@@ -152,56 +152,6 @@ a:hover {
   margin-right: 1rem;
 }
 
-@media screen and (min-width: 600px) {
-  .sidebar {
-    transform: translateX(0%);
-    width: 400px;
-  }
-  .navbar {
-    display: none;
-  }
-  .sidebar .close-btn {
-    display: none;
-  }
-  #about,
-  #projects,
-  #skills,
-  #contact {
-    margin-left: 400px !important;
-  }
-
-  #projects .cards .card {
-    width: 380px;
-  }
-  .breaker {
-    margin-left: 400px !important;
-  }
-
-  #projects .card .card-footer a {
-    padding: 0.3rem 1rem !important;
-  }
-
-  #contact .content > * {
-    text-align: left !important;
-  }
-
-  #contact .content .feelFree {
-    font-size: 1.1rem !important;
-  }
-
-  #contact .content .whatsapp,
-  #contact .content .email {
-    font-size: 1.5rem !important;
-  }
-  #contact .social-icons {
-    justify-content: start !important;
-  }
-
-  footer {
-    margin-left: 400px;
-  }
-}
-
 .breaker {
   border: 0;
   height: 1px;
@@ -264,7 +214,7 @@ a:hover {
 
 #about a {
   display: block;
-  max-width: 200px;
+  max-width: 210px;
   text-align: center;
   background-color: var(--sidebar-color);
   margin: 0 auto;
@@ -517,4 +467,54 @@ a:hover {
 footer {
   text-align: center;
   padding: 1rem 0;
+}
+
+@media screen and (min-width: 600px) {
+  .sidebar {
+    transform: translateX(0%);
+    width: 400px;
+  }
+  .navbar {
+    display: none;
+  }
+  .sidebar .close-btn {
+    display: none;
+  }
+  #about,
+  #projects,
+  #skills,
+  #contact {
+    margin-left: 400px;
+  }
+
+  #projects .cards .card {
+    width: 380px;
+  }
+  .breaker {
+    margin-left: 400px;
+  }
+
+  #projects .card .card-footer a {
+    padding: 0.3rem 1rem;
+  }
+
+  #contact .content > * {
+    text-align: left;
+  }
+
+  #contact .content .feelFree {
+    font-size: 1.1rem;
+  }
+
+  #contact .content .whatsapp,
+  #contact .content .email {
+    font-size: 1.5rem;
+  }
+  #contact .social-icons {
+    justify-content: start;
+  }
+
+  footer {
+    margin-left: 400px;
+  }
 }
