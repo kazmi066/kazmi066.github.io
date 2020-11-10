@@ -464,26 +464,6 @@ a:hover {
   color: var(--btn-hover);
 }
 
-/* The fading effect */
-.fade-in {
-  animation: fade-in 0.5s ease-in;
-}
-
-@keyframes fade-in {
-  from {
-    opacity: 0;
-    transform: translateX(-20%);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0%);
-  }
-}
-
-.hidden {
-  opacity: 0;
-}
-
 footer {
   text-align: center;
   padding: 1rem 0;
