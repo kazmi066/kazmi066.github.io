@@ -1,0 +1,339 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  color: white;
+}
+
+$theme-primary-color: #151618;
+$theme-secondary-color: #232529;
+$main-transition: all 0.3s ease;
+$border-main: 0.5px solid rgba(255, 255, 255, 0.5);
+$border-main-hover: 1px solid rgba(255, 255, 255, 1);
+$skills-padding: 0.5em 1em;
+$skills-border: 20px;
+
+body {
+  background-color: $theme-primary-color;
+}
+
+.mr-1 {
+  margin-right: 0.3em;
+}
+
+.mb-1 {
+  margin-bottom: 0.3em;
+}
+
+.pd-1 {
+  padding: 0 0 0 0.1em;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+header {
+  padding: 0.8em 0;
+
+  .contact {
+    padding: 0.5em 1em;
+    float: right;
+    border: $border-main;
+    outline: none;
+    background-color: $theme-secondary-color;
+    transition: $main-transition;
+
+    &:hover {
+      cursor: pointer;
+      border: $border-main-hover;
+    }
+  }
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+// Main Section
+main {
+  margin: 8em 0;
+  .columns {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    align-items: center;
+    justify-items: center;
+
+    .image img {
+      width: 330px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 1em;
+      border: $border-main;
+    }
+
+    .info {
+      .name {
+        font-size: clamp(1.5em, 3vw, 2.5em);
+        text-transform: uppercase;
+      }
+      .work {
+        font-size: clamp(0.9em, 2vw, 2.5em);
+        color: red;
+      }
+      .about {
+        margin-bottom: 1em;
+        opacity: 0.7;
+
+        &::after {
+          content: '"';
+        }
+
+        &::before {
+          content: '"';
+        }
+      }
+      .been-working {
+        margin-bottom: 1em;
+        font-weight: normal;
+      }
+    }
+  }
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.skill-js {
+  background-color: rgb(149, 158, 20);
+  border-radius: $skills-border;
+  padding: $skills-padding;
+}
+
+.skill-react {
+  background-color: rgb(68, 66, 66);
+  border-radius: $skills-border;
+  padding: $skills-padding;
+}
+.skill-node {
+  background-color: rgb(62, 172, 11);
+  border-radius: $skills-border;
+  padding: $skills-padding;
+}
+.skill-express {
+  background-color: rgb(57, 111, 155);
+  border-radius: $skills-border;
+  padding: $skills-padding;
+}
+.skill-mongo {
+  background-color: rgb(247, 162, 6);
+  border-radius: $skills-border;
+  padding: $skills-padding;
+}
+.skill-html {
+  background-color: rgb(116, 40, 116);
+  border-radius: $skills-border;
+  padding: $skills-padding;
+}
+.skill-cpp {
+  background-color: rgb(19, 124, 98);
+  border-radius: $skills-border;
+  padding: $skills-padding;
+}
+
+// projects Section
+#projects {
+  .title h1 {
+    text-transform: capitalize;
+    text-align: center;
+    font-size: 2em;
+    width: 150px;
+    border-bottom: double;
+    margin: 0 auto;
+  }
+
+  .cards {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+    margin: 5em 0;
+
+    .card {
+      padding: 0.4em 0.4em 0.6em 0.4em;
+      width: 310px;
+      border-radius: 20px;
+      height: auto;
+      background-color: $theme-secondary-color;
+      overflow: visible;
+      margin-bottom: 3em;
+
+      &:hover .card_image {
+        transform: scale(1.1);
+      }
+
+      .card_title {
+        padding: 1em;
+      }
+
+      .card_image {
+        transition: $main-transition;
+        width: 100%;
+        border-radius: 20px;
+      }
+
+      .card_footer {
+        display: flex;
+        align-items: center;
+        padding: 1em 0 1.5em 1em;
+
+        .source_code {
+          margin-right: 1em;
+          padding-right: 1em;
+          border-right: 1px solid white;
+        }
+
+        i {
+          font-size: 1.5em;
+          transition: $main-transition;
+
+          &:hover {
+            opacity: 0.5;
+          }
+        }
+
+        .live {
+          padding: 0.2em 1em;
+          border-radius: 10px;
+          background-color: $theme-primary-color;
+          transition: $main-transition;
+          &:hover {
+            opacity: 0.5;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Contact Section */
+#contact {
+  padding: 1rem;
+  margin: 5rem 0;
+
+  .title {
+    font-size: clamp(2rem, 5vw, 2.8rem);
+  }
+
+  img {
+    width: clamp(310px, 40vw, 500px);
+  }
+
+  .contact-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+
+    .content {
+      padding-bottom: 2rem;
+
+      & > * {
+        margin: 0 1rem;
+        text-align: center;
+        padding: 0.7rem 0;
+      }
+
+      .feelFree {
+        text-align: center;
+        line-height: 1.5rem;
+        font-size: clamp(1rem, 4vw, 1.1rem);
+        font-weight: normal;
+        opacity: 0.6;
+      }
+
+      .whatsapp,
+      .email {
+        font-size: clamp(1.2rem, 4vw, 1.5rem);
+        font-weight: normal;
+
+        .email_text,
+        .whatsapp_num {
+          opacity: 0.6;
+        }
+      }
+
+      .phone {
+        i {
+          color: rgb(108, 61, 238);
+        }
+      }
+
+      .social-icons {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        .fab {
+          color: white;
+        }
+
+        a {
+          font-size: 2rem;
+          margin: 0 1rem;
+
+          &:hover {
+            background-color: transparent;
+          }
+        }
+
+        i {
+          &:hover {
+            opacity: 0.6;
+          }
+        }
+      }
+    }
+  }
+}
+
+footer {
+  text-align: center;
+  padding: 1rem 0;
+}
+
+@media screen and (min-width: 600px) {
+  #contact .content > * {
+    text-align: left;
+  }
+
+  #contact .social-icons {
+    justify-content: start;
+  }
+}
+
+@media only screen and(max-width: 960px) {
+  main {
+    margin: 5em 0;
+    .columns {
+      .image img {
+        width: 250px;
+      }
+
+      .info {
+        text-align: center;
+
+        .skills {
+          justify-content: center;
+        }
+      }
+    }
+  }
+}
