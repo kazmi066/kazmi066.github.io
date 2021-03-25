@@ -15,12 +15,16 @@ body {
   margin-right: 0.3em;
 }
 
+.ml-1 {
+  margin-left: 0.3em;
+}
+
 .mb-1 {
-  margin-bottom: 0.3em;
+  margin-bottom: 0.6em;
 }
 
 .pd-1 {
-  padding: 0 0 0 0.1em;
+  padding: 0 0 0 0.5em;
 }
 
 a {
@@ -113,48 +117,49 @@ main .columns .info .been-working {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  text-transform: capitalize;
 }
 
 .skill-js {
   background-color: #959e14;
   border-radius: 20px;
-  padding: 0.5em 1em;
+  padding: 0.4em 1em;
 }
 
 .skill-react {
   background-color: #444242;
   border-radius: 20px;
-  padding: 0.5em 1em;
+  padding: 0.4em 1em;
 }
 
 .skill-node {
   background-color: #3eac0b;
   border-radius: 20px;
-  padding: 0.5em 1em;
+  padding: 0.4em 1em;
 }
 
 .skill-express {
   background-color: #396f9b;
   border-radius: 20px;
-  padding: 0.5em 1em;
+  padding: 0.4em 1em;
 }
 
 .skill-mongo {
   background-color: #f7a206;
   border-radius: 20px;
-  padding: 0.5em 1em;
+  padding: 0.4em 1em;
 }
 
 .skill-html {
   background-color: #742874;
   border-radius: 20px;
-  padding: 0.5em 1em;
+  padding: 0.4em 1em;
 }
 
 .skill-cpp {
   background-color: #137c62;
   border-radius: 20px;
-  padding: 0.5em 1em;
+  padding: 0.4em 1em;
 }
 
 #projects .title h1 {
@@ -176,7 +181,7 @@ main .columns .info .been-working {
 }
 
 #projects .cards .card {
-  padding: 0.4em 0.4em 0.6em 0.4em;
+  padding: 0.4em 0.4em 0em 0.4em;
   width: 310px;
   border-radius: 20px;
   height: auto;
@@ -186,8 +191,8 @@ main .columns .info .been-working {
 }
 
 #projects .cards .card:hover .card_image {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
 }
 
 #projects .cards .card .card_title {

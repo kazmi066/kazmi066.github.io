@@ -11,7 +11,7 @@ $theme-secondary-color: #232529;
 $main-transition: all 0.3s ease;
 $border-main: 0.5px solid rgba(255, 255, 255, 0.5);
 $border-main-hover: 1px solid rgba(255, 255, 255, 1);
-$skills-padding: 0.5em 1em;
+$skills-padding: 0.4em 1em;
 $skills-border: 20px;
 
 body {
@@ -21,13 +21,16 @@ body {
 .mr-1 {
   margin-right: 0.3em;
 }
+.ml-1 {
+  margin-left: 0.3em;
+}
 
 .mb-1 {
-  margin-bottom: 0.3em;
+  margin-bottom: 0.6em;
 }
 
 .pd-1 {
-  padding: 0 0 0 0.1em;
+  padding: 0 0 0 0.5em;
 }
 
 a {
@@ -110,6 +113,7 @@ main {
 .skills {
   display: flex;
   flex-wrap: wrap;
+  text-transform: capitalize;
 }
 
 .skill-js {
@@ -167,7 +171,7 @@ main {
     margin: 5em 0;
 
     .card {
-      padding: 0.4em 0.4em 0.6em 0.4em;
+      padding: 0.4em 0.4em 0em 0.4em;
       width: 310px;
       border-radius: 20px;
       height: auto;
@@ -176,7 +180,7 @@ main {
       margin-bottom: 3em;
 
       &:hover .card_image {
-        transform: scale(1.1);
+        transform: scale(0.9);
       }
 
       .card_title {
