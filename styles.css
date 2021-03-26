@@ -7,6 +7,10 @@
   color: white;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: #151618;
 }
@@ -75,7 +79,7 @@ main .columns {
 }
 
 main .columns .image img {
-  width: 330px;
+  width: 320px;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 50%;
@@ -162,6 +166,37 @@ main .columns .info .been-working {
   padding: 0.4em 1em;
 }
 
+.inView {
+  -webkit-animation: fadeIn 0.3s ease-in;
+          animation: fadeIn 0.3s ease-in;
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0.3;
+    -webkit-transform: translateY(1.5rem);
+            transform: translateY(1.5rem);
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0.3;
+    -webkit-transform: translateY(1.5rem);
+            transform: translateY(1.5rem);
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
 #projects .title h1 {
   text-transform: capitalize;
   text-align: center;
@@ -191,8 +226,8 @@ main .columns .info .been-working {
 }
 
 #projects .cards .card:hover .card_image {
-  -webkit-transform: scale(0.9);
-          transform: scale(0.9);
+  -webkit-transform: scale(0.96);
+          transform: scale(0.96);
 }
 
 #projects .cards .card .card_title {

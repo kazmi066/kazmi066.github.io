@@ -6,6 +6,10 @@
   color: white;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 $theme-primary-color: #151618;
 $theme-secondary-color: #232529;
 $main-transition: all 0.3s ease;
@@ -74,11 +78,12 @@ main {
     justify-items: center;
 
     .image img {
-      width: 330px;
+      width: 320px;
       object-fit: cover;
       border-radius: 50%;
       margin-bottom: 1em;
       border: $border-main;
+      // margin-right: 5rem;
     }
 
     .info {
@@ -153,6 +158,23 @@ main {
   padding: $skills-padding;
 }
 
+// Animation
+
+.inView {
+  animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0.3;
+    transform: translateY(1.5rem);
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
 // projects Section
 #projects {
   .title h1 {
@@ -180,7 +202,7 @@ main {
       margin-bottom: 3em;
 
       &:hover .card_image {
-        transform: scale(0.9);
+        transform: scale(0.96);
       }
 
       .card_title {

@@ -8,9 +8,15 @@ window.addEventListener("load", async (e) => {
       <div class="card">
         <h4 class="card_title">${item.card_title}</h4>
         <div class="skills pd-1">
-          <div class="mr-1 mb-1 skill-react">${item.skills[0]}</div>
-          <div class="mr-1 mb-1 skill-node">${item.skills[1]}</div>
-          <div class="mr-1 mb-1 skill-mongo">${item.skills[2]}</div>
+          <div class="mr-1 mb-1 skill-${item.skills[0].toLowerCase()}">${
+      item.skills[0]
+    }</div>
+          <div class="mr-1 mb-1 skill-${item.skills[1].toLowerCase()}">${
+      item.skills[1]
+    }</div>
+          <div class="mr-1 mb-1 skill-${item.skills[2].toLowerCase()}">${
+      item.skills[2]
+    }</div>
         </div>
         <img
           class="card_image"
@@ -26,5 +32,28 @@ window.addEventListener("load", async (e) => {
           </a>
         </div>
       </div>`;
+  });
+
+  const temp = document.querySelectorAll("#projects .cards .card");
+  const contact = document.querySelector("#contact");
+
+  window.addEventListener("scroll", () => {
+    for (var i = 0; i < temp.length; i++) {
+      var elem = temp[i];
+      var distInView =
+        elem.getBoundingClientRect().top - window.innerHeight + 100;
+      if (distInView < 0) {
+        elem.classList.add("inView");
+      } else {
+        elem.classList.remove("inView");
+      }
+    }
+    var contactView =
+      contact.getBoundingClientRect().top - window.innerHeight + 50;
+    if (contactView < 0) {
+      contact.classList.add("inView");
+    } else {
+      contact.classList.remove("inView");
+    }
   });
 });
