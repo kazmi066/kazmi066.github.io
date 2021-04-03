@@ -8,7 +8,8 @@
       href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
       rel="stylesheet"
     />
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
@@ -64,7 +65,11 @@
       </div>
     </section>
 
-    <section id="contact">
+    <section
+      id="contact"
+      data-aos="fade-up"
+      data-aos-anchor-placement="center-bottom"
+    >
       <div class="contact-container">
         <div class="content">
           <h1 class="title">
@@ -100,13 +105,17 @@
             ></a>
           </div>
         </div>
-        <img src="./assets/contact.svg" alt="skills" />
+        <img src="./assets/image/contact.svg" alt="skills" />
       </div>
     </section>
 
     <footer>
       <h3>Made with ❤️ by Awais Abbas</h3>
     </footer>
+
+    <script>
+      AOS.init();
+    </script>
 
     <script src="./code.js"></script>
   </body>
