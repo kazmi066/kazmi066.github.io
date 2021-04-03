@@ -18,6 +18,15 @@ $border-main-hover: 1px solid rgba(255, 255, 255, 1);
 $skills-padding: 0.4em 1em;
 $skills-border: 20px;
 
+// For image animation
+$anime-time: 8s;
+$box-size: 320px;
+$clip-distance: 0.05;
+$clip-size: $box-size * (1 + $clip-distance * 2);
+$path-width: 2px;
+$main-color: red;
+$codepen-logo-path: url("./assets/image/newAwais.jpg");
+
 body {
   background-color: $theme-primary-color;
 }
@@ -68,6 +77,23 @@ header {
   margin: 0 auto;
 }
 
+// Image Animation Main
+@keyframes clipMe {
+  0%,
+  100% {
+    clip: rect(0px, $clip-size, $path-width, 0px);
+  }
+  25% {
+    clip: rect(0px, $path-width, $clip-size, 0px);
+  }
+  50% {
+    clip: rect($clip-size - $path-width, $clip-size, $clip-size, 0px);
+  }
+  75% {
+    clip: rect(0px, $clip-size, $clip-size, $clip-size - $path-width);
+  }
+}
+
 // Main Section
 main {
   margin: 8em 0;
@@ -76,14 +102,43 @@ main {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     align-items: center;
     justify-items: center;
+    position: relative;
 
-    .image img {
-      width: 320px;
-      object-fit: cover;
-      border-radius: 50%;
-      margin-bottom: 1em;
-      border: $border-main;
+    // Image Animation
+    .bb {
+      position: relative;
+      width: $box-size;
+      height: $box-size;
+      background: $codepen-logo-path no-repeat 50% / 100% rgba(#000, 0.1);
+      color: $main-color;
+      box-shadow: inset 0 0 0 1px rgba(black, 0.5);
+
+      &::before,
+      &::after {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        content: "";
+        z-index: -1;
+        margin: -1 * $clip-distance * 100%;
+        box-shadow: inset 0 0 0 $path-width;
+        animation: clipMe $anime-time linear infinite;
+      }
+
+      &::before {
+        animation-delay: $anime-time * -0.5;
+      }
     }
+
+    // .image img {
+    //   width: 320px;
+    //   object-fit: cover;
+    //   border-radius: 50%;
+    //   margin-bottom: 1em;
+    //   border: $border-main;
+    // }
 
     .info {
       .name {
@@ -345,11 +400,14 @@ footer {
 }
 
 @media only screen and(max-width: 960px) {
+  $box-size: 200px;
   main {
     margin: 5em 0;
     .columns {
-      .image img {
-        width: 250px;
+      .bb {
+        width: $box-size;
+        height: $box-size;
+        margin-bottom: 2rem;
       }
 
       .info {
