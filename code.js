@@ -9,15 +9,13 @@ window.addEventListener("load", async (e) => {
       data-aos-anchor-placement="center-bottom">
         <h4 class="card_title">${item.card_title}</h4>
         <div class="skills pd-1">
-          <div class="mr-1 mb-1 skill-${item.skills[0].toLowerCase()}">${
-      item.skills[0]
-    }</div>
-          <div class="mr-1 mb-1 skill-${item.skills[1].toLowerCase()}">${
-      item.skills[1]
-    }</div>
-          <div class="mr-1 mb-1 skill-${item.skills[2].toLowerCase()}">${
-      item.skills[2]
-    }</div>
+        ${item.skills
+          .map((skill) => {
+            return `<div class="mr-1 mb-1 skill-${skill.toLowerCase()}">
+            ${skill}
+          </div>`;
+          })
+          .join("")}
         </div>
         <img
           class="card_image"
@@ -25,17 +23,22 @@ window.addEventListener("load", async (e) => {
           alt="no image"
         />
         <div class="card_footer">
-          <a href="#" class="source_code">
+          <a href="${item.source_url}" class="source_code">
             <i class="fab fa-github github"></i>
           </a>
-          <a href="#" class="live">
-            Live preview
-          </a>
+          ${
+            item.live
+              ? `<a href=${item?.live} class="live">
+                Live preview
+              </a>`
+              : "Not in production"
+          }
+          
         </div>
       </div>`;
   });
 
-  // The indicator
+  // The loading bar on scroll
   document.addEventListener(
     "scroll",
     function () {
@@ -52,27 +55,4 @@ window.addEventListener("load", async (e) => {
     },
     { passive: true }
   );
-
-  // const temp = document.querySelectorAll("#projects .cards .card");
-  // const contact = document.querySelector("#contact");
-
-  // window.addEventListener("scroll", () => {
-  //   for (var i = 0; i < temp.length; i++) {
-  //     var elem = temp[i];
-  //     var distInView =
-  //       elem.getBoundingClientRect().top - window.innerHeight + 100;
-  //     if (distInView < 0) {
-  //       elem.classList.add("inView");
-  //     } else {
-  //       elem.classList.remove("inView");
-  //     }
-  //   }
-  //   var contactView =
-  //     contact.getBoundingClientRect().top - window.innerHeight + 50;
-  //   if (contactView < 0) {
-  //     contact.classList.add("inView");
-  //   } else {
-  //     contact.classList.remove("inView");
-  //   }
-  // });
 });
