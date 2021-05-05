@@ -295,7 +295,7 @@ main .columns .info .been-working {
   text-transform: capitalize;
   text-align: center;
   font-size: 2em;
-  width: 150px;
+  width: 10rem;
   border-bottom: double;
   margin: 0 auto;
 }
