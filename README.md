@@ -1,1 +1,1 @@
-deployed on github page: [site](https://kazmi066.github.io)
+deployed on github pages: [site](https://kazmi066.github.io)
