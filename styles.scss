@@ -185,41 +185,60 @@ main {
   text-transform: capitalize;
 }
 
-.skill-js {
-  background-color: rgb(149, 158, 20);
+.skill-js,
+.skill-react,
+.skill-node,
+.skill-express,
+.skill-mongo,
+.skill-html,
+.skill-cpp,
+.skill-context-api,
+.skill-jwt,
+.skill-material-ui,
+.skill-sockets,
+.skill-angular {
   border-radius: $skills-border;
   padding: $skills-padding;
 }
 
+.skill-js {
+  background-color: rgb(149, 158, 20);
+}
+
 .skill-react {
   background-color: rgb(68, 66, 66);
-  border-radius: $skills-border;
-  padding: $skills-padding;
 }
 .skill-node {
   background-color: rgb(62, 172, 11);
-  border-radius: $skills-border;
-  padding: $skills-padding;
 }
 .skill-express {
   background-color: rgb(57, 111, 155);
-  border-radius: $skills-border;
-  padding: $skills-padding;
 }
 .skill-mongo {
   background-color: rgb(247, 162, 6);
-  border-radius: $skills-border;
-  padding: $skills-padding;
 }
 .skill-html {
   background-color: rgb(116, 40, 116);
-  border-radius: $skills-border;
-  padding: $skills-padding;
 }
 .skill-cpp {
   background-color: rgb(19, 124, 98);
-  border-radius: $skills-border;
-  padding: $skills-padding;
+}
+
+.skill-context-api {
+  background-color: rgb(140, 196, 36);
+}
+
+.skill-jwt {
+  background-color: rgb(25, 75, 95);
+}
+.skill-material-ui {
+  background-color: rgb(238, 212, 98);
+}
+.skill-sockets {
+  background-color: rgb(68, 30, 83);
+}
+.skill-angular {
+  background-color: rgb(124, 57, 19);
 }
 
 // Animation
