@@ -13,6 +13,17 @@ html {
 
 body {
   background-color: #151618;
+  -webkit-clip-path: circle(10% at 0 10);
+          clip-path: circle(10% at 0 10);
+}
+
+.color-changer {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  padding: 1rem;
+  background-color: white;
+  color: black;
 }
 
 #indicator {
@@ -187,6 +198,7 @@ main .columns .info .been-working {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   text-transform: capitalize;
+  padding-bottom: 1rem;
 }
 
 .skill-js,
@@ -200,7 +212,9 @@ main .columns .info .been-working {
 .skill-jwt,
 .skill-material-ui,
 .skill-sockets,
-.skill-angular {
+.skill-angular,
+.skill-redux,
+.skill-lazy-load {
   border-radius: 20px;
   padding: 0.4em 1em;
 }
@@ -213,12 +227,20 @@ main .columns .info .been-working {
   background-color: #444242;
 }
 
+.skill-redux {
+  background-color: #258383;
+}
+
 .skill-node {
   background-color: #3eac0b;
 }
 
 .skill-express {
   background-color: #396f9b;
+}
+
+.skill-lazy-load {
+  background-color: #399b7a;
 }
 
 .skill-mongo {
@@ -304,12 +326,18 @@ main .columns .info .been-working {
 
 #projects .cards .card {
   padding: 0.4em 0.4em 0em 0.4em;
-  width: 310px;
+  width: 330px;
   border-radius: 20px;
   height: auto;
   background-color: #232529;
   overflow: visible;
   margin-bottom: 3em;
+}
+
+@media only screen and (max-width: 767px) {
+  #projects .cards .card {
+    width: 310px;
+  }
 }
 
 #projects .cards .card:hover .card_image {
@@ -325,7 +353,6 @@ main .columns .info .been-working {
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
   width: 100%;
-  border-radius: 20px;
 }
 
 #projects .cards .card .card_footer {

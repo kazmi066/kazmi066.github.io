@@ -10,8 +10,8 @@ html {
   scroll-behavior: smooth;
 }
 
-$theme-primary-color: #151618;
-$theme-secondary-color: #232529;
+$primary-color: #151618;
+$secondary-color: #232529;
 $main-transition: all 0.3s ease;
 $border-main: 0.5px solid rgba(255, 255, 255, 0.5);
 $border-main-hover: 1px solid rgba(255, 255, 255, 1);
@@ -28,7 +28,17 @@ $main-color: red;
 $codepen-logo-path: url("./assets/image/newAwais.jpg");
 
 body {
-  background-color: $theme-primary-color;
+  background-color: $primary-color;
+  clip-path: circle(10% at 0 10);
+}
+
+.color-changer {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  padding: 1rem;
+  background-color: white;
+  color: black;
 }
 
 #indicator {
@@ -72,7 +82,7 @@ header {
     float: right;
     border: $border-main;
     outline: none;
-    background-color: $theme-secondary-color;
+    background-color: $secondary-color;
     transition: $main-transition;
 
     &:hover {
@@ -142,14 +152,6 @@ main {
       }
     }
 
-    // .image img {
-    //   width: 320px;
-    //   object-fit: cover;
-    //   border-radius: 50%;
-    //   margin-bottom: 1em;
-    //   border: $border-main;
-    // }
-
     .info {
       .name {
         font-size: clamp(1.5em, 3vw, 2.5em);
@@ -183,6 +185,7 @@ main {
   display: flex;
   flex-wrap: wrap;
   text-transform: capitalize;
+  padding-bottom: 1rem;
 }
 
 .skill-js,
@@ -196,7 +199,9 @@ main {
 .skill-jwt,
 .skill-material-ui,
 .skill-sockets,
-.skill-angular {
+.skill-angular,
+.skill-redux,
+.skill-lazy-load {
   border-radius: $skills-border;
   padding: $skills-padding;
 }
@@ -208,11 +213,19 @@ main {
 .skill-react {
   background-color: rgb(68, 66, 66);
 }
+
+.skill-redux {
+  background-color: rgb(37, 131, 131);
+}
+
 .skill-node {
   background-color: rgb(62, 172, 11);
 }
 .skill-express {
   background-color: rgb(57, 111, 155);
+}
+.skill-lazy-load {
+  background-color: rgb(57, 155, 122);
 }
 .skill-mongo {
   background-color: rgb(247, 162, 6);
@@ -277,12 +290,16 @@ main {
 
     .card {
       padding: 0.4em 0.4em 0em 0.4em;
-      width: 310px;
+      width: 330px;
       border-radius: 20px;
       height: auto;
-      background-color: $theme-secondary-color;
+      background-color: $secondary-color;
       overflow: visible;
       margin-bottom: 3em;
+
+      @media only screen and (max-width: 767px) {
+        width: 310px;
+      }
 
       &:hover .card_image {
         transform: scale(0.96);
@@ -295,7 +312,6 @@ main {
       .card_image {
         transition: $main-transition;
         width: 100%;
-        border-radius: 20px;
       }
 
       .card_footer {
@@ -321,7 +337,7 @@ main {
         .live {
           padding: 0.2em 1em;
           border-radius: 10px;
-          background-color: $theme-primary-color;
+          background-color: $primary-color;
           transition: $main-transition;
           &:hover {
             opacity: 0.5;

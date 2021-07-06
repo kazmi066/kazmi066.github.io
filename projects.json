@@ -1,39 +1,45 @@
 [
   {
-    "card_title": "Chat app with React and Socket.io",
-    "skills": ["React", "Node", "Express", "sockets"],
-    "image_url": "../assets/chatapp.png",
-    "source_url": "https://github.com/kazmi066/Chat-app",
-    "live": "https://chat-app-sockets-635648.netlify.app"
-  },
-  {
-    "card_title": "Mail system with MERN Stack",
-    "skills": ["React", "Node", "mongo", "express"],
+    "card_title": "Mail system",
+    "skills": ["React", "Node", "Redux", "mongo", "express"],
     "source_url": "https://github.com/kazmi066/mail_System",
     "image_url": "../assets/mailsystem.png"
   },
   {
-    "card_title": "The Movie DB with React and Material-ui",
+    "card_title": "Big-five Personality Test",
+    "skills": ["React", "Node", "Express", "sockets"],
+    "source_url": "https://github.com/kazmi066/big-five-test",
+    "image_url": "../assets/personality.png"
+  },
+  {
+    "card_title": "TMDB",
     "skills": ["React", "Material-ui", "Context-api"],
     "image_url": "../assets/movie.png",
     "live": "https://tmdb-movie-site-be60b3.netlify.app/",
     "source_url": "https://github.com/kazmi066/theMovieDb-react"
   },
   {
-    "card_title": "Unsplash-clone with React and Context-api",
-    "skills": ["React", "html", "Context-api"],
+    "card_title": "Unsplash-clone",
+    "skills": ["React", "Context-api", "lazy-load"],
     "source_url": "https://github.com/kazmi066/unsplash-clone",
     "image_url": "../assets/unsplash.png",
     "live": "https://unsplash-clone01.herokuapp.com/"
   },
   {
-    "card_title": "MERN Authentication with JWT and Express-sessions",
+    "card_title": "MERN Auth",
     "skills": ["React", "Node", "Express", "Mongo", "jwt"],
     "source_url": "https://github.com/kazmi066/MERN-authentication",
     "image_url": "../assets/mern_auth.jpg"
   },
   {
-    "card_title": "Github job search with MEAN Stack",
+    "card_title": "Chat app",
+    "skills": ["React", "Node", "Express", "sockets"],
+    "image_url": "../assets/chatapp.png",
+    "source_url": "https://github.com/kazmi066/Chat-app",
+    "live": "https://chat-app-sockets-635648.netlify.app"
+  },
+  {
+    "card_title": "Github job search",
     "skills": ["Angular", "Node", "Express", "Mongo"],
     "source_url": "https://github.com/kazmi066/Angular-JS/tree/master/Github-jobs-Api-MEAN",
     "image_url": "https://apilist.fun/images/social/api/github-jobs.png"

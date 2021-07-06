@@ -7,7 +7,7 @@ window.addEventListener("load", async (e) => {
     cards.innerHTML += `
       <div class="card" data-aos="fade-up"
       data-aos-anchor-placement="center-bottom">
-        <h4 class="card_title">${item.card_title}</h4>
+        <h3 class="card_title">${item.card_title}</h3>
         <div class="skills pd-1">
         ${item.skills
           .map((skill) => {
