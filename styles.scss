@@ -32,15 +32,6 @@ body {
   clip-path: circle(10% at 0 10);
 }
 
-.color-changer {
-  position: fixed;
-  bottom: 2rem;
-  right: 2rem;
-  padding: 1rem;
-  background-color: white;
-  color: black;
-}
-
 #indicator {
   --scroll: 0%;
   background: linear-gradient(to right, red var(--scroll), transparent 0);
