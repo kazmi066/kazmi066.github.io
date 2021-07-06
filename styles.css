@@ -214,13 +214,28 @@ main .columns .info .been-working {
 .skill-sockets,
 .skill-angular,
 .skill-redux,
-.skill-lazy-load {
+.skill-lazy-load,
+.skill-flask,
+.skill-machine-learning,
+.skill-azure {
   border-radius: 20px;
   padding: 0.4em 1em;
 }
 
 .skill-js {
   background-color: #959e14;
+}
+
+.skill-flask {
+  background-color: #5b38ad;
+}
+
+.skill-machine-learning {
+  background-color: #e02bd7;
+}
+
+.skill-azure {
+  background-color: #bb3272;
 }
 
 .skill-react {
@@ -264,7 +279,7 @@ main .columns .info .been-working {
 }
 
 .skill-material-ui {
-  background-color: #eed462;
+  background-color: #e64a3f;
 }
 
 .skill-sockets {

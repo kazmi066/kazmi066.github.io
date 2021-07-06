@@ -201,13 +201,26 @@ main {
 .skill-sockets,
 .skill-angular,
 .skill-redux,
-.skill-lazy-load {
+.skill-lazy-load,
+.skill-flask,
+.skill-machine-learning,
+.skill-azure {
   border-radius: $skills-border;
   padding: $skills-padding;
 }
 
 .skill-js {
   background-color: rgb(149, 158, 20);
+}
+
+.skill-flask {
+  background-color: rgb(91, 56, 173);
+}
+.skill-machine-learning {
+  background-color: rgb(224, 43, 215);
+}
+.skill-azure {
+  background-color: rgb(187, 50, 114);
 }
 
 .skill-react {
@@ -245,7 +258,7 @@ main {
   background-color: rgb(25, 75, 95);
 }
 .skill-material-ui {
-  background-color: rgb(238, 212, 98);
+  background-color: rgb(230, 74, 63);
 }
 .skill-sockets {
   background-color: rgb(68, 30, 83);

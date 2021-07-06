@@ -7,7 +7,7 @@
   },
   {
     "card_title": "Big-five Personality Test",
-    "skills": ["React", "Node", "Express", "sockets"],
+    "skills": ["React", "Flask", "machine-learning", "azure"],
     "source_url": "https://github.com/kazmi066/big-five-test",
     "image_url": "../assets/personality.png"
   },
