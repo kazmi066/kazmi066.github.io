@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import { useEffect } from "react";
 import { useApp } from "../context";
 
@@ -15,7 +16,10 @@ export default function FrontLoader({ children }) {
             {
                 loading ?
                     <div className="flex items-center justify-center h-screen w-full">
-                        <h1 className="font-bold text-6xl animate-pulse">A.</h1>
+                        <motion.h1
+                            animate={{ opacity: [.5, .7, .2, 1] }}
+                            transition={{ duration: 3 }}
+                            className="font-bold text-6xl">A.</motion.h1>
                     </div> :
                     children
             }
