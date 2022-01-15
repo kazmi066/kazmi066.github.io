@@ -2,7 +2,7 @@ import Container from "../../components/Container";
 import awais from '../../assets/awais.jpg';
 import About from '../../components/About';
 import Title from "../../Elements/Title";
-import { ReactComponent as Javascript } from "../../assets/Javascript.svg";
+import Skills from "../../components/Skills";
 
 export default function Front() {
     return (
@@ -21,7 +21,7 @@ export default function Front() {
                 <div className="pt-12">
                     <Title title="tech skills" />
                     <h4 className="py-8">Here are some of the technologies and tools I'm proficient and comfortable with:</h4>
-                    <Javascript />
+                    <Skills />
                 </div>
             </Container>
         </main>

@@ -1,7 +1,7 @@
-export default function Skill({ image, title }) {
+export default function Skill({ image, title, color }) {
     return (
-        <div className="flex flex-column items-center content-center py-4 px-2">
-            <img src={image} alt="skill" />
+        <div className="mx-6">
+            <svg className={`hover:fill-${color}-500`}>{image}</svg>
             <h3>{title}</h3>
         </div>
     )
