@@ -1,71 +1,70 @@
 import Skill from "../Elements/Skill"
-import { ReactComponent as Javascript } from "../assets/skills/Javascript.svg";
-import { ReactComponent as React } from "../assets/skills/React.svg";
-import { ReactComponent as Css } from "../assets/skills/Css.svg";
-import { ReactComponent as Html } from "../assets/skills/Html.svg";
-import { ReactComponent as Node } from "../assets/skills/Node.svg";
-import { ReactComponent as Mongo } from "../assets/skills/Mongo.svg";
-import { ReactComponent as Graphql } from "../assets/skills/Graphql.svg";
-import { ReactComponent as Tailwind } from "../assets/skills/Tailwind.svg";
-import { ReactComponent as Next } from "../assets/skills/Next.svg";
+import SvgIcon, {
+    cssIcon,
+    htmlIcon,
+    javascriptIcon,
+    nextjsIcon,
+    nodejsIcon,
+    reactIcon,
+    rokuIcon,
+    sassIcon,
+    tailwindIcon,
+    typescriptIcon
+} from '../components/svg-icon';
 
 const skills = [
     {
-        image: <Javascript />,
-        title: "something",
-        color: "red"
+        image: <SvgIcon className="svg-skill-icon" title="JavaScript logo" d={javascriptIcon} viewBox="0 0 50 50" />,
+        title: "Javascript",
+        hoverClassName: "group-hover:text-[#F0DB4F]"
     },
     {
-        image: <Html />,
-        title: "something",
-        color: "red"
-
+        image: <SvgIcon className="svg-skill-icon" title="HTML logo" d={htmlIcon} viewBox="0 0 50 50" />,
+        title: "Html",
+        hoverClassName: "group-hover:text-[#E34C26]"
     },
     {
-        image: <Css />,
-        title: "something",
-        color: "red"
-
+        image: <SvgIcon className="svg-skill-icon" title="CSS logo" d={cssIcon} viewBox="0 0 128 128" />,
+        title: "Css",
+        hoverClassName: "group-hover:text-[#2965F1]"
     },
     {
-        image: <React />,
-        title: "something",
-        color: "red"
-
+        image: <SvgIcon className="svg-skill-icon" title="React.js logo" d={reactIcon} viewBox="0 0 50 50" />,
+        title: "React",
+        hoverClassName: "group-hover:text-[#61DBFB]"
     },
     {
-        image: <Node />,
-        title: "something",
-        color: "red"
+        image: <SvgIcon className="svg-skill-icon" title="Node.js logo" d={nodejsIcon} viewBox="0 0 32 32" />,
+        title: "Node",
+        hoverClassName: "group-hover:text-[#3C873A]"
     },
     {
-        image: <Mongo />,
-        title: "something",
-        color: "yellow"
+        image: <SvgIcon className="svg-skill-icon" title="Sass logo" d={sassIcon} viewBox="0 0 50 50" />,
+        title: "Sass",
+        hoverClassName: "group-hover:text-[#CC6699]"
     },
     {
-        image: <Next />,
-        title: "something",
-        color: "yellow"
+        image: <SvgIcon className="svg-skill-icon" title="Next.js logo" d={nextjsIcon} viewBox="0 0 48 48" />,
+        title: "NextJs",
+        hoverClassName: "group-hover:text-gray-500"
     },
+    // {
+    //     image: <Graphql />,
+    //     title: "GraphQL",
+    // },
     {
-        image: <Graphql />,
+        image: <SvgIcon className="svg-skill-icon" title="Tailwind CSS logo" d={tailwindIcon} viewBox="0 0 64 64" />,
         title: "something",
-        color: "yellow"
-    },
-    {
-        image: <Tailwind />,
-        title: "something",
-        color: "yellow"
+        hoverClassName: "group-hover:text-[#06B6D4]"
     },
 ]
 
 export default function Skills() {
     return (
-        <section className="flex content-center px-2 flex-wrap">
+        <section className="flex flex-wrap overflow-hidden">
             {
                 skills.map((skill, index) => {
-                    return <Skill key={index} image={skill.image} title={skill.title} color={skill.color} />
+                    return <Skill key={index} image={skill.image} title={skill.title} hoverClassName={skill.hoverClassName} />
                 })
             }
         </section>
