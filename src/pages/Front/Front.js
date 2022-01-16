@@ -4,6 +4,8 @@ import About from '../../components/Home/About';
 import Title from "../../Elements/Title";
 import Skills from "../../components/Home/Skills";
 import Timelines from "../../components/Home/Timelines";
+import Contact from "../../components/Home/Contact";
+import Footer from "../../components/Home/Footer";
 
 export default function Front() {
     return (
@@ -21,6 +23,8 @@ export default function Front() {
                 <About />
                 <Skills />
                 <Timelines />
+                <Contact />
+                <Footer />
             </Container>
         </main>
     )

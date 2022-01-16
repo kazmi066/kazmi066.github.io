@@ -18,12 +18,13 @@
     @apply text-sm;
   }
   a {
-    @apply text-blue-600 underline;
+    @apply text-blue-600 underline no-underline font-bold;
   }
 }
 
 @tailwind components;
 @tailwind utilities;
+
 
 *{
   margin: 0;
