@@ -14,7 +14,7 @@ export default function Home() {
     }, [])
 
     return (
-        <main id="home">
+        <main id="home" className="dark:bg-black dark:text-white">
             <FrontLoader>
                 <Header />
                 <Front />

@@ -1,8 +1,9 @@
 import Container from "../../components/Container";
 import awais from '../../assets/awais.jpg';
-import About from '../../components/About';
+import About from '../../components/Home/About';
 import Title from "../../Elements/Title";
-import Skills from "../../components/Skills";
+import Skills from "../../components/Home/Skills";
+import Timelines from "../../components/Home/Timelines";
 
 export default function Front() {
     return (
@@ -18,11 +19,8 @@ export default function Front() {
                     </div>
                 </div>
                 <About />
-                <div className="pt-12">
-                    <Title title="tech skills" />
-                    <h4 className="py-8">Here are some of the technologies and tools I'm proficient and comfortable with:</h4>
-                    <Skills />
-                </div>
+                <Skills />
+                <Timelines />
             </Container>
         </main>
     )

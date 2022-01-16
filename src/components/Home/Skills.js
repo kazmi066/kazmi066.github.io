@@ -1,4 +1,4 @@
-import Skill from "../Elements/Skill"
+import Skill from "../../Elements/Skill"
 import SvgIcon, {
     cssIcon,
     htmlIcon,
@@ -6,11 +6,10 @@ import SvgIcon, {
     nextjsIcon,
     nodejsIcon,
     reactIcon,
-    rokuIcon,
     sassIcon,
     tailwindIcon,
-    typescriptIcon
-} from '../components/svg-icon';
+} from '../svg-icon';
+import Title from "../../Elements/Title";
 
 const skills = [
     {
@@ -62,6 +61,10 @@ const skills = [
 export default function Skills() {
     return (
         <section className="flex flex-wrap overflow-hidden">
+            <div className="pt-12">
+                <Title title="tech skills" />
+                <h4 className="py-8">Here are some of the technologies and tools I'm proficient and comfortable with:</h4>
+            </div>
             {
                 skills.map((skill, index) => {
                     return <Skill key={index} image={skill.image} title={skill.title} hoverClassName={skill.hoverClassName} />
