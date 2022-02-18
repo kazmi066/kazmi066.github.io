@@ -53,7 +53,7 @@ const skills = [
     // },
     {
         image: <SvgIcon className="svg-skill-icon" title="Tailwind CSS logo" d={tailwindIcon} viewBox="0 0 64 64" />,
-        title: "something",
+        title: "Tailwind-css",
         hoverClassName: "group-hover:text-[#06B6D4]"
     },
 ]
