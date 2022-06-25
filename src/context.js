@@ -1,4 +1,4 @@
-import { useState, createContext, useContext } from 'react';
+import { useState, createContext, useMemo, useContext } from 'react';
 
 const initialState = {
     loading: true,
@@ -11,13 +11,13 @@ const AppProvider = ({ children }) => {
     const [loading, setLoading] = useState(initialState.loading);
     const [data, setData] = useState(initialState.data);
 
-    const memoedState = () => {
+    const memoedState = useMemo(() => {
         return {
             loading,
             setLoading,
             data
         }
-    }
+    }, [loading, data]);
 
     return (
         <AppContext.Provider value={memoedState}>
