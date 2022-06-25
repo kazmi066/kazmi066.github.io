@@ -9,7 +9,7 @@ export default function FrontLoader({ children }) {
         setTimeout(() => {
             setLoading(false);
         }, 1500)
-    }, [])
+    }, [setLoading])
 
     return (
         <>

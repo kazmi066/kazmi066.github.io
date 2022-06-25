@@ -9,7 +9,7 @@ const AppContext = createContext(initialState);
 
 const AppProvider = ({ children }) => {
     const [loading, setLoading] = useState(initialState.loading);
-    const [data, setData] = useState(initialState.data);
+    const [data] = useState(initialState.data);
 
     const memoedState = useMemo(() => {
         return {

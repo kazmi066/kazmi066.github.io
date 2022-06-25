@@ -1,7 +1,6 @@
 import Container from "../../components/Container";
 import awais from '../../assets/awais.jpg';
 import About from '../../components/Home/About';
-import Title from "../../Elements/Title";
 import Skills from "../../components/Home/Skills";
 import Timelines from "../../components/Home/Timelines";
 import Contact from "../../components/Home/Contact";
