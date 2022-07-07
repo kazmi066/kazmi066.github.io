@@ -23,8 +23,8 @@ export default function Timelines() {
     ]
 
     return (
-        <article>
-            <div className="py-12">
+        <article className="mt-12">
+            <div className="pb-4">
                 <Title title="Career" />
             </div>
             {

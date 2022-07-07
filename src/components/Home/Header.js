@@ -16,7 +16,7 @@ export default function Header() {
     const [label, icon, iconLabel] = moon === false ? ['Light mode', sunIcon, 'Sun icon'] : ['Dark mode', moonIcon, 'Moon icon']
 
     return (
-        <header className="py-2 px-10">
+        <header className="py-4">
             <Container>
                 <div className="flex items-center justify-between">
                     <h1

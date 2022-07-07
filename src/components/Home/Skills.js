@@ -60,8 +60,8 @@ const skills = [
 
 export default function Skills() {
     return (
-        <section className="flex flex-wrap overflow-hidden">
-            <div className="pt-12">
+        <section className="flex flex-wrap overflow-hidden mt-12">
+            <div>
                 <Title title="tech skills" />
                 <h4 className="py-8">Here are some of the technologies and tools I'm proficient and comfortable with:</h4>
             </div>
