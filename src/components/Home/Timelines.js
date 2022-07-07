@@ -9,16 +9,22 @@ export default function Timelines() {
             text: "Worked with different clients on React and Javascript based projects. Really helped me to learn new things, improve my skills and get a better understanding of the programming."
         },
         {
-            date: '2020-08-01',
+            date: '2021-08-01',
             dateString: 'August 2021 - September 2021',
             work: 'AlphaSquad',
             text: "Got offered an internship as a Fullstack Developer. I worked on company on-going projects based on AWS and NextJS. It was a breakthrough experience for me to learn industry level stuff."
         },
         {
-            date: '2020-09-01',
+            date: '2021-09-01',
             dateString: 'September 2021 - January 2022',
             work: 'Mexil Software Solutions',
             text: "Really good experience at Mexil as Fullstack engineer. I Worked with several projects till deployment and maintained different workflows."
+        },
+        {
+            date: '2022-04-01',
+            dateString: 'April 2022 - Present',
+            work: 'Stellar Minore',
+            text: "Working as a frontend developer at Stellar Minore."
         },
     ]
 
