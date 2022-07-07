@@ -1,4 +1,5 @@
 import Container from '../../components/Container';
+import Styles from './Home.module.css';
 import FrontLoader from '../../components/FrontLoader';
 import Header from '../../components/Home/Header';
 import awais from '../../assets/awais.jpg';
@@ -10,11 +11,14 @@ import Footer from "../../components/Home/Footer";
 
 export default function Home() {
     return (
-        <main id="home" className="dark:bg-black dark:text-white py-8">
+        <main className={`text-white ${Styles.mainContainer}`}>
+            <div className={Styles.gradientCover1}></div>
+            <div className={Styles.gradientCover2}></div>
+            <div className={Styles.gradientCover3}></div>
             <FrontLoader>
                 <Header />
                 <Container>
-                    <div className="flex items-center content-center gap-4">
+                    <div className="flex items-center content-center gap-4 mt-4">
                         <div className="person_image">
                             <img className="w-20 rounded-full" src={awais} alt="broken" />
                         </div>
