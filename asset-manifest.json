@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/static/css/main.17c6d416.css",
-    "main.js": "/static/js/main.0b1344c1.js",
+    "main.css": "/static/css/main.be9ddddf.css",
+    "main.js": "/static/js/main.3915f058.js",
     "static/media/awais.jpg": "/static/media/awais.bcfa15bb1f421a847c09.jpg",
     "index.html": "/index.html",
-    "main.17c6d416.css.map": "/static/css/main.17c6d416.css.map",
-    "main.0b1344c1.js.map": "/static/js/main.0b1344c1.js.map"
+    "main.be9ddddf.css.map": "/static/css/main.be9ddddf.css.map",
+    "main.3915f058.js.map": "/static/js/main.3915f058.js.map"
   },
   "entrypoints": [
-    "static/css/main.17c6d416.css",
-    "static/js/main.0b1344c1.js"
+    "static/css/main.be9ddddf.css",
+    "static/js/main.3915f058.js"
   ]
 }
