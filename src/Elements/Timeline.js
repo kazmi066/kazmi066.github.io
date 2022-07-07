@@ -8,7 +8,7 @@ export default function Timeline({ date, dateString, work, children }) {
                 </time>
             </div>
             <div className="flex flex-col pl-8 text-gray-600 dark:text-gray-400 relative before:bg-purple-500 dark:before:bg-green-400 before:h-full before:w-[3px] before:absolute before:left-[0.43em]">
-                <h4 className="text-gray-900 font-bold dark:text-white">
+                <h4 className="text-white font-bold dark:text-white">
                     {work}
                 </h4>
                 {children}

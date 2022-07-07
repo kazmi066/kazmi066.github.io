@@ -31,7 +31,7 @@ export default function Timelines() {
                 career.reverse().map((item, index) => {
                     return (
                         <Timeline key={index} date={item.date} dateString={item.dateString} work={item.work}>
-                            <p className="w-11/12">{item.text}</p>
+                            <p className="w-11/12 text-gray-400">{item.text}</p>
                         </Timeline>
                     )
                 })
