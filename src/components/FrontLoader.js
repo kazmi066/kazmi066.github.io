@@ -12,7 +12,7 @@ export default function FrontLoader({ children }) {
     }, [setLoading])
 
     return (
-        <>
+        <div className="relative z-40">
             {
                 loading ?
                     <div className="flex items-center justify-center h-screen w-full">
@@ -23,6 +23,6 @@ export default function FrontLoader({ children }) {
                     </div> :
                     children
             }
-        </>
+        </div>
     )
 }
