@@ -44,12 +44,11 @@
 
 @media (max-width: 768px) {
     .gradientCover1 {
-        width: 30rem;
-        height: 30rem;
+        width: 20rem;
+        height: 10rem;
     }
     .gradientCover2 {
-        width: 30rem;
-        height: 30rem;
+        display: none;
     }
     .gradientCover3 {
         width: 20rem;
