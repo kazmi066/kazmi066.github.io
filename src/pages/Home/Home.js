@@ -14,7 +14,6 @@ export default function Home() {
         <main className={`text-white ${Styles.mainContainer}`}>
             <div className={Styles.gradientCover1}></div>
             <div className={Styles.gradientCover2}></div>
-            <div className={Styles.gradientCover3}></div>
             <FrontLoader>
                 <Header />
                 <Container>
