@@ -8,6 +8,7 @@ import Skills from "../../components/Home/Skills";
 import Timelines from "../../components/Home/Timelines";
 import Contact from "../../components/Home/Contact";
 import Footer from "../../components/Home/Footer";
+import Projects from '../../components/Home/Projects';
 
 export default function Home() {
     return (
@@ -29,6 +30,7 @@ export default function Home() {
                     <About />
                     <Skills />
                     <Timelines />
+                    <Projects />
                     <Contact />
                     <Footer />
                 </Container>
