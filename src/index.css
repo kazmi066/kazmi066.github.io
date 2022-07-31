@@ -21,7 +21,7 @@
     @apply text-sm;
   }
   a {
-    @apply text-blue-600 underline no-underline font-bold;
+    @apply text-white underline no-underline font-bold;
   }
 }
 
