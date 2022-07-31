@@ -19,9 +19,8 @@ export default function Header() {
         <header className="py-4">
             <Container>
                 <div className="flex items-center justify-between">
-                    <h1
-                        className="text-3xl font-bold py-2">Awais.
-                    </h1>
+                    <div></div>
+                    <button className="font-bold py-2">Contact</button>
                     {/* <button className="flex p-2 text-yellow-400 focus-outline hover:glow" onClick={toggleTheme} area-label={label}>
                         <SvgIcon className="w-5" d={icon} title={iconLabel} viewBox="0 0 512 512" />
                     </button> */}
