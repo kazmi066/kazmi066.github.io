@@ -2,7 +2,7 @@ import Container from '../../components/Container';
 import Styles from './Home.module.css';
 import FrontLoader from '../../components/FrontLoader';
 import Header from '../../components/Home/Header';
-import awais from '../../assets/awais.jpg';
+import awais from '../../assets/awais.png';
 import About from '../../components/Home/About';
 import Skills from "../../components/Home/Skills";
 import Timelines from "../../components/Home/Timelines";
