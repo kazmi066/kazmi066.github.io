@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import Container from '../../components/Container';
 import Styles from './Home.module.css';
 import FrontLoader from '../../components/FrontLoader';
@@ -9,8 +10,16 @@ import Timelines from "../../components/Home/Timelines";
 import Contact from "../../components/Home/Contact";
 import Footer from "../../components/Home/Footer";
 import Projects from '../../components/Home/Projects';
+import Skeleton from 'react-loading-skeleton'
+import 'react-loading-skeleton/dist/skeleton.css'
 
 export default function Home() {
+    const [loaded, setLoaded] = useState(false);
+    
+    setTimeout(() => {
+        setLoaded(true);
+    }, 2000);
+
     return (
         <main className={`text-white ${Styles.mainContainer}`}>
             <div className={Styles.gradientCover1}></div>
@@ -19,10 +28,14 @@ export default function Home() {
                 <Header />
                 <Container>
                     <div className="flex items-center content-center gap-4 mt-4">
-                        <div className="person_image">
-                            <img className="w-20 rounded-full" src={awais} alt="broken" />
+                        <div className="w-20 h-20 rounded-md">
+                            {
+                                loaded
+                                    ? <img className="w-full h-full rounded-md" src={awais} alt="broken" />
+                                    : <Skeleton height={80} baseColor="rgb(104, 31, 104)" highlightColor="#ffffff" />
+                            }
                         </div>
-                        <div className="person_text">
+                        <div className="person_text w-64">
                             <h3 className="font-bold">Awais Abbas Kazmi</h3>
                             <p>Full Stack | JavaScript Developer</p>
                         </div>
