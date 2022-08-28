@@ -1,15 +1,14 @@
 {
   "files": {
-    "main.css": "/static/css/main.03d7a2e5.css",
-    "main.js": "/static/js/main.d8bf5c82.js",
-    "static/media/card_background.jpeg": "/static/media/card_background.160a3c234dc88dd474bf.jpeg",
+    "main.css": "/static/css/main.03625bad.css",
+    "main.js": "/static/js/main.57e084a8.js",
     "static/media/awais.png": "/static/media/awais.756a6c59e9a793f8bfef.png",
     "index.html": "/index.html",
-    "main.03d7a2e5.css.map": "/static/css/main.03d7a2e5.css.map",
-    "main.d8bf5c82.js.map": "/static/js/main.d8bf5c82.js.map"
+    "main.03625bad.css.map": "/static/css/main.03625bad.css.map",
+    "main.57e084a8.js.map": "/static/js/main.57e084a8.js.map"
   },
   "entrypoints": [
-    "static/css/main.03d7a2e5.css",
-    "static/js/main.d8bf5c82.js"
+    "static/css/main.03625bad.css",
+    "static/js/main.57e084a8.js"
   ]
 }
