@@ -23,28 +23,32 @@ export default function Projects() {
 			basicTitle: 'Unsplash-clone',
 			hoveredTitle: 'Unsplash-clone',
 			description: 'Responsive images gallery website built with React and Tailwind.',
-			link: 'https://unsplash-clone-d3.netlify.app/'
+			link: 'https://unsplash-clone-d3.netlify.app/',
+			backgroundImg: 'https://media.giphy.com/media/11y9UBjLh2Rs40/giphy.gif'
 		},
 		{
 			id: 2,
 			basicTitle: 'Ledger',
 			hoveredTitle: 'Ledger',
 			description: 'A fiverr client project dealing with blockchain, built with Next and Tailwind.',
-			link: 'https://ledger-design.netlify.app'
+			link: 'https://ledger-design.netlify.app',
+			backgroundImg: 'https://media.giphy.com/media/gBxL0G0DqZd84/giphy.gif'
 		},
 		{
 			id: 3,
 			basicTitle: 'Febeth',
 			hoveredTitle: 'Febeth Tokens',
 			description: 'A frontend project for client regarding blockchain tokens, built with Next and Tailwind.',
-			link: 'https://febeth-redesign.netlify.app'
+			link: 'https://febeth-redesign.netlify.app',
+			backgroundImg: 'https://media.giphy.com/media/8LpEhnKQ4olb2/giphy.gif'
 		},
 		{
 			id: 4,
 			basicTitle: 'Shroombits',
 			hoveredTitle: 'Shroombits',
 			description: 'A frontend project for a fiverr client regarding NFTs, built with React and Tailwind.',
-			link: 'https://shroombits-102471.netlify.app'
+			link: 'https://shroombits-102471.netlify.app',
+			backgroundImg: 'https://media.giphy.com/media/VeevaQ0W85jzy/giphy.gif'
 		}
 	]
 
@@ -55,7 +59,7 @@ export default function Projects() {
 			{
 				projects.map((project) => (
 					<div key={project.id}>
-						<div className="relative md:inline-block hidden overflow-hidden group sm:mb-0 mb-4 w-24 h-52 transition-all duration-300 ease-in hover:w-64 px-4 bg-[url('assets/card_background.jpeg')] rounded-xl">
+						<div style={{ backgroundImage: `url(${project.backgroundImg})` }} className={`relative md:inline-block hidden overflow-hidden group sm:mb-0 mb-4 w-24 h-52 transition-all duration-300 ease-in hover:w-64 px-4 rounded-xl`}>
 							<div className="absolute top-0 right-0 bottom-0 left-0 bg-[#000000b0]"></div>
 							<div className="md:contents hidden">
 								<h4 className="absolute top-[60%] w-64 -right-[50px] font-bold rotate-90 group-hover:hidden text-bordered">{project.basicTitle}</h4>
