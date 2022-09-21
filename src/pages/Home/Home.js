@@ -30,7 +30,7 @@ export default function Home() {
                             {
                                 loaded
                                     ? <img className="min-w-full h-full object-cover rounded-md" src={awais} alt="broken" />
-                                    : <Skeleton height={80} baseColor="rgb(104, 31, 104)" highlightColor="#ffffff" />
+                                    : <Skeleton height={80} baseColor="#dcdcdc" highlightColor="#ffffff" />
                             }
                         </div>
                         <div className="person_text w-64">

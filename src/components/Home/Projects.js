@@ -79,7 +79,7 @@ export default function Projects() {
 									loaded ? (
 										project.hoveredTitle
 									) : (
-										<Skeleton width={300} height={20} baseColor="rgb(104, 31, 104)" highlightColor="#ffffff" />
+										<Skeleton width={300} height={20} baseColor="#dcdcdc" highlightColor="#ffffff" />
 									)
 								}
 							</h4>
@@ -88,7 +88,7 @@ export default function Projects() {
 									loaded ? (
 										project.description
 									) : (
-										<Skeleton width={200} height={10} baseColor="rgb(104, 31, 104)" highlightColor="#ffffff" />
+										<Skeleton width={200} height={10} baseColor="#dcdcdc" highlightColor="#ffffff" />
 									)
 								}
 							</p>
@@ -98,7 +98,7 @@ export default function Projects() {
 										Demo <i className="fa-solid text-white p-2 rounded-full fa-arrow-up-right-from-square"></i>
 									</a>
 								) : (
-									<Skeleton width={100} height={20} baseColor="rgb(104, 31, 104)" highlightColor="#ffffff" />
+									<Skeleton width={100} height={20} baseColor="#dcdcdc" highlightColor="#ffffff" />
 								)
 							}
 						</div>
