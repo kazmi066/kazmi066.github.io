@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/static/css/main.03625bad.css",
-    "main.js": "/static/js/main.57e084a8.js",
-    "static/media/awais.png": "/static/media/awais.756a6c59e9a793f8bfef.png",
+    "main.css": "/static/css/main.9e2c1cae.css",
+    "main.js": "/static/js/main.58252c52.js",
+    "static/media/awais.jpg": "/static/media/awais.29de51fc16a3e0c1b1aa.jpg",
     "index.html": "/index.html",
-    "main.03625bad.css.map": "/static/css/main.03625bad.css.map",
-    "main.57e084a8.js.map": "/static/js/main.57e084a8.js.map"
+    "main.9e2c1cae.css.map": "/static/css/main.9e2c1cae.css.map",
+    "main.58252c52.js.map": "/static/js/main.58252c52.js.map"
   },
   "entrypoints": [
-    "static/css/main.03625bad.css",
-    "static/js/main.57e084a8.js"
+    "static/css/main.9e2c1cae.css",
+    "static/js/main.58252c52.js"
   ]
 }
