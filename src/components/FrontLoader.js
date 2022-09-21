@@ -51,7 +51,7 @@ export default function FrontLoader({ children }) {
                                             delay: i * 0.1
                                         }
                                     })
-                                }}>Awais Abbas
+                                }}>{"</>"}
                             </SplitText>    
                         </motion.div>
                     </div> :
