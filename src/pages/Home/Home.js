@@ -3,7 +3,7 @@ import Container from '../../components/Container';
 import Styles from './Home.module.css';
 import FrontLoader from '../../components/FrontLoader';
 import Header from '../../components/Home/Header';
-import awais from '../../assets/awais.png';
+import awais from '../../assets/awais.jpg';
 import About from '../../components/Home/About';
 import Skills from "../../components/Home/Skills";
 import Timelines from "../../components/Home/Timelines";
@@ -29,7 +29,7 @@ export default function Home() {
                         <div className="w-20 h-20 rounded-md">
                             {
                                 loaded
-                                    ? <img className="w-full h-full rounded-md" src={awais} alt="broken" />
+                                    ? <img className="min-w-full h-full object-cover rounded-md" src={awais} alt="broken" />
                                     : <Skeleton height={80} baseColor="rgb(104, 31, 104)" highlightColor="#ffffff" />
                             }
                         </div>

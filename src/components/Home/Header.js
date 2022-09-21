@@ -1,5 +1,4 @@
 import Container from '../Container';
-import SvgIcon from '../svg-icon';
 // import { useState } from 'react';
 
 export default function Header() {
@@ -20,7 +19,7 @@ export default function Header() {
             <Container>
                 <div className="flex items-center justify-between">
                     <div></div>
-                    <a href="#contact" className="border border transition-colors rounded-sm px-4 py-1 hover:bg-white hover:text-black">Contact</a>
+                    <a href="#contact" className="border border-black transition-colors text-black rounded-md px-4 py-1 hover:bg-black hover:text-white">Contact</a>
                     {/* <button className="flex p-2 text-yellow-400 focus-outline hover:glow" onClick={toggleTheme} area-label={label}>
                         <SvgIcon className="w-5" d={icon} title={iconLabel} viewBox="0 0 512 512" />
                     </button> */}

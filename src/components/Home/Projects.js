@@ -58,9 +58,8 @@ export default function Projects() {
 		<div className="md:flex block gap-4 md:mt-8 mt-4 items-center" ref={ref}>
 			{
 				projects.map((project) => (
-					<div key={project.id}>
+					<div key={project.id} className="text-white">
 						<div style={{ backgroundImage: `url(${project.backgroundImg})` }} className={`relative md:inline-block hidden overflow-hidden group sm:mb-0 mb-4 w-24 h-52 transition-all duration-300 ease-in hover:w-64 px-4 rounded-xl`}>
-							<div className="absolute top-0 right-0 bottom-0 left-0 bg-[#000000b0]"></div>
 							<div className="md:contents hidden">
 								<h4 className="absolute top-[60%] w-64 -right-[50px] font-bold rotate-90 group-hover:hidden text-bordered">{project.basicTitle}</h4>
 								<h4 className="relative z-10 invisible font-bold pt-4 leading-tight pb-2 transition-opacity opacity-0 group-hover:opacity-100 group-hover:visible delay-300">
@@ -74,7 +73,7 @@ export default function Projects() {
 								</a>
 							</div>
 						</div>
-						<div className="md:hidden">
+						<div className="md:hidden text-black">
 							<h4 className="font-bold pt-8 leading-tight pb-2">
 								{
 									loaded ? (
@@ -95,8 +94,8 @@ export default function Projects() {
 							</p>
 							{
 								loaded ? (
-									<a className="text-sm group w-auto bg-white text-black rounded-md py-1 px-2 transition-colors" href={project.link} target="_blank" rel="noopener noreferrer">
-										Demo <i className="fa-solid text-black p-2 text-white rounded-full fa-arrow-up-right-from-square"></i>
+									<a className="text-sm group w-auto bg-black text-white rounded-md py-2 px-2 transition-colors" href={project.link} target="_blank" rel="noopener noreferrer">
+										Demo <i className="fa-solid text-white p-2 rounded-full fa-arrow-up-right-from-square"></i>
 									</a>
 								) : (
 									<Skeleton width={100} height={20} baseColor="rgb(104, 31, 104)" highlightColor="#ffffff" />
