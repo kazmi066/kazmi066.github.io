@@ -1,14 +1,16 @@
 {
   "files": {
-    "main.css": "/static/css/main.9e2c1cae.css",
-    "main.js": "/static/js/main.9051c439.js",
+    "main.css": "/static/css/main.b19ee4d8.css",
+    "main.js": "/static/js/main.7b5861a5.js",
+    "static/media/glitch-1.png": "/static/media/glitch-1.f3356498d03879da3f29.png",
+    "static/media/glitch-2.png": "/static/media/glitch-2.3de41902b871a6db25f4.png",
     "static/media/awais.jpg": "/static/media/awais.29de51fc16a3e0c1b1aa.jpg",
     "index.html": "/index.html",
-    "main.9e2c1cae.css.map": "/static/css/main.9e2c1cae.css.map",
-    "main.9051c439.js.map": "/static/js/main.9051c439.js.map"
+    "main.b19ee4d8.css.map": "/static/css/main.b19ee4d8.css.map",
+    "main.7b5861a5.js.map": "/static/js/main.7b5861a5.js.map"
   },
   "entrypoints": [
-    "static/css/main.9e2c1cae.css",
-    "static/js/main.9051c439.js"
+    "static/css/main.b19ee4d8.css",
+    "static/js/main.7b5861a5.js"
   ]
 }
