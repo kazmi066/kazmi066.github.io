@@ -7,26 +7,4 @@
     border-radius: 50% 50% 46% 54% / 51% 47% 53% 49%;
     background: url('../../assets/awais.jpg');
     background-size: cover;
-
-    animation: glitch 1s infinite steps(1);
-    animation-duration: 5s;
-}
-
-@keyframes glitch {
-    0%, 70%, 100% {
-        background: url('../../assets/awais.jpg');
-        background-size: cover;
-    }
-    50% {
-        background: url('../../assets/glitch-1.png');
-        filter: grayscale(100%);
-        background-size: cover;
-    }
-    60.5% {
-        background: url('../../assets/glitch-2.png');
-        background-size: cover;
-    }
-    69% {
-        filter: grayscale(0%);
-    }
 }

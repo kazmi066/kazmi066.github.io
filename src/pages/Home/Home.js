@@ -17,7 +17,7 @@ export default function Home() {
                 <Header />
                 <Container>
                     <div className="flex items-center content-center gap-4 mt-4">
-                        <div className={`w-20 h-20 rounded-md ${Styles.avatar}`}>
+                        <div className={`w-20 h-20 ${Styles.avatar}`}>
                         </div>
                         <div className="person_text w-64">
                             <h3 className="font-bold">Awais Abbas Kazmi</h3>
