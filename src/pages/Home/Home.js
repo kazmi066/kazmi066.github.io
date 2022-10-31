@@ -9,12 +9,16 @@ import Contact from "../../components/Home/Contact";
 import Footer from "../../components/Home/Footer";
 // import Projects from '../../components/Home/Projects';
 import 'react-loading-skeleton/dist/skeleton.css'
+import useOnScreen from '../../hooks/useOnScreen';
 
 export default function Home() {
     return (
         <main className={`text-white ${Styles.mainContainer}`}>
             <FrontLoader>
                 <Header />
+                <div className="fixed top-2 flex w-full items-center justify-center">
+                    <div className={Styles.dynamicIsland}>Nothing</div>
+                </div>
                 <Container>
                     <div className="flex items-center content-center gap-4 mt-4">
                         <div className={`w-20 h-20 ${Styles.avatar}`}>
