@@ -1,21 +1,23 @@
-import { useEffect, useState } from "react"
+import { useEffect, useMemo, useState } from "react"
 
 export default function useOnScreen(ref) {
+    const [isIntersecting, setIsIntersecting] = useState(false);
 
-    const [isIntersecting, setIntersecting] = useState(false)
-
-    const observer = new IntersectionObserver(
-        ([entry]) => setIntersecting(entry.isIntersecting)
-    )
-
+    const observer = useMemo(
+      () =>
+        new IntersectionObserver(([entry]) =>
+          setIsIntersecting(entry.isIntersecting),
+        ),
+      [],
+    );
+  
     useEffect(() => {
-        observer.observe(ref.current)
-
-        // Remove the observer as soon as the component is unmounted
-        return () => { observer.disconnect() }
-
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [])
-
+      observer.observe(ref.current);
+  
+      return () => {
+        observer.disconnect();
+      };
+    }, [ref, observer]);
+  
     return isIntersecting;
 }
