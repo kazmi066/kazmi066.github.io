@@ -9,7 +9,6 @@ import Contact from "../../components/Home/Contact";
 import Footer from "../../components/Home/Footer";
 // import Projects from '../../components/Home/Projects';
 import 'react-loading-skeleton/dist/skeleton.css'
-import useOnScreen from '../../hooks/useOnScreen';
 
 export default function Home() {
     return (
