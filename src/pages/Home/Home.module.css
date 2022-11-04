@@ -8,11 +8,3 @@
     background: url('../../assets/awais.jpg');
     background-size: cover;
 }
-
-.dynamicIsland {
-    padding: 10px 20px;
-    background: black;
-    border-radius: 30px;
-    font-weight: bold;
-    color: white;
-}
