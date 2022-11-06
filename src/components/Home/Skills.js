@@ -1,75 +1,67 @@
 import Skill from "../../Elements/Skill"
-import SvgIcon, {
-    cssIcon,
-    htmlIcon,
-    javascriptIcon,
-    nextjsIcon,
-    nodejsIcon,
-    reactIcon,
-    sassIcon,
-    tailwindIcon,
-} from '../svg-icon';
 import Title from "../../Elements/Title";
 
 const skills = [
     {
-        image: <SvgIcon className="svg-skill-icon" title="JavaScript logo" d={javascriptIcon} viewBox="0 0 50 50" />,
-        title: "Javascript",
-        hoverClassName: "group-hover:text-[#F0DB4F]"
+        image: "https://skillicons.dev/icons?i=javascript&theme=light",
+        title: "Javascript"
     },
     {
-        image: <SvgIcon className="svg-skill-icon" title="HTML logo" d={htmlIcon} viewBox="0 0 50 50" />,
-        title: "Html",
-        hoverClassName: "group-hover:text-[#E34C26]"
+        image: "https://skillicons.dev/icons?i=html&theme=light",
+        title: "Html"
     },
     {
-        image: <SvgIcon className="svg-skill-icon" title="CSS logo" d={cssIcon} viewBox="0 0 128 128" />,
-        title: "Css",
-        hoverClassName: "group-hover:text-[#2965F1]"
+        image: "https://skillicons.dev/icons?i=css&theme=light",
+        title: "Css"
     },
     {
-        image: <SvgIcon className="svg-skill-icon" title="React.js logo" d={reactIcon} viewBox="0 0 50 50" />,
-        title: "React",
-        hoverClassName: "group-hover:text-[#61DBFB]"
+        image: "https://skillicons.dev/icons?i=react&theme=light",
+        title: "React"
     },
     {
-        image: <SvgIcon className="svg-skill-icon" title="Node.js logo" d={nodejsIcon} viewBox="0 0 32 32" />,
-        title: "Node",
-        hoverClassName: "group-hover:text-[#3C873A]"
+        image: "https://skillicons.dev/icons?i=tailwind&theme=light",
+        title: "Tailwind-css"
     },
     {
-        image: <SvgIcon className="svg-skill-icon" title="Sass logo" d={sassIcon} viewBox="0 0 50 50" />,
-        title: "Sass",
-        hoverClassName: "group-hover:text-[#CC6699]"
+        image: "https://skillicons.dev/icons?i=bootstrap&theme=light",
+        title: "Bootstrap"
     },
     {
-        image: <SvgIcon className="svg-skill-icon" title="Next.js logo" d={nextjsIcon} viewBox="0 0 48 48" />,
-        title: "NextJs",
-        hoverClassName: "group-hover:text-gray-500"
+        image: "https://skillicons.dev/icons?i=nodejs&theme=light",
+        title: "Node"
+    },
+    {
+        image: "https://skillicons.dev/icons?i=express&theme=light",
+        title: "ExpressJs"
+    },
+    {
+        image: "https://skillicons.dev/icons?i=sass&theme=light",
+        title: "Sass"
+    },
+    {
+        image: "https://skillicons.dev/icons?i=nextjs&theme=light",
+        title: "NextJs"
     },
     // {
     //     image: <Graphql />,
     //     title: "GraphQL",
     // },
-    {
-        image: <SvgIcon className="svg-skill-icon" title="Tailwind CSS logo" d={tailwindIcon} viewBox="0 0 64 64" />,
-        title: "Tailwind-css",
-        hoverClassName: "group-hover:text-[#06B6D4]"
-    },
 ]
 
 export default function Skills() {
     return (
-        <section className="flex flex-wrap overflow-hidden mt-12">
-            <div>
+        <>
+            <div className="mt-12">
                 <Title title="tech skills" />
                 <h4 className="py-8">Here are some of the technologies and tools I'm proficient and comfortable with:</h4>
             </div>
-            {
-                skills.map((skill, index) => {
-                    return <Skill key={index} image={skill.image} title={skill.title} hoverClassName={skill.hoverClassName} />
-                })
-            }
-        </section>
+            <section className="flex flex-wrap align-center justify-start gap-4 overflow-hidden">
+                {
+                    skills.map((skill, index) => {
+                        return <Skill key={index} image={skill.image} title={skill.title} />
+                    })
+                }
+            </section>
+        </>
     )
 }
