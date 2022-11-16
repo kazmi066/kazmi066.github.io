@@ -5,7 +5,16 @@
 }
 
 .avatar {
-    border-radius: 50% 50% 46% 54% / 51% 47% 53% 49%;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
     background: url('../../assets/awais.jpg');
     background-size: cover;
+}
+
+@media (max-width: 768px) {
+    .avatar {
+        width: 70px;
+        height: 70px;
+    }
 }
