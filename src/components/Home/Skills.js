@@ -20,7 +20,7 @@ const skills = [
     },
     {
         image: "https://skillicons.dev/icons?i=tailwind&theme=light",
-        title: "Tailwind-css"
+        title: "Tailwind"
     },
     {
         image: "https://skillicons.dev/icons?i=bootstrap&theme=light",
@@ -46,6 +46,37 @@ const skills = [
     //     image: <Graphql />,
     //     title: "GraphQL",
     // },
+];
+
+const tools = [
+    {
+        image: "https://skillicons.dev/icons?i=git&theme=light",
+        title: "Git"
+    },
+    {
+        image: "https://skillicons.dev/icons?i=github&theme=light",
+        title: "Github"
+    },
+    {
+        image: "https://skillicons.dev/icons?i=vscode&theme=light",
+        title: "VSCode"
+    },
+    {
+        image: "https://skillicons.dev/icons?i=figma&theme=light",
+        title: "Figma"
+    },
+    {
+        image: "https://skillicons.dev/icons?i=bash&theme=light",
+        title: "Bash"
+    },
+    {
+        image: "https://skillicons.dev/icons?i=codepen&theme=light",
+        title: "Codepen"
+    },
+    {
+        image: "https://skillicons.dev/icons?i=discord&theme=light",
+        title: "Discord"
+    },
 ]
 
 export default function Skills() {
@@ -53,11 +84,19 @@ export default function Skills() {
         <>
             <div className="mt-12">
                 <Title title="tech skills" />
-                <h4 className="py-8">Here are some of the technologies and tools I'm proficient and comfortable with:</h4>
+                <h4 className="py-8">Here are some of the technologies I'm proficient and comfortable with:</h4>
             </div>
             <section className="flex flex-wrap align-center justify-start gap-4 overflow-hidden">
                 {
                     skills.map((skill, index) => {
+                        return <Skill key={index} image={skill.image} title={skill.title} />
+                    })
+                }
+            </section>
+            <h4 className="py-7">Tools I use:</h4>
+            <section className="flex flex-wrap align-center justify-start gap-4 overflow-hidden">
+                {
+                    tools.map((skill, index) => {
                         return <Skill key={index} image={skill.image} title={skill.title} />
                     })
                 }
