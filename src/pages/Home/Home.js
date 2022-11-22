@@ -20,7 +20,7 @@ export default function Home() {
                         <div className={`w-20 h-20 ${Styles.avatar}`}>
                         </div>
                         <div className="person_text sm:w-64 w-54">
-                            <h3 className="font-bold sm:text-[1.5rem] text-[1.4rem]">Awais Abbas Kazmi</h3>
+                            <h3 className="font-bold sm:text-[1.5rem] text-[1.3rem]">Awais Abbas Kazmi</h3>
                             <p className="sm:text-[16px] text-[14px]">Full Stack | JavaScript Developer</p>
                         </div>
                     </div>
