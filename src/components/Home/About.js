@@ -3,7 +3,7 @@ export default function About() {
         <div className="mt-8">
             <h4>
                 I'm a software engineer specializing in building exceptional websites.
-                My interest in web development starting back in 2020 during my university - turns out making CRUD operations
+                My interest in web development starting back in 2019 during my university - turns out making CRUD operations
                 for a semester project made me curios about the web industry.
                 <br />
                 My focus right now is <b>React</b>, <b>Next</b> and <b>Typescript</b>.
