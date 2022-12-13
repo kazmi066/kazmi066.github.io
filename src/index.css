@@ -35,3 +35,12 @@ html, body{
   scroll-behavior: smooth;
   font-family: 'Lato', monospace, sans-serif;
 }
+
+.react-tabs__tab {
+  border: none !important;
+  position: unset !important;
+}
+
+.react-tabs__tab.react-tabs__tab--selected {
+  border-radius: 0px;
+}
