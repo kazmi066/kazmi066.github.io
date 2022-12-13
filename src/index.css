@@ -43,4 +43,11 @@ html, body{
 
 .react-tabs__tab.react-tabs__tab--selected {
   border-radius: 0px;
+  animation-name: fadeIn;
+  animation-duration: 300ms;
+  animation-timing-function: linear;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; } to { opacity: 1; }
 }
