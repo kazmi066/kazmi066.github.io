@@ -8,6 +8,9 @@ export const ProjectCard = ({ project }) => {
             <p className="mb-4 text-sm">
                 {project.description}
             </p>
+            <p className="capitalize"><b>Stack:</b> {
+                project.stack?.map((p, index) => `${p}${index === project.stack.length - 1 ? '' : ', '}`)
+            }</p>
             <a className="absolute bottom-4 right-4" href={project.link} target="_blank" rel="noopener noreferrer">
                 <i className="fa-solid bg-white text-black p-2 rounded-full fa-arrow-up-right-from-square"></i>
             </a>
