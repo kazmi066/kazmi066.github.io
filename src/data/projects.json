@@ -4,14 +4,14 @@
         "basicTitle": "Ledger",
         "description": "A fiverr client project dealing with blockchain, built with Next and Tailwind.",
         "link": "https://ledger-design.netlify.app",
-        "backgroundImg": "https://media.giphy.com/media/gBxL0G0DqZd84/giphy.gif",
+        "backgroundImg": "https://media.giphy.com/media/dejmNXDWTU7gmy2Y0N/giphy.gif",
         "category": "next",
         "stack": ["next", "tailwind"]
     },
     {
         "id": 2,
         "basicTitle": "Febeth",
-        "description": "A frontend project for client regarding blockchain tokens, built with Next and Tailwind.",
+        "description": "Fabeth is an Austrian play-and-earn gamefi DAO. Febeth partners with game developers across the globe to integrate their games on blockchains.",
         "link": "https://febeth-redesign.netlify.app",
         "backgroundImg": "https://media.giphy.com/media/8LpEhnKQ4olb2/giphy.gif",
         "category": "next",
@@ -22,7 +22,7 @@
         "basicTitle": "Shroombits",
         "description": "ShroomBits is a collection of cute and unique pixel mushrooms that live on the Ethereum and Matic networks.",
         "link": "https://shroombits-102471.netlify.app",
-        "backgroundImg": "https://media.giphy.com/media/VeevaQ0W85jzy/giphy.gif",
+        "backgroundImg": "https://media.giphy.com/media/uXYy46IRliHQdfX0Jw/giphy.gif",
         "category": "react",
         "stack": ["react", "tailwind"]
     },
@@ -31,7 +31,7 @@
         "basicTitle": "Dao-b Wallet",
         "description": "Dao-b Wallet is a decentralized cryptocurrency wallet that supports more than 500 coins and tokens, providing simplicity, safety, and convenience for its users.",
         "link": "https://dao-b-7c8a5a.netlify.app/admin/dashboard",
-        "backgroundImg": "https://media.giphy.com/media/11y9UBjLh2Rs40/giphy.gif",
+        "backgroundImg": "https://media.giphy.com/media/RCrvFCK5LTNe5mw4Wv/giphy.gif",
         "category": "react",
         "stack": ["react", "tailwind"]
     },
