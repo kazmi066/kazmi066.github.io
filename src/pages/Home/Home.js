@@ -1,3 +1,4 @@
+import React, { Suspense } from 'react';
 import Container from '../../components/Container';
 import Styles from './Home.module.css';
 import FrontLoader from '../../components/FrontLoader';
@@ -7,8 +8,9 @@ import Skills from "../../components/Home/Skills";
 import Timelines from "../../components/Home/Timelines";
 import Contact from "../../components/Home/Contact";
 import Footer from "../../components/Home/Footer";
-import Projects from '../../components/Home/Projects';
-import 'react-loading-skeleton/dist/skeleton.css'
+import 'react-loading-skeleton/dist/skeleton.css';
+
+const Projects = React.lazy(() => import('../../components/Home/Projects'));
 
 export default function Home() {
     return (
@@ -27,7 +29,9 @@ export default function Home() {
                     <About />
                     <Skills />
                     <Timelines />
-                    <Projects />
+                    <Suspense fallback={<div>Loading...</div>}>
+                        <Projects />
+                    </Suspense>
                     <Contact />
                     <Footer />
                 </Container>
