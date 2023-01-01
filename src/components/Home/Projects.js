@@ -22,7 +22,7 @@ export default function Projects() {
 	return (
 		<section className="pt-12">
 			<Title title="Projects" />
-			<Tabs className="mt-10 sticky top-0">
+			<Tabs className="mt-10">
 				<TabList className="border-b-[1px] border-gray-600">
 					<Tab>React.js</Tab>
 					<Tab>Next.js</Tab>
