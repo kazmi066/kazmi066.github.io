@@ -1,5 +1,6 @@
-import SocialIcon from '../../Elements/SocialIcon'
-import SvgIcon, { githubIcon, linkedinIcon, stackoverflowIcon, twitterIcon } from '../svg-icon'
+import SocialIcon from '../../Elements/SocialIcon';
+import SvgIcon, { githubIcon, linkedinIcon, stackoverflowIcon, twitterIcon } from '../svg-icon';
+import { ReactComponent as YoutubeIcon } from '../../assets/youtube_footer.svg';
 
 export default function Footer() {
     const currentYear = new Date().getFullYear()
@@ -17,6 +18,9 @@ export default function Footer() {
                 </SocialIcon>
                 <SocialIcon href="https://www.linkedin.com/in/kazmi066" label="LinkedIn">
                     <SvgIcon className="w-8 h-8 hover:opacity-70 fill-white transition-opacity" d={linkedinIcon} title="LinkedIn logo" viewBox="0 0 32 32" />
+                </SocialIcon>
+                <SocialIcon href="https://www.youtube.com/@theweekendcoder" label="Youtube">
+                    <div className="rotate-180 -scale-75 -ml-1"><YoutubeIcon /></div>
                 </SocialIcon>
             </ul>
             <p className="text-center text-sm pt-2">Awais Abbas © {currentYear}</p>
