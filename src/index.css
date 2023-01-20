@@ -4,6 +4,12 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 @layer base {
   h1 {
     @apply text-4xl;
@@ -23,12 +29,6 @@
   a {
     @apply text-white underline no-underline font-bold;
   }
-}
-
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
 }
 
 html, body{
