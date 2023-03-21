@@ -43,5 +43,14 @@
         "backgroundImg": "https://media.giphy.com/media/11y9UBjLh2Rs40/giphy.gif",
         "category": "react",
         "stack": ["react", "tailwind"]
+    },
+    {
+        "id": 5,
+        "basicTitle": "Zeej",
+        "description": "ZEEJ Events provides end-to-end event solutions powered by proprietary data and algorithms and executed by partners vetted for quality.",
+        "link": "https://zeej.netlify.app/",
+        "backgroundImg": "https://media.giphy.com/media/8L17z7N2tOCxMDlfE0/giphy.gif",
+        "category": "next",
+        "stack": ["next", "tailwind"]
     }
 ]
