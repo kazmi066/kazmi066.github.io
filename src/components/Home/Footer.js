@@ -1,6 +1,5 @@
 import SocialIcon from '../../Elements/SocialIcon';
 import SvgIcon, { githubIcon, linkedinIcon, stackoverflowIcon, twitterIcon } from '../svg-icon';
-import { ReactComponent as YoutubeIcon } from '../../assets/youtube_footer.svg';
 import { useEffect, useRef } from 'react';
 import { fadeRightObserver } from '../../utils/animations';
 
@@ -33,13 +32,6 @@ export default function Footer() {
                     <SvgIcon className="w-8 h-8 hover:opacity-70 fill-white transition-opacity" d={linkedinIcon} title="LinkedIn logo" viewBox="0 0 32 32" />
                 </SocialIcon>,
             delay: 500,
-            ref: useRef(null)
-        },
-        {
-            icon: <SocialIcon href="https://www.youtube.com/@theweekendcoder" label="Youtube">
-                    <div className="rotate-180 -scale-75 -ml-1"><YoutubeIcon /></div>
-                </SocialIcon>,
-            delay: 600,
             ref: useRef(null)
         }
     ];

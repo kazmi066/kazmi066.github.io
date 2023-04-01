@@ -51,3 +51,61 @@ html, body{
 @keyframes fadeIn {
   from { opacity: 0; } to { opacity: 1; }
 }
+
+.gradient {
+  -webkit-animation: moving-gradient 3s linear infinite;
+  -moz-animation: moving-gradient 3s linear infinite;
+  -o-animation: moving-gradient 3s linear infinite;
+  animation: moving-gradient 3s linear infinite;
+}
+
+@-webkit-keyframes moving-gradient {
+  0%{background-position:83% 0%}
+  50%{background-position:18% 100%}
+  100%{background-position:83% 0%}
+}
+@-moz-keyframes moving-gradient {
+  0%{background-position:83% 0%}
+  50%{background-position:18% 100%}
+  100%{background-position:83% 0%}
+}
+@-o-keyframes moving-gradient {
+  0%{background-position:83% 0%}
+  50%{background-position:18% 100%}
+  100%{background-position:83% 0%}
+}
+@keyframes moving-gradient {
+  0%{background-position:83% 0%}
+  50%{background-position:18% 100%}
+  100%{background-position:83% 0%}
+}
+
+.gradient.gradient-1 {
+  background: linear-gradient(120deg, #000000, #e74c3c);
+  background-size: 100% 300%;
+}
+
+.gradient.gradient-2 {
+  background: linear-gradient(13deg, rgb(96 12 86 / 76%), rgb(255 168 37 / 75%));
+  background-size: 100% 300%;
+}
+
+.gradient.gradient-3 {
+  background: linear-gradient(120deg, #16222a, #3a6073);
+  background-size: 100% 300%;
+}
+
+.gradient.gradient-4 {
+  background: linear-gradient(13deg, #360033, #0b8793);
+  background-size: 100% 300%;
+}
+
+.gradient.gradient-5 {
+  background: linear-gradient(13deg, #780206, #061161);
+  background-size: 100% 300%;
+}
+
+.gradient.gradient-6 {
+  background: linear-gradient(13deg, #e7672b, #3634cd);
+  background-size: 100% 300%;
+}

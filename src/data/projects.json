@@ -4,7 +4,7 @@
         "basicTitle": "Ledger",
         "description": "A fiverr client project dealing with blockchain, built with Next and Tailwind.",
         "link": "https://ledger-design.netlify.app",
-        "backgroundImg": "https://media.giphy.com/media/dejmNXDWTU7gmy2Y0N/giphy.gif",
+        "gradient": "gradient-1",
         "category": "next",
         "stack": ["next", "tailwind"]
     },
@@ -13,7 +13,7 @@
         "basicTitle": "Febeth",
         "description": "Fabeth is an Austrian play-and-earn gamefi DAO. Febeth partners with game developers across the globe to integrate their games on blockchains.",
         "link": "https://febeth-redesign.netlify.app",
-        "backgroundImg": "https://media.giphy.com/media/8LpEhnKQ4olb2/giphy.gif",
+         "gradient": "gradient-2",
         "category": "next",
         "stack": ["next", "tailwind"]
     },
@@ -22,7 +22,7 @@
         "basicTitle": "Shroombits",
         "description": "ShroomBits is a collection of cute and unique pixel mushrooms that live on the Ethereum and Matic networks.",
         "link": "https://shroombits-102471.netlify.app",
-        "backgroundImg": "https://media.giphy.com/media/uXYy46IRliHQdfX0Jw/giphy.gif",
+         "gradient": "gradient-3",
         "category": "react",
         "stack": ["react", "tailwind"]
     },
@@ -31,7 +31,7 @@
         "basicTitle": "Dao-b Wallet",
         "description": "Dao-b Wallet is a decentralized cryptocurrency wallet that supports more than 500 coins and tokens, providing simplicity, safety, and convenience for its users.",
         "link": "https://dao-b-7c8a5a.netlify.app/admin/dashboard",
-        "backgroundImg": "https://media.giphy.com/media/RCrvFCK5LTNe5mw4Wv/giphy.gif",
+         "gradient": "gradient-4",
         "category": "react",
         "stack": ["react", "tailwind"]
     },
@@ -40,7 +40,7 @@
         "basicTitle": "Unsplash Clone",
         "description": "Responsive images gallery website built with React and Tailwind.",
         "link": "https://unsplash-clone-d3.netlify.app/",
-        "backgroundImg": "https://media.giphy.com/media/11y9UBjLh2Rs40/giphy.gif",
+         "gradient": "gradient-5",
         "category": "react",
         "stack": ["react", "tailwind"]
     },
@@ -49,7 +49,7 @@
         "basicTitle": "Zeej",
         "description": "ZEEJ Events provides end-to-end event solutions powered by proprietary data and algorithms and executed by partners vetted for quality.",
         "link": "https://zeej.netlify.app/",
-        "backgroundImg": "https://media.giphy.com/media/8L17z7N2tOCxMDlfE0/giphy.gif",
+         "gradient": "gradient-6",
         "category": "next",
         "stack": ["next", "tailwind"]
     }
