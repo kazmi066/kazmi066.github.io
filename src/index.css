@@ -36,7 +36,6 @@ html, body {
   font-family: 'Lato', monospace, sans-serif;
   color: #fff;
   background: #0a0f1c;
-  overflow: hidden;
 }
 
 .react-tabs__tab {

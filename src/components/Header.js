@@ -33,13 +33,13 @@ export default function Header() {
     // const [label, icon, iconLabel] = moon === false ? ['Light mode', sunIcon, 'Sun icon'] : ['Dark mode', moonIcon, 'Moon icon']
 
     return (
-        <header className="py-4">
+        <header className="py-6">
             <Container>
                 <div className="flex items-center justify-between">
                     {
                         backRoute
                             ? <Link to="/">
-                                <BackIcon className='w-10 h-10 animate-pulse' />
+                                <BackIcon className='w-8 h-8 animate-pulse' />
                             </Link>
                             : <div></div>
                     }
