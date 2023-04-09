@@ -14,26 +14,24 @@ const Projects = React.lazy(() => import('../../components/Home/Projects'));
 export default function Home() {
     return (
         <main className="text-white">
-            <FrontLoader>
-                <Container>
-                    <div className="flex items-center content-center gap-4 mt-4">
-                        <div className={`w-20 h-20 ${Styles.avatar}`}>
-                        </div>
-                        <div className="person_text sm:w-64 w-54">
-                            <h3 className="font-bold sm:text-[1.5rem] text-[1.3rem]">Awais Abbas Kazmi</h3>
-                            <p className="sm:text-[16px] text-[14px]">Full Stack | JavaScript Developer</p>
-                        </div>
+            <Container>
+                <div className="flex items-center content-center gap-4 mt-4">
+                    <div className={`w-20 h-20 ${Styles.avatar}`}>
                     </div>
-                    <About />
-                    <Skills />
-                    <Timelines />
-                    <Suspense fallback={<div>Loading...</div>}>
-                        <Projects />
-                    </Suspense>
-                    <Contact />
-                    <Footer />
-                </Container>
-            </FrontLoader>
+                    <div className="person_text sm:w-64 w-54">
+                        <h3 className="font-bold sm:text-[1.5rem] text-[1.3rem]">Awais Abbas Kazmi</h3>
+                        <p className="sm:text-[16px] text-[14px]">Full Stack | JavaScript Developer</p>
+                    </div>
+                </div>
+                <About />
+                <Skills />
+                <Timelines />
+                <Suspense fallback={<div>Loading...</div>}>
+                    <Projects />
+                </Suspense>
+                <Contact />
+                <Footer />
+            </Container>
         </main>
     )
 }
