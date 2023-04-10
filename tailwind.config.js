@@ -21,6 +21,9 @@ module.exports = {
       animation: {
         "fade-up-in": 'fade-up-in .3s',
         "fade-right": 'fade-right .3s'
+      },
+      borderRadius: {
+        'large': '30px'
       }
     },
   },
