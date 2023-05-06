@@ -1,14 +1,24 @@
 export default function About() {
+    const highlightContainer = (text) => {
+        return (
+            <span className="highlight-container">
+                <span className="relative">
+                    {text}
+                </span>
+            </span>
+        )
+    }
+
     return (
         <div className="mt-8">
             <h4>
                 I'm a software engineer specializing in building exceptional websites.
-                My interest in web development starting back in 2019 during my university - turns out making CRUD operations
-                for a semester project made me curios about the web industry.
+                My interest in web development starting back in 2019 during my university. Turns out making CRUD operations
+                for a semester project made me curious about the web industry.
                 <br />
-                My focus right now is <b>React</b>, <b>Next</b> and <b>Typescript</b>.
-                Might also try <b>React Native</b> someday.
-                I also have experience with backend stuff including <b>NodeJs / Express</b> and <b>Graphql</b>.
+                Right now, I'm all about the frontend stack, rocking {highlightContainer("React")}, {highlightContainer("Next.js")}, and {highlightContainer("Typescript")}.
+                I'm diving into {highlightContainer("React Native")} too, because who doesn't want to conquer the world of mobile apps? But that's not all—I've also got some backend skills under my belt, including {highlightContainer("Node.js")}, {highlightContainer("Express")}, and {highlightContainer("GraphQL")}.
+                I'm a well-rounded developer who knows how to handle the whole shebang.
             </h4>
         </div>
     )
