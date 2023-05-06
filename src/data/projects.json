@@ -10,12 +10,12 @@
     },
     {
         "id": 2,
-        "basicTitle": "Febeth",
-        "description": "Fabeth is an Austrian play-and-earn gamefi DAO. Febeth partners with game developers across the globe to integrate their games on blockchains.",
-        "link": "https://febeth-redesign.netlify.app",
-         "gradient": "gradient-2",
+        "basicTitle": "Treasure Market",
+        "description": "Treasure is an online platform where people can collect and preserve rare and historic items, build an awesome collection, and comment on their collections and experiences.",
+        "link": "https://www.treasuremarket.com",
+        "gradient": "gradient-7",
         "category": "next",
-        "stack": ["next", "tailwind"]
+        "stack": ["next", "material-ui", "next-auth", "redux"]
     },
     {
         "id": 3,
@@ -33,7 +33,7 @@
         "link": "https://dao-b-7c8a5a.netlify.app/admin/dashboard",
          "gradient": "gradient-4",
         "category": "react",
-        "stack": ["react", "tailwind"]
+        "stack": ["react", "tailwind", "redux"]
     },
     {
         "id": 5,
@@ -45,11 +45,20 @@
         "stack": ["react", "tailwind"]
     },
     {
-        "id": 5,
+        "id": 6,
         "basicTitle": "Zeej",
         "description": "ZEEJ Events provides end-to-end event solutions powered by proprietary data and algorithms and executed by partners vetted for quality.",
         "link": "https://zeej.netlify.app/",
          "gradient": "gradient-6",
+        "category": "next",
+        "stack": ["next", "tailwind"]
+    },
+    {
+        "id": 7,
+        "basicTitle": "Febeth",
+        "description": "Fabeth is an Austrian play-and-earn gamefi DAO. Febeth partners with game developers across the globe to integrate their games on blockchains.",
+        "link": "https://febeth-redesign.netlify.app",
+         "gradient": "gradient-2",
         "category": "next",
         "stack": ["next", "tailwind"]
     }
