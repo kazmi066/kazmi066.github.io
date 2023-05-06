@@ -1,6 +1,6 @@
 import React, { useRef } from 'react'
 import { Tab, TabList, TabPanel, Tabs } from 'react-tabs';
-import projects from '../../data/projects.json';
+import { projects } from '../../data/projects';
 import Title from '../../Elements/Title'
 import { ProjectCard } from '../ProjectCard';
 import 'react-tabs/style/react-tabs.css';

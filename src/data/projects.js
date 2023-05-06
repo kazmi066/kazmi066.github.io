@@ -1,4 +1,12 @@
-[
+import Ledger from '../assets/ledger.png';
+import Febeth from '../assets/febeth.png';
+import Treasure from '../assets/treasure.png';
+import DaoB from '../assets/daoB.png';
+import ShroomBits from '../assets/shroombits.png';
+import Unsplash from '../assets/unsplash.png';
+import Zeej from '../assets/zeej.png';
+
+export const projects = [
     {
         "id": 1,
         "basicTitle": "Ledger",
@@ -6,6 +14,7 @@
         "link": "https://ledger-design.netlify.app",
         "gradient": "gradient-1",
         "category": "next",
+        "picture": Ledger,
         "stack": ["next", "tailwind"]
     },
     {
@@ -15,6 +24,7 @@
         "link": "https://www.treasuremarket.com",
         "gradient": "gradient-7",
         "category": "next",
+        "picture": Treasure,
         "stack": ["next", "material-ui", "next-auth", "redux"]
     },
     {
@@ -24,6 +34,7 @@
         "link": "https://shroombits-102471.netlify.app",
          "gradient": "gradient-3",
         "category": "react",
+        "picture": ShroomBits,
         "stack": ["react", "tailwind"]
     },
     {
@@ -33,6 +44,7 @@
         "link": "https://dao-b-7c8a5a.netlify.app/admin/dashboard",
          "gradient": "gradient-4",
         "category": "react",
+        "picture": DaoB,
         "stack": ["react", "tailwind", "redux"]
     },
     {
@@ -42,6 +54,7 @@
         "link": "https://unsplash-clone-d3.netlify.app/",
          "gradient": "gradient-5",
         "category": "react",
+        "picture": Unsplash,
         "stack": ["react", "tailwind"]
     },
     {
@@ -51,6 +64,7 @@
         "link": "https://zeej.netlify.app/",
          "gradient": "gradient-6",
         "category": "next",
+        "picture": Zeej,
         "stack": ["next", "tailwind"]
     },
     {
@@ -60,6 +74,7 @@
         "link": "https://febeth-redesign.netlify.app",
          "gradient": "gradient-2",
         "category": "next",
+        "picture": Febeth,
         "stack": ["next", "tailwind"]
     }
 ]
