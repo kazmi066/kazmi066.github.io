@@ -112,6 +112,11 @@ html, body {
   background-size: 100% 300%;
 }
 
+.gradient.gradient-7 {
+  background: linear-gradient(40deg, #1f5b18, #29286a);
+  background-size: 100% 400%;
+}
+
 .loader {
   width: 10px;
   height: 10px;
