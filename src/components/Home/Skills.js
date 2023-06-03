@@ -146,20 +146,20 @@ export default function Skills() {
                 <Title title="tech skills" />
                 <h4 className="py-8">Here are some of the technologies I'm proficient and comfortable with:</h4>
             </div>
-            <section className="flex flex-wrap align-center justify-start gap-4 overflow-hidden">
+            <section className="flex flex-wrap align-center justify-start gap-4 overflow-hidden skills">
                 {
                     skills.map((skill, index) => (
-                        <div key={index} ref={skill.ref} className="opacity-0">
+                        <div key={index} ref={skill.ref} className="opacity-0 transition-opacity">
                             <Skill image={skill.image} title={skill.title} />
                         </div>
                     ))
                 }
             </section>
             <h4 className="py-7">Tools I use:</h4>
-            <section className="flex flex-wrap align-center justify-start gap-4 overflow-hidden">
+            <section className="flex flex-wrap align-center justify-start gap-4 overflow-hidden skills">
                 {
                     tools.map((tool, index) => (
-                        <div key={index} ref={tool.ref} className="opacity-0">
+                        <div key={index} ref={tool.ref} className="opacity-0 transition-opacity">
                             <Skill key={index} image={tool.image} title={tool.title} />
                         </div>
                     ))
