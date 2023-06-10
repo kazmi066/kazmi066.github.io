@@ -38,6 +38,12 @@ html, body {
   background: #0a0f1c;
 }
 
+@layer components {
+  .project-card-overlay {
+    @apply absolute inset-0 w-full h-full transition-colors group-hover:bg-slate-800/40;
+  }
+}
+
 .react-tabs__tab {
   border: none !important;
   position: unset !important;

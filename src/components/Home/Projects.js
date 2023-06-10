@@ -28,12 +28,12 @@ export default function Projects() {
 					<Tab>Next.js</Tab>
 				</TabList>
 				<TabPanel className="mt-8">
-					<div className="overflow-hidden grid xl:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4" ref={ref}>
+					<div className="overflow-hidden sm:columns-2 columns-auto gap-4" ref={ref}>
 						{renderProjects('react')}
 					</div>
 				</TabPanel>
 				<TabPanel className="mt-8">
-					<div className="overflow-hidden grid xl:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4" ref={ref}>
+					<div className="overflow-hidden sm:columns-2 columns-auto gap-4" ref={ref}>
 						{renderProjects('next')}
 					</div>
 				</TabPanel>
