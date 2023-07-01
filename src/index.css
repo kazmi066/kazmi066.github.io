@@ -38,6 +38,10 @@ html, body {
   background: #0a0f1c;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 @layer components {
   .project-card-overlay {
     @apply absolute inset-0 w-full h-full transition-colors group-hover:bg-slate-800/40;

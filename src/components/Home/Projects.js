@@ -27,7 +27,7 @@ export default function Projects() {
 					<Tab>React.js</Tab>
 					<Tab>Next.js</Tab>
 				</TabList>
-				<TabPanel className="mt-8">
+				<TabPanel className="mt-8 ">
 					<div className="overflow-hidden sm:columns-2 columns-auto gap-4" ref={ref}>
 						{renderProjects('react')}
 					</div>

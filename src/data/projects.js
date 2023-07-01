@@ -38,16 +38,6 @@ export const projects = [
         stack: ["react", "tailwind"]
     },
     {
-        id: 4,
-        basicTitle: "Dao-b Wallet",
-        description: "Dao-b Wallet is a decentralized cryptocurrency wallet that supports more than 500 coins and tokens, providing simplicity, safety, and convenience for its users.",
-        link: "https://dao-b-7c8a5a.netlify.app/admin/dashboard",
-        gradient: "gradient-4",
-        category: "react",
-        picture: DaoB,
-        stack: ["react", "tailwind", "redux"]
-    },
-    {
         id: 5,
         basicTitle: "Unsplash Clone",
         description: "Responsive images gallery website built with React and Tailwind.",
@@ -59,17 +49,17 @@ export const projects = [
         stack: ["react", "tailwind"]
     },
     {
-        id: 6,
-        basicTitle: "Zeej",
-        description: "ZEEJ Events provides end-to-end event solutions powered by proprietary data and algorithms and executed by partners vetted for quality.",
-        link: "https://zeej.netlify.app/",
-        gradient: "gradient-6",
-        category: "next",
-        picture: Zeej,
-        stack: ["next", "tailwind"]
+        id: 4,
+        basicTitle: "Dao-b Wallet",
+        description: "Dao-b Wallet is a decentralized cryptocurrency wallet that supports more than 500 coins and tokens, providing simplicity, safety, and convenience for its users.",
+        link: "https://dao-b-7c8a5a.netlify.app/admin/dashboard",
+        gradient: "gradient-4",
+        category: "react",
+        picture: DaoB,
+        stack: ["react", "tailwind", "redux"]
     },
     {
-        id: 7,
+        id: 6,
         basicTitle: "Febeth",
         description: "Fabeth is an Austrian play-and-earn gamefi DAO. Febeth partners with game developers across the globe to integrate their games on blockchains.",
         link: "https://febeth-redesign.netlify.app",
