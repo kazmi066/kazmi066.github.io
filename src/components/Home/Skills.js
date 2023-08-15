@@ -144,7 +144,7 @@ export default function Skills() {
         <>
             <div className="mt-12">
                 <Title title="tech skills" />
-                <h4 className="py-8">Here are some of the technologies I'm proficient and comfortable with:</h4>
+                <h4 className="pb-8 pt-6 text-light">Here are some of the technologies I'm proficient and comfortable with:</h4>
             </div>
             <section className="flex flex-wrap align-center justify-start gap-4 overflow-hidden skills">
                 {
@@ -155,7 +155,7 @@ export default function Skills() {
                     ))
                 }
             </section>
-            <h4 className="py-7">Tools I use:</h4>
+            <h4 className="py-7 text-light">Tools I use:</h4>
             <section className="flex flex-wrap align-center justify-start gap-4 overflow-hidden skills">
                 {
                     tools.map((tool, index) => (

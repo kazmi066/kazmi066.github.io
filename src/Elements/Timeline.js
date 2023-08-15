@@ -3,7 +3,7 @@ export default function Timeline({ date, dateString, work, children }) {
         <li className="flex flex-col py-2">
             <div className="flex items-center py-2">
                 <span className="border-2 rounded-full border-orange-500 w-4 h-4"></span>
-                <time className="text-lg px-4" dateTime={date}>
+                <time className="text-lg px-4 text-light" dateTime={date}>
                     {dateString}
                 </time>
             </div>

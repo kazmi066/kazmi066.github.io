@@ -4,7 +4,6 @@ import Treasure from '../assets/treasure.png';
 import DaoB from '../assets/daoB.png';
 import ShroomBits from '../assets/shroombits.png';
 import Unsplash from '../assets/unsplash.png';
-import Zeej from '../assets/zeej.png';
 
 export const projects = [
     {
@@ -25,6 +24,7 @@ export const projects = [
         gradient: "gradient-7",
         category: "next",
         picture: Treasure,
+        major: true,
         stack: ["next", "material-ui", "next-auth", "redux"]
     },
     {

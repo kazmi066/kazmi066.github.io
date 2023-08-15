@@ -24,6 +24,9 @@ module.exports = {
       },
       borderRadius: {
         'large': '30px'
+      },
+      colors: {
+        'light': '#f0f0f0'
       }
     },
   },

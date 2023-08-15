@@ -4,8 +4,7 @@ export default function FrontLoader({ children }) {
     useEffect(() => {
         const overlay = document.querySelector('.homeOverlay');
         
-        // Gradually reduce the blur to 0px
-        let blurValue = 20; // Adjust the initial blur value as needed
+        let blurValue = 20;
         let bgOpacity = 0.05;
         const blurInterval = setInterval(() => {
             blurValue -= 1;
@@ -15,6 +14,7 @@ export default function FrontLoader({ children }) {
 
             if (blurValue <= 0) {
                 clearInterval(blurInterval);
+
                 overlay.style.display = 'none';
             }
         }, 100);
