@@ -1,29 +1,30 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 
 export default function FrontLoader({ children }) {
-    useEffect(() => {
-        const overlay = document.querySelector('.homeOverlay');
-        
-        let blurValue = 20;
-        let bgOpacity = 0.05;
-        const blurInterval = setInterval(() => {
-            blurValue -= 1;
-            bgOpacity -= 0.01;
-            overlay.style.backdropFilter = `blur(${blurValue}px)`;
-            overlay.style.background = `rgba(255, 255, 255, ${bgOpacity})`
+	const overlayRef = useRef(null);
 
-            if (blurValue <= 0) {
-                clearInterval(blurInterval);
+	useEffect(() => {
+		let blurValue = 20;
+		let bgOpacity = 0.05;
 
-                overlay.style.display = 'none';
-            }
-        }, 100);
-    }, [])
+		const blurInterval = setInterval(() => {
+			blurValue -= 1;
+			bgOpacity -= 0.01;
+			overlayRef.current.style.backdropFilter = `blur(${blurValue}px)`;
+			overlayRef.current.style.background = `rgba(255, 255, 255, ${bgOpacity})`
 
-    return (
-        <div>
-            {children}
-            <div className="homeOverlay" />
-        </div>
-    )
+			if (blurValue <= 0) {
+				clearInterval(blurInterval);
+
+				overlayRef.current.style.display = 'none';
+			}
+		}, 100);
+	}, [])
+
+	return (
+		<div>
+			{children}
+			<div ref={overlayRef} className="homeOverlay" />
+		</div>
+	)
 }
