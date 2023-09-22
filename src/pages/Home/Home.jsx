@@ -11,6 +11,7 @@ import Footer from "../../components/Home/Footer";
 const Projects = React.lazy(() => import('../../components/Home/Projects'));
 
 export default function Home() {
+
     const { scrollY } = useScroll();
     let y1 = useTransform(scrollY, [0, 500], ['0%', '100%']);
     let y2 = useTransform(scrollY, [0, 500], ['0%', '100%']);
