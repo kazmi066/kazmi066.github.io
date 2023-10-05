@@ -12,23 +12,17 @@ const AnchorWrapper = ({ url, children }) => {
 export const ProjectCard = ({ project }) => {
 	return (
 		<div key={project.id} className="text-white relative group">
-			<div className={`gradient gradient-${project.id} relative inline-block overflow-hidden mb-4 py-4 w-full px-4 rounded-xl bg-no-repeat bg-cover`}>
+			<div className={`border-[1px] border-[#404040] relative inline-block overflow-hidden mb-4 py-4 w-full px-4 rounded-xl bg-no-repeat bg-cover`}>
 				<div className="project-card-overlay" />
-				{
-					project.major
-					&& <div className="absolute top-2 right-2 bg-[#374bde] border-[1px] px-4 py-2 text-[14px] rounded-xl">
-							Major
-						</div>
-				}
-				<img src={project.picture} alt="Project pic" className="rounded-lg mb-6" />
-				<h4 className="font-bold leading-tight pb-2 text-light">
-						{project.basicTitle}
+				<img src={project.picture} alt="Project pic" className="rounded-lg mb-6 border-[1px] border-[#404040]" />
+				<h4 className="font-bold leading-tight pb-2 font-bold">
+					{project.basicTitle}
 				</h4>
-				<p className="mb-4 text-sm text-light">
-						{project.description}
+				<p className="mb-4 text-sm font-normal">
+					{project.description}
 				</p>
 				<p className="capitalize text-sm"><span className="text-[16px] font-medium">Stack:</span> {
-						project.stack?.map((p, index) => `${p}${index === project.stack.length - 1 ? '' : ', '}`)
+					project.stack?.map((p, index) => `${p}${index === project.stack.length - 1 ? '' : ', '}`)
 				}</p>
 				<div className="absolute bottom-4 right-4 group-hover:opacity-100 opacity-0 transition-opacity">
 					<div className="flex items-center gap-2">
