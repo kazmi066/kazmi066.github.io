@@ -107,7 +107,7 @@ export default function Skills() {
                     ))
                 }
             </section>
-            <h4 className="py-7 text-light">Tools I use:</h4>
+            <h4 className="py-7 text-light">Tools I use: </h4>
             <section className="flex flex-wrap align-center justify-start gap-4 overflow-hidden skills">
                 {
                     tools.map((tool, index) => (
