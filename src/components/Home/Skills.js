@@ -100,6 +100,7 @@ export default function Skills() {
                             initial="hidden"
                             whileInView="visible"
                             variants={variants}
+                            viewport={{ once: true }}
                             custom={index}
                             transition={{ duration: 1, ease: "backIn" }}>
                             <Skill image={skill.image} title={skill.title} />
@@ -116,6 +117,7 @@ export default function Skills() {
                             initial="hidden"
                             whileInView="visible"
                             variants={variants}
+                            viewport={{ once: true }}
                             custom={index}
                             transition={{ duration: 1, ease: "backIn" }}>
                             <Skill key={index} image={tool.image} title={tool.title} />

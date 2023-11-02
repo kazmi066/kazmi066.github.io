@@ -1,16 +1,16 @@
 @font-face {
   font-family: 'Lato';
-  src: local('Lato'), url(./fonts/Lato-Regular.ttf) format('opentype');
+  src: local('Lato'), url(./fonts/Lato-Regular.woff2) format('opentype');
 }
 
 @font-face {
   font-family: 'Lato';
   font-weight: 700;
-  src: local('Lato'), url(./fonts/Lato-Bold.ttf) format('opentype');
+  src: local('Lato'), url(./fonts/Lato-Bold.woff2) format('opentype');
 }
 
 @font-face {
   font-family: 'Lato';
   font-weight: 300;
-  src: local('Lato'), url(./fonts/Lato-Light.ttf) format('opentype');
+  src: local('Lato'), url(./fonts/Lato-Light.woff2) format('opentype');
 }
