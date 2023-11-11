@@ -1,12 +1,13 @@
 import React from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import Container from '../../components/Container';
-import Styles from './Home.module.css';
 import About from '../../components/Home/About';
-import Skills from "../../components/Home/Skills";
-import Timelines from "../../components/Home/Timelines";
+// import Skills from "../../components/Home/Skills";
+// import Timelines from "../../components/Home/Timelines";
 import Contact from "../../components/Home/Contact";
 import Footer from "../../components/Home/Footer";
+import { Blogs } from '../../components/Home/Blogs';
+// import { GradientBoxes } from '../../components/GradientBoxes/GradientBoxes';
 
 const Projects = React.lazy(() => import('../../components/Home/Projects'));
 
@@ -37,32 +38,27 @@ export default function Home() {
         <main className="text-white relative">
             <motion.div
                 style={{ y: y1, opacity: opacity1, rotate: rotate1, scale: scale1 }}
-                className='sm:flex hidden w-[150px] absolute top-60 left-20 h-[150px] bg-[#1b294c] rounded-large'>
+                className='sm:flex hidden w-[150px] absolute top-60 left-20 h-[150px] bg-[#1c1919] border-[1px] border-[#565656] rounded-xl'>
             </motion.div>
             <motion.div
                 style={{ y: y2, opacity: opacity2, rotate: rotate2, scale: scale2 }}
-                className='sm:flex hidden w-[100px] absolute top-[24%] right-60 h-[100px] bg-[#1b294c] rounded-large'>
+                className='sm:flex hidden w-[100px] absolute top-[24%] right-20 h-[100px] bg-[#1c1919] border-[1px] border-[#565656] rounded-xl'>
             </motion.div>
             <motion.div
                 style={{ y: y3, opacity: opacity3, rotate: rotate3, scale: scale3 }}
-                className='sm:flex hidden w-[100px] absolute top-[47%] left-40 h-[100px] bg-[#1b294c] rounded-xl'>
+                className='sm:flex hidden w-[100px] absolute top-[47%] left-40 h-[100px] bg-[#1c1919] border-[1px] border-[#565656] rounded-xl'>
             </motion.div>
             <motion.div
                 style={{ y: y5, opacity: opacity5, rotate: rotate5, scale: scale5 }}
-                className='sm:flex hidden w-[120px] absolute bottom-[20%] right-[10%] h-[120px] bg-[#1b294c] rounded-2xl'>
+                className='sm:flex hidden w-[120px] absolute bottom-[20%] right-[10%] h-[120px] bg-[#1c1919] border-[1px] border-[#565656] rounded-xl'>
             </motion.div>
-            <Container>
-                <div className="flex items-center content-center gap-4 mt-4">
-                    <div className={`w-20 h-20 ${Styles.avatar}`}>
-                    </div>
-                    <div className="person_text sm:w-64 w-54">
-                        <h3 className="font-bold sm:text-[1.5rem] text-[1.3rem]">Awais Abbas Kazmi</h3>
-                        <p className="sm:text-[16px] text-[14px]">Full Stack | JavaScript Developer</p>
-                    </div>
-                </div>
+            {/* <GradientBoxes className="top-0 left-0" /> */}
+            {/* <GradientBoxes className="top-40 right-10" /> */}
+            <Container className="relative z-20">
                 <About />
-                <Skills />
-                <Timelines />
+                {/* <Skills /> */}
+                {/* <Timelines /> */}
+                <Blogs />
                 <Projects />
                 <Contact />
                 <Footer />

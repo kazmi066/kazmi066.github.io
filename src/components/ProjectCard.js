@@ -11,29 +11,30 @@ const AnchorWrapper = ({ url, children }) => {
 
 export const ProjectCard = ({ project }) => {
 	return (
-		<div key={project.id} className="text-white relative group">
-			<div className={`border-[1px] border-[#404040] relative inline-block overflow-hidden mb-4 py-4 w-full px-4 rounded-xl bg-no-repeat bg-cover`}>
-				<div className="project-card-overlay" />
-				<img src={project.picture} alt="Project pic" className="rounded-lg mb-6 border-[1px] border-[#404040]" />
-				<h4 className="font-bold leading-tight pb-2 font-bold">
-					{project.basicTitle}
-				</h4>
-				<p className="mb-4 text-sm font-normal">
-					{project.description}
-				</p>
-				<p className="capitalize text-sm"><span className="text-[16px] font-medium">Stack:</span> {
-					project.stack?.map((p, index) => `${p}${index === project.stack.length - 1 ? '' : ', '}`)
-				}</p>
-				<div className="absolute bottom-4 right-4 group-hover:opacity-100 opacity-0 transition-opacity">
-					<div className="flex items-center gap-2">
-						<AnchorWrapper url={project.githubUrl}>
-							<i className="fa-brands fa-github bg-white text-black p-2 rounded-full"></i>
-						</AnchorWrapper>
-						<AnchorWrapper url={project.link}>
-							<i className="fa-solid bg-white text-black p-2 rounded-full fa-arrow-up-right-from-square"></i>
-						</AnchorWrapper>
+		<div key={project.id} className="text-white">
+			<div className="bg-[#1c1919] rounded-md grid grid-cols-6 gap-4 border-[0.1px] border-[#565656] relative inline-block overflow-hidden mb-4 p-4 w-full rounded-lgx">
+				<div className="sm:col-span-4 col-span-6">
+					<div className="flex items-center gap-2 pb-3">
+						<h4 className="font-bold leading-tight font-bold">
+							{project.basicTitle}
+						</h4>
+						<div className="flex items-center gap-2">
+							<AnchorWrapper url={project.githubUrl}>
+								<i className="fa-brands fa-github"></i>
+							</AnchorWrapper>
+							<AnchorWrapper url={project.link}>
+								<i className="fa-solid fa-arrow-up-right-from-square"></i>
+							</AnchorWrapper>
+						</div>
 					</div>
+					<p className="mb-4 text-sm font-normal">
+						{project.description}
+					</p>
+					<p className="text-[16px] capitalize"><span className="normal-case text-[#afafaf] font-medium">Made using:</span> {
+						project.stack?.map((p, index) => `${p}${index === project.stack.length - 1 ? '' : ', '}`)
+					}</p>
 				</div>
+				<img src={project.picture} alt="Project pic" width={300} className="rounded-lg sm:col-span-2 col-span-6" />
 			</div>
 		</div>
 	)

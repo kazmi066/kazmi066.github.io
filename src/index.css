@@ -29,13 +29,16 @@
   a {
     @apply text-white underline no-underline font-bold;
   }
+  p {
+    @apply text-light text-base md:text-[17px] leading-7 max-w-[700px];
+  }
 }
 
 html, body {
   scroll-behavior: smooth;
   font-family: Lato, monospace, sans-serif;
   color: #fff;
-  background: #0a0f1c;
+  background: #111010;
 }
 
 body {

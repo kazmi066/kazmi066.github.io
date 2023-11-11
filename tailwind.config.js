@@ -26,7 +26,7 @@ module.exports = {
         'large': '30px'
       },
       colors: {
-        'light': '#f0f0f0'
+        'light': '#d4d4d4'
       }
     },
   },

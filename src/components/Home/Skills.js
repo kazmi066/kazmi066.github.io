@@ -87,44 +87,48 @@ export default function Skills() {
     }
 
     return (
-        <>
-            <div className="mt-12">
-                <Title title="tech skills" />
-                <h4 className="pb-8 pt-6 text-light">Here are some of the technologies I'm proficient and comfortable with:</h4>
-            </div>
-            <section className="flex flex-wrap align-center justify-start gap-4 overflow-hidden skills">
-                {
-                    skills.map((skill, index) => (
-                        <motion.div
-                            key={index}
-                            initial="hidden"
-                            whileInView="visible"
-                            variants={variants}
-                            viewport={{ once: true }}
-                            custom={index}
-                            transition={{ duration: 1, ease: "backIn" }}>
-                            <Skill image={skill.image} title={skill.title} />
-                        </motion.div>
-                    ))
-                }
-            </section>
-            <h4 className="py-7 text-light">Tools I use: </h4>
-            <section className="flex flex-wrap align-center justify-start gap-4 overflow-hidden skills">
-                {
-                    tools.map((tool, index) => (
-                        <motion.div
-                            key={index}
-                            initial="hidden"
-                            whileInView="visible"
-                            variants={variants}
-                            viewport={{ once: true }}
-                            custom={index}
-                            transition={{ duration: 1, ease: "backIn" }}>
-                            <Skill key={index} image={tool.image} title={tool.title} />
-                        </motion.div>
-                    ))
-                }
-            </section>
-        </>
+        <section className="mt-12">
+            <Title title="tech skills" />
+            <article className="md:col-span-8 col-span-12 md:order-1 order-last">
+                <div>
+                    <p className="py-8 text-light">
+                        Here are some of the technologies I'm proficient and comfortable with:
+                    </p>
+                </div>
+                <section className="flex flex-wrap align-center justify-start gap-4 overflow-hidden skills">
+                    {
+                        skills.map((skill, index) => (
+                            <motion.div
+                                key={index}
+                                initial="hidden"
+                                whileInView="visible"
+                                variants={variants}
+                                viewport={{ once: true }}
+                                custom={index}
+                                transition={{ duration: 1, ease: "backIn" }}>
+                                <Skill image={skill.image} title={skill.title} />
+                            </motion.div>
+                        ))
+                    }
+                </section>
+                <p className="py-7 text-light">Tools I use: </p>
+                <section className="flex flex-wrap align-center justify-start gap-4 overflow-hidden skills">
+                    {
+                        tools.map((tool, index) => (
+                            <motion.div
+                                key={index}
+                                initial="hidden"
+                                whileInView="visible"
+                                variants={variants}
+                                viewport={{ once: true }}
+                                custom={index}
+                                transition={{ duration: 1, ease: "backIn" }}>
+                                <Skill key={index} image={tool.image} title={tool.title} />
+                            </motion.div>
+                        ))
+                    }
+                </section>
+            </article>
+        </section>
     )
 }

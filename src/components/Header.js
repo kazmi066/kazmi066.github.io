@@ -44,12 +44,7 @@ export default function Header() {
                             : <div></div>
                     }
                     <div>
-                        <Link
-                            to="/writings"
-                            className='font-semibold mr-6 border-b-[1px] border-b-white transition-all hover:border-b-transparent'>
-                            Writings
-                        </Link>
-                        <a href="#contact" className="border border-white transition-colors text-white rounded-md px-4 py-1 hover:bg-black hover:text-white">Contact</a>
+                        <a href="#contact" className="text-light transition-colors font-medium mr-4 hover:text-white">Contact</a>
                     </div>
                     {/* <button className="flex p-2 text-yellow-400 focus-outline hover:glow" onClick={toggleTheme} area-label={label}>
                         <SvgIcon className="w-5" d={icon} title={iconLabel} viewBox="0 0 512 512" />

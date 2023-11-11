@@ -1,6 +1,6 @@
 import React from 'react'
 import { projects } from '../../data/projects';
-import Title from '../../Elements/Title'
+// import Title from '../../Elements/Title'
 import { ProjectCard } from '../ProjectCard';
 import 'react-tabs/style/react-tabs.css';
 
@@ -18,8 +18,10 @@ export default function Projects() {
 
 	return (
 		<section className="pt-12">
-			<Title title="Projects" />
-			<div className="sm:columns-2 columns-auto gap-4 mt-10">
+			<p className="pt-8 text-light">
+        Some projects which I made along my way.
+      </p>
+			<div className="mt-10">
 				{renderProjects('react')}
 				{renderProjects('next')}
 			</div>
