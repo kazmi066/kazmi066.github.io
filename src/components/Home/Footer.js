@@ -36,7 +36,7 @@ export default function Footer() {
 
     return (
         <footer className="flex flex-col justify-center py-6">
-            <ul className="flex items-center gap-3">
+            <ul className="flex items-center gap-3 flex-wrap">
                 {socialButtons.map((socialButton, index) => (
                     <SocialButton url={socialButton.url} label={socialButton.title} key={index}>
                         {socialButton.title}

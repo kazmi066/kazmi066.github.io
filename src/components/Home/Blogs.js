@@ -21,7 +21,7 @@ export const Blogs = () => {
       </p>
       <div className="sm:columns-2 columns-auto gap-4 mt-8">
         {blogs.map((blog) => (
-          <div key={blog.id} className="mb-4 bg-[#1c1919] rounded-md border-[0.1px] border-[#565656]">
+          <div key={blog.id} className="mb-4 bg-[#1c1919] transition rounded-md border-[0.1px] border-[#565656] hover:border-[#777777]">
             <a
               href={blog.url}
               target="_blank"
