@@ -1,29 +1,21 @@
 {
   "files": {
-    "main.css": "/static/css/main.db1ccec6.css",
-    "main.js": "/static/js/main.89d0a75d.js",
-    "static/css/970.8e00c020.chunk.css": "/static/css/970.8e00c020.chunk.css",
-    "static/js/970.c4ba37e2.chunk.js": "/static/js/970.c4ba37e2.chunk.js",
-    "static/media/unsplash.png": "/static/media/unsplash.c109096300f5a3991790.png",
-    "static/media/febeth.png": "/static/media/febeth.f6fe49b65c5cebbca492.png",
+    "main.css": "/static/css/main.0961dc0b.css",
+    "main.js": "/static/js/main.dc62fabe.js",
     "static/media/myself.jpg": "/static/media/myself.6fd48bfa2bbf0ce89b11.jpg",
-    "static/media/shroombits.png": "/static/media/shroombits.82daa7748331979532b0.png",
-    "static/media/ledger.png": "/static/media/ledger.cfd9191589bd87bd5c13.png",
-    "static/media/treasure.png": "/static/media/treasure.5efd8f367ea01fe6a07b.png",
     "static/media/stellarLogo.svg": "/static/media/stellarLogo.e52c740bb9d4908a29ace2d56f61b855.svg",
-    "static/media/daoB.png": "/static/media/daoB.21c5c479c470756d5b06.png",
     "static/media/Lato-Regular.woff2": "/static/media/Lato-Regular.cf0cb273ca399ef6f49e.woff2",
     "static/media/Lato-Bold.woff2": "/static/media/Lato-Bold.053c985717ad3258a6ff.woff2",
     "static/media/Lato-Light.woff2": "/static/media/Lato-Light.7306216b5534c4e5a06c.woff2",
     "index.html": "/index.html",
-    "static/media/backIcon.svg": "/static/media/backIcon.8c648ef9c0d07346dc582499f966c5ca.svg",
-    "main.db1ccec6.css.map": "/static/css/main.db1ccec6.css.map",
-    "main.89d0a75d.js.map": "/static/js/main.89d0a75d.js.map",
-    "970.8e00c020.chunk.css.map": "/static/css/970.8e00c020.chunk.css.map",
-    "970.c4ba37e2.chunk.js.map": "/static/js/970.c4ba37e2.chunk.js.map"
+    "static/media/reactIcon.svg": "/static/media/reactIcon.8de111cf357fe8b8c1b7b97f2946f813.svg",
+    "static/media/backIcon.svg": "/static/media/backIcon.5353c67daf9d7393c4ac00b0c13b1f5e.svg",
+    "static/media/vueIcon.svg": "/static/media/vueIcon.d56d5136652826673b3bf90358e7f615.svg",
+    "main.0961dc0b.css.map": "/static/css/main.0961dc0b.css.map",
+    "main.dc62fabe.js.map": "/static/js/main.dc62fabe.js.map"
   },
   "entrypoints": [
-    "static/css/main.db1ccec6.css",
-    "static/js/main.89d0a75d.js"
+    "static/css/main.0961dc0b.css",
+    "static/js/main.dc62fabe.js"
   ]
 }
