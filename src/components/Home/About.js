@@ -23,13 +23,13 @@ export default function About() {
                     Crafting amazing websites that users adore! I turn ideas into smooth, user-friendly
                     online experiences. With a mix of creativity and tech skills, I'm here to make
                     your web projects stand out and shine. I currently work
-                    as <span className="bg-[#ffcf4d] px-1 text-black">Frontend Developer</span> Lead at &nbsp;
+                    as a <span className="bg-[#ffcf4d] px-1 text-black">Frontend Developer</span> at &nbsp;
                     <span className="px-1 pb-1 border-[1px] border-[#404040] rounded-sm bg-slate-900">
                         <a
-                            href="https://stellarminore.com"
+                            href="https://emumba.com"
                             target="_blank"
                             rel="noopener noreferrer">
-                            <img src={StellarLogo} alt="Stellar Minore" width={150} className="inline-block" />
+                            Emumba
                         </a>
                     </span>
                     {/* I'm a software engineer specializing in building exceptional websites.
