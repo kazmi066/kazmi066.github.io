@@ -1,13 +1,11 @@
-import React from 'react'
-import { ReactComponent as ReactIcon } from '../../assets/reactIcon.svg';
-import { ReactComponent as VueIcon } from '../../assets/vueIcon.svg';
+import React from "react";
+import { ReactComponent as ReactIcon } from "../../assets/reactIcon.svg";
+import { ReactComponent as VueIcon } from "../../assets/vueIcon.svg";
 
 export const Templates = () => {
   return (
-    <section className="mt-12">
-      <p className="pt-8 pb-4 text-light">
-        Checkout some of my starter templates:
-      </p>
+    <section className="flex flex-col gap-4">
+      <p className="text-light">Checkout some of my starter templates:</p>
       <div className="grid sm:grid-cols-2 grid-cols-1 gap-4">
         <a
           href="https://github.com/kazmi066/react-tailwind-rtk-starter"
@@ -33,5 +31,5 @@ export const Templates = () => {
         </a>
       </div>
     </section>
-  )
-}
+  );
+};

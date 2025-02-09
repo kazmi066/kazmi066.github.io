@@ -1,4 +1,5 @@
 import SocialButton from "../../Elements/SocialButton";
+import Contact from "./Contact";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -22,15 +23,20 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="flex flex-col justify-center py-6">
+    <footer className="flex flex-col justify-center gap-4">
+      <Contact />
       <ul className="flex items-center gap-3 flex-wrap">
         {socialButtons.map((socialButton, index) => (
-          <SocialButton url={socialButton.url} label={socialButton.title} key={index}>
+          <SocialButton
+            url={socialButton.url}
+            label={socialButton.title}
+            key={index}
+          >
             {socialButton.title}
           </SocialButton>
         ))}
       </ul>
-      <p className="text-sm pt-10">Awais Abbas © {currentYear}</p>
+      <p className="text-sm py-4">Awais Abbas © {currentYear}</p>
     </footer>
   );
 }
