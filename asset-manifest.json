@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.c7c791a8.css",
-    "main.js": "/static/js/main.4889c402.js",
+    "main.css": "/static/css/main.7d5b914f.css",
+    "main.js": "/static/js/main.d0fb8d1f.js",
     "static/media/myself.jpg": "/static/media/myself.6fd48bfa2bbf0ce89b11.jpg",
     "static/media/Lato-Regular.woff2": "/static/media/Lato-Regular.cf0cb273ca399ef6f49e.woff2",
     "static/media/Lato-Bold.woff2": "/static/media/Lato-Bold.053c985717ad3258a6ff.woff2",
@@ -10,11 +10,11 @@
     "static/media/reactIcon.svg": "/static/media/reactIcon.24c4eb0c572c9766c1e0ef414eb7ae91.svg",
     "static/media/backIcon.svg": "/static/media/backIcon.5353c67daf9d7393c4ac00b0c13b1f5e.svg",
     "static/media/vueIcon.svg": "/static/media/vueIcon.80c8f55113235ea648eb86ac4426d4dd.svg",
-    "main.c7c791a8.css.map": "/static/css/main.c7c791a8.css.map",
-    "main.4889c402.js.map": "/static/js/main.4889c402.js.map"
+    "main.7d5b914f.css.map": "/static/css/main.7d5b914f.css.map",
+    "main.d0fb8d1f.js.map": "/static/js/main.d0fb8d1f.js.map"
   },
   "entrypoints": [
-    "static/css/main.c7c791a8.css",
-    "static/js/main.4889c402.js"
+    "static/css/main.7d5b914f.css",
+    "static/js/main.d0fb8d1f.js"
   ]
 }
