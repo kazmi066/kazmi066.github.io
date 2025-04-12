@@ -1,0 +1,38 @@
+.templates-section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-2xl);
+}
+
+.templates-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--spacing-md);
+}
+
+.template-icon {
+  position: absolute;
+  right: -1rem;
+  bottom: -2rem;
+  opacity: 0.5;
+  width: 5rem;
+  height: 5rem;
+  transition: color var(--transition-duration) var(--transition-timing),
+    opacity var(--transition-duration) var(--transition-timing),
+    transform var(--transition-duration) var(--transition-timing);
+}
+
+.link-card:hover .template-icon {
+  opacity: 0.8;
+}
+
+.react-template:hover .template-icon {
+  animation: spin 2s linear infinite;
+  stroke: var(--color-info);
+}
+
+.vue-template:hover .template-icon {
+  stroke: var(--color-success);
+  transform: rotate(40deg);
+}
