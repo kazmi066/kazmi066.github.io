@@ -6,7 +6,17 @@
 }
 
 .blogs-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: var(--spacing-md);
+  columns: 2;
+  column-gap: var(--spacing-md);
+}
+
+.blogs-list > external-card-link {
+  display: block;
+  margin-bottom: var(--spacing-md);
+}
+
+@media (max-width: 768px) {
+  .blogs-list {
+    columns: 1;
+  }
 }
