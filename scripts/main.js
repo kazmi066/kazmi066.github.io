@@ -13,41 +13,25 @@ document.documentElement.dataset.theme = "dark";
 
 // Blogs List
 const blogContainer = document.getElementById("blogs-list");
+
 blogs.forEach((blogItem) => {
-  const blog = document.createElement("li");
-  blog.className = "link-card";
+  const card = document.createElement("external-card-link");
+  card.url = blogItem.url;
+  card.title = blogItem.title;
 
-  const link = document.createElement("a");
-  link.href = blogItem.url;
-  link.target = "_blank";
-  link.rel = "noopener noreferrer";
-  link.className = "blog-link";
-
-  const title = document.createElement("span");
-  title.className = "link-card__title";
-  title.textContent = blogItem.title;
-
-  link.appendChild(title);
-  blog.appendChild(link);
-  blogContainer.appendChild(blog);
+  blogContainer.appendChild(card);
 });
 
 // Footer Social Buttons
 const socialButtonsList = document.querySelector(
   ".footer-section .social-buttons-list"
 );
-socialButtons.forEach((socialButton, index) => {
-  const socialButtonElement = document.createElement("li");
-  socialButtonElement.className = "link-card";
+socialButtons.forEach((socialButton) => {
+  const card = document.createElement("external-card-link");
+  card.url = socialButton.url;
+  card.title = socialButton.title;
 
-  const anchorElement = document.createElement("a");
-  anchorElement.href = socialButton.url;
-  anchorElement.target = "_blank";
-  anchorElement.rel = "noopener noreferrer";
-  anchorElement.textContent = socialButton.title;
-
-  socialButtonElement.appendChild(anchorElement);
-  socialButtonsList.appendChild(socialButtonElement);
+  socialButtonsList.appendChild(card);
 });
 
 // Current Year

@@ -11,7 +11,7 @@
   gap: var(--spacing-md);
 }
 
-.template-icon {
+.card-icon {
   position: absolute;
   right: -1rem;
   bottom: -2rem;
@@ -23,16 +23,22 @@
     transform var(--transition-duration) var(--transition-timing);
 }
 
-.link-card:hover .template-icon {
+.template-card:hover .card-icon {
   opacity: 0.8;
 }
 
-.react-template:hover .template-icon {
-  animation: spin 2s linear infinite;
-  stroke: var(--color-info);
+.react {
+  color: var(--color-info);
 }
 
-.vue-template:hover .template-icon {
-  stroke: var(--color-success);
+.vue {
+  color: var(--color-success);
+}
+
+.react-card:hover .card-icon {
+  animation: spin 2s linear infinite;
+}
+
+.vue-card:hover .card-icon {
   transform: rotate(40deg);
 }

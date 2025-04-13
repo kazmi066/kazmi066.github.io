@@ -10,6 +10,10 @@
   gap: var(--spacing-md);
 }
 
+.footer-section .social-buttons-list > external-card-link::part(card-wrapper) {
+  padding: var(--spacing-xs) var(--spacing-sm);
+}
+
 .footer-section .social-buttons-list .link-card a {
   padding: var(--spacing-xs) var(--spacing-sm);
 }
