@@ -7,7 +7,8 @@
 
 .footer-section .social-buttons-list {
   display: flex;
-  gap: var(--spacing-md);
+  gap: var(--spacing-sm);
+  flex-wrap: wrap;
 }
 
 .footer-section .social-buttons-list > external-card-link::part(card-wrapper) {
