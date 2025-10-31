@@ -78,7 +78,7 @@ class ExternalCardLink extends HTMLElement {
       <a href="${url}" target="_blank" rel="noopener noreferrer"
          class="group w-full flex items-center justify-between md:flex-nowrap flex-wrap gap-2 py-3 no-underline">
         <div class="min-w-0 md:flex-1 flex items-center gap-4">
-          <span class="truncate text-foreground group-hover:text-emerald-500 transition-colors">${left}</span>
+          <span class="md:truncate text-foreground group-hover:text-emerald-500 transition-colors">${left}</span>
           <span class="hidden sm:block h-px flex-1 bg-border group-hover:bg-emerald-500/80 transition-colors"></span>
         </div>
         <span class="shrink-0 text-muted-foreground tabular-nums">${right}</span>
