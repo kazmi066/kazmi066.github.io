@@ -12,7 +12,6 @@ class SiteFooter extends HTMLElement {
           You can also check out my social media following the links below.
         </p>
         <ul class="social-buttons-list flex flex-wrap gap-3 mt-4"></ul>
-        <p class="copyright">Awais Abbas &copy; <span id="current-year"></span></p>
       </footer>
     `;
   }
