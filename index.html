@@ -11,134 +11,175 @@
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="/assets/favicon-32x32.png"
-    />
+      href="/assets/favicon-32x32.png" />
     <link
       rel="icon"
       type="image/png"
       sizes="16x16"
-      href="/assets/favicon-16x16.png"
-    />
+      href="/assets/favicon-16x16.png" />
     <link rel="manifest" href="/site.webmanifest" />
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
     <meta name="msapplication-TileColor" content="#da532c" />
     <meta name="theme-color" content="#ffffff" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
-      integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <script
-      src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.7.1/dist/dotlottie-wc.js"
-      type="module"
-    ></script>
+      href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap"
+      rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="styles/styles.css" />
-    <!-- <script type="module">
-      import {
-        animate,
-        scroll,
-      } from "https://cdn.jsdelivr.net/npm/motion@latest/+esm";
-    </script> -->
+    <style type="text/tailwindcss">
+      @custom-variant dark (&:is(.dark *));
+
+      @theme inline {
+        --color-background: var(--background);
+        --color-foreground: var(--foreground);
+        --color-card: var(--card);
+        --color-primary: var(--primary);
+        --color-secondary: var(--secondary);
+        --color-secondary-foreground: var(--secondary-foreground);
+        --color-muted: var(--muted);
+        --color-muted-foreground: var(--muted-foreground);
+        --color-accent: var(--accent);
+        --color-accent-foreground: var(--accent-foreground);
+        --color-destructive: var(--destructive);
+        --color-destructive-foreground: var(--destructive-foreground);
+        --color-border: var(--border);
+        --color-input: var(--input);
+        --color-ring: var(--ring);
+        --font-sans: var(--font-sans);
+      }
+    </style>
     <title>Awais Abbas.</title>
   </head>
-  <body>
+  <body class="bg-background text-foreground">
     <noscript>You need to enable JavaScript to run this app.</noscript>
-    <main>
-      <div class="root-container">
-        <div class="container">
-          <!-- Header -->
-          <div class="header-wrapper">
-            <header-component>
-              <!-- <svg class="logo" slot="logo" style="width: 40px; height: 40px">
-                <use href="/assets/icons.svg#react-icon"></use>
-              </svg> -->
-            </header-component>
-          </div>
+    <main class="px-4 pt-16 pb-16 sm:pt-32">
+      <div class="max-w-[768px] mx-auto">
+        <site-navbar></site-navbar>
 
-          <div id="frog-container"></div>
-
-          <button class="lottie-trigger-button">𓆏</button>
-
-          <!-- Profile Section -->
-          <section class="profile-section">
-            <article class="profile-bio">
-              <h1>Hey, I'm Awais 👋</h1>
-              <p>
-                I've been working professionally in tech for almost 4+ years and
-                have been passionate about it for as long as I can remember. I
-                really enjoy building and maintaining Frontend aspect of web
-                applications. Also trying to write about my experiences and
-                learnings whenever I get time. Currently working as a as a
-                <span class="job-title">Frontend Developer</span> at
-                <span class="company-title">
-                  <a
-                    href="https://emumba.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    >Emumba</a
-                  >
-                </span>
-              </p>
-            </article>
-            <div class="profile-image">
-              <img src="./assets/myself.jpg" alt="Myself" />
-            </div>
-          </section>
-
-          <!-- Templates Section -->
-          <section class="templates-section">
-            <p>Checkout some of my starter templates:</p>
-            <ul class="templates-list">
-              <li class="react-card">
-                <external-card-link
-                  url="https://github.com/kazmi066/react-tailwind-rtk-starter"
-                  title="React-Tailwind-RTK Template"
+        <!-- Profile Section -->
+        <section class="profile-section">
+          <article class="profile-bio">
+            <h1
+              class="tracking-tight leading-[1.2] text-3xl sm:text-4xl font-medium">
+              Hello
+              <span
+                class="inline-block hover:animate-wave"
+                style="transform-origin: 70% 70%"
+                >👋</span
+              >
+              I'm Awais Abbas
+              <img
+                alt=""
+                loading="lazy"
+                width="460"
+                height="460"
+                decoding="async"
+                class="m-0 inline w-8 aspect-square overflow-hidden object-cover rounded-md border rotate-6 -translate-y-0.5 border-neutral-200 dark:border-neutral-700"
+                style="color: transparent"
+                src="./assets/myself.jpg" />. I'm a Software Engineer 🥷
+              <div
+                class="not-prose inline-flex overflow-hidden border rounded-md shadow-[0_1px_8px_0_rgba(0,0,0,0.04)] scale-[0.8] md:scale-100 border-neutral-200 dark:border-neutral-700 dark:text-foreground -translate-y-0.5">
+                <a
+                  href="https://github.com/kazmi066"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="GitHub"
+                  class="border-r shadow-[inset_0_-2px_5px_0_rgba(0,0,0,0.07)] flex items-center justify-center bg-foreground/5 border-neutral-200 dark:bg-neutral-600 dark:border-neutral-700 hover:dark:bg-neutral-700 transition-all px-2 py-1.5">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-brand-github h-4 w-4">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path
+                      d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" /></svg
+                ></a>
+                <span
+                  class="px-2 py-1.5 text-sm font-medium shadow-[inset_0_-2px_5px_0_rgba(0,0,0,0.07)] bg-white dark:bg-neutral-800"
+                  >175</span
                 >
-                  <svg class="card-icon react" slot="card-icon">
-                    <use href="/assets/icons.svg#react-icon"></use>
-                  </svg>
-                </external-card-link>
-              </li>
-              <li class="vue-card">
-                <external-card-link
-                  url="https://github.com/kazmi066/Vue-portfolio"
-                  title="Vue Portfolio Template"
+              </div>
+              currently based in Islamabad, Pakistan.
+              <div
+                class="not-prose align-text-bottom inline-flex overflow-hidden border rounded-md shadow-[0_1px_8px_0_rgba(0,0,0,0.04)] scale-[0.8] md:scale-100 border-neutral-200 dark:border-neutral-700 dark:text-white -translate-y-1">
+                <span
+                  class="px-2 py-1.5 text-sm font-medium shadow-[inset_0_-2px_5px_0_rgba(0,0,0,0.07)] bg-foreground/5 dark:bg-neutral-600"
+                  >🌤️</span
                 >
-                  <svg class="card-icon vue" slot="card-icon">
-                    <use href="/assets/icons.svg#vue-icon"></use>
-                  </svg>
-                </external-card-link>
-              </li>
-            </ul>
-          </section>
+                <span
+                  class="px-2 py-1.5 text-sm font-medium shadow-[inset_0_-2px_5px_0_rgba(0,0,0,0.07)] bg-neutral dark:bg-neutral-800"
+                  >2:42 PM</span
+                >
+              </div>
+            </h1>
+          </article>
+        </section>
 
-          <!-- Blogs Section -->
-          <section class="blogs-section">
-            <p>I try to write a little bit as well.</p>
-            <ul class="blogs-list" id="blogs-list"></ul>
-          </section>
+        <!-- Projects: simple external links with optional hover previews -->
+        <section class="projects-section mt-16">
+          <ul class="mt-2">
+            <li>
+              <external-card-link
+                url="#"
+                title="Cat of Gaza — Interactive Video"
+                right=""
+                preview="/assets/projects/cat-of-gaza.mp4"></external-card-link>
+            </li>
+            <li>
+              <external-card-link
+                url="#"
+                title="LocalSite Generator — UI"
+                right=""></external-card-link>
+            </li>
+            <li>
+              <external-card-link
+                url="#"
+                title="Snake Button — Micro-interaction"
+                right=""
+                preview="/assets/projects/snake-button.mp4"></external-card-link>
+            </li>
+          </ul>
+        </section>
 
-          <!-- Footer Section -->
-          <footer class="footer-section" id="contact">
-            <p class="contact-text">
-              If you want to reach out please drop me an
-              <a href="mailto:awaisabbas47@gmail.com" class="contact-email">
-                Email</a
-              >. You can also check out my social media following the links
-              below.
-            </p>
-            <ul class="social-buttons-list"></ul>
-            <p class="copyright">
-              Awais Abbas © <span id="current-year"></span>
-            </p>
-          </footer>
-        </div>
+        <!-- Templates Section -->
+        <section class="templates-section mt-16">
+          <p class="font-medium">Checkout some of my starter templates:</p>
+          <ul class="templates-list mt-2">
+            <li class="react-card">
+              <external-card-link
+                url="https://github.com/kazmi066/react-tailwind-rtk-starter"
+                title="React-Tailwind-RTK Template">
+                <svg class="card-icon react" slot="card-icon">
+                  <use href="/assets/icons.svg#react-icon"></use>
+                </svg>
+              </external-card-link>
+            </li>
+            <li class="vue-card">
+              <external-card-link
+                url="https://github.com/kazmi066/Vue-portfolio"
+                title="Vue Portfolio Template">
+                <svg class="card-icon vue" slot="card-icon">
+                  <use href="/assets/icons.svg#vue-icon"></use>
+                </svg>
+              </external-card-link>
+            </li>
+          </ul>
+        </section>
+
+        <site-footer></site-footer>
       </div>
 
       <script type="module" src="scripts/main.js"></script>
       <script src="components/header.component.js"></script>
+      <script src="components/footer.component.js"></script>
       <script src="components/external-card-link.component.js"></script>
     </main>
   </body>

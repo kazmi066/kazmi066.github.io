@@ -17,7 +17,7 @@ export const blogs = [
   {
     id: 5,
     title:
-      "A Clear Understanding of the <h1> Element: Perspectives from SEO and Developers",
+      "A Clear Understanding of the h1 Element: Perspectives from SEO and Developers",
     url: "https://kazmi066.hashnode.dev/a-clear-understanding-of-the-h1-element-perspectives-from-seo-and-developers",
   },
   {

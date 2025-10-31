@@ -3,36 +3,39 @@
 import { blogs } from "../data/blogs.js";
 import { socialButtons } from "../data/social-buttons.js";
 document.documentElement.dataset.theme = "dark";
-// const themeToggle = document.querySelector(".theme-toggle");
-// themeToggle.addEventListener("click", () => {
-//   document.documentElement.dataset.theme =
-//     document.documentElement.dataset.theme === "dark"
-//       ? "light"
-//       : "dark";
-// });
 
 // Blogs List
 const blogContainer = document.getElementById("blogs-list");
 
-blogs.forEach((blogItem) => {
-  const card = document.createElement("external-card-link");
-  card.url = blogItem.url;
-  card.title = blogItem.title;
+if (blogContainer) {
+  blogs.forEach((blogItem) => {
+    const card = document.createElement("external-card-link");
+    card.url = blogItem.url;
+    card.title = blogItem.title;
 
-  blogContainer.appendChild(card);
-});
+    blogContainer.appendChild(card);
+  });
+}
 
 // Footer Social Buttons
 const socialButtonsList = document.querySelector(
   ".footer-section .social-buttons-list"
 );
-socialButtons.forEach((socialButton) => {
-  const card = document.createElement("external-card-link");
-  card.url = socialButton.url;
-  card.title = socialButton.title;
-
-  socialButtonsList.appendChild(card);
-});
+if (socialButtonsList) {
+  socialButtonsList.style.display = "flex";
+  socialButtonsList.style.flexWrap = "wrap";
+  socialButtons.forEach((socialButton) => {
+    const li = document.createElement("li");
+    const a = document.createElement("a");
+    a.href = socialButton.url;
+    a.target = "_blank";
+    a.rel = "noopener noreferrer";
+    a.textContent = socialButton.title;
+    a.className = "underline underline-offset-4 hover:text-emerald-500";
+    li.appendChild(a);
+    socialButtonsList.appendChild(li);
+  });
+}
 
 // Current Year
 const currentYear = new Date().getFullYear();

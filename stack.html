@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Stack - Awais Abbas" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap"
+      rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="styles/styles.css" />
+    <style type="text/tailwindcss">
+      @custom-variant dark (&:is(.dark *));
+
+      @theme inline {
+        --color-background: var(--background);
+        --color-foreground: var(--foreground);
+        --color-card: var(--card);
+        --color-primary: var(--primary);
+        --color-secondary: var(--secondary);
+        --color-secondary-foreground: var(--secondary-foreground);
+        --color-muted: var(--muted);
+        --color-muted-foreground: var(--muted-foreground);
+        --color-accent: var(--accent);
+        --color-accent-foreground: var(--accent-foreground);
+        --color-destructive: var(--destructive);
+        --color-destructive-foreground: var(--destructive-foreground);
+        --color-border: var(--border);
+        --color-input: var(--input);
+        --color-ring: var(--ring);
+        --font-sans: var(--font-sans);
+      }
+    </style>
+    <title>Stack</title>
+  </head>
+  <body class="bg-background text-foreground">
+    <main class="px-4 pt-16 pb-16 sm:pt-32">
+      <div class="max-w-[768px] mx-auto">
+        <site-navbar></site-navbar>
+
+        <section class="mt-2">
+          <h1 class="text-2xl sm:text-3xl font-medium">Stack</h1>
+          <p class="text-muted-foreground mt-1">
+            Tools and technologies I use.
+          </p>
+        </section>
+
+        <section class="mt-10 space-y-6">
+          <!-- Coding & AI -->
+          <div class="rounded-xl border border-border bg-card/40">
+            <div
+              class="px-4 py-3 text-sm font-medium text-muted-foreground bg-foreground/5 rounded-t-xl">
+              Coding & AI
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-0 p-2">
+              <div class="flex items-start gap-3 rounded-lg p-4">
+                <div
+                  class="shrink-0 h-8 w-8 rounded bg-foreground/4 dark:bg-neutral-600 grid place-items-center">
+                  <img
+                    src="assets/gpt.png"
+                    alt="ChatGPT"
+                    class="h-6 w-6 object-contain" />
+                </div>
+                <div class="min-w-0">
+                  <p class="font-medium">ChatGPT</p>
+                  <p class="text-sm text-muted-foreground truncate">
+                    AI-powered assistant.
+                  </p>
+                </div>
+              </div>
+              <div class="flex items-start gap-3 rounded-lg p-4">
+                <div
+                  class="shrink-0 h-8 w-8 rounded bg-foreground/4 dark:bg-neutral-600 grid place-items-center">
+                  <img
+                    src="assets/copilot.png"
+                    alt="Copilot"
+                    class="h-6 w-6 object-contain" />
+                </div>
+                <div class="min-w-0">
+                  <p class="font-medium">Copilot</p>
+                  <p class="text-sm text-muted-foreground truncate">
+                    Autocompletion for code.
+                  </p>
+                </div>
+              </div>
+              <div class="flex items-start gap-3 rounded-lg p-4">
+                <div
+                  class="shrink-0 h-8 w-8 rounded bg-foreground/4 dark:bg-neutral-600 grid place-items-center">
+                  <img
+                    src="assets/claude.png"
+                    alt="Claude"
+                    class="h-6 w-6 object-contain" />
+                </div>
+                <div class="min-w-0">
+                  <p class="font-medium">Claude Chat</p>
+                  <p class="text-sm text-muted-foreground truncate">
+                    Conversational AI.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Editors -->
+          <div class="rounded-xl border border-border bg-card/40">
+            <div
+              class="px-4 py-3 text-sm font-medium text-muted-foreground bg-foreground/5 rounded-t-xl">
+              Editors
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-0 p-2">
+              <div class="flex items-start gap-3 rounded-lg p-4">
+                <div
+                  class="shrink-0 h-8 w-8 rounded bg-foreground/4 dark:bg-neutral-600 grid place-items-center">
+                  <img
+                    src="assets/cursor.png"
+                    alt="Cursor"
+                    class="h-6 w-6 object-contain" />
+                </div>
+                <div class="min-w-0">
+                  <p class="font-medium">Cursor</p>
+                  <p class="text-sm text-muted-foreground truncate">
+                    AI-first editor.
+                  </p>
+                </div>
+              </div>
+              <div class="flex items-start gap-3 rounded-lg p-4">
+                <div
+                  class="shrink-0 h-8 w-8 rounded bg-foreground/4 dark:bg-neutral-600 grid place-items-center">
+                  <img
+                    src="assets/windsurf.png"
+                    alt="Windsurf"
+                    class="h-6 w-6 object-contain" />
+                </div>
+                <div class="min-w-0">
+                  <p class="font-medium">Windsurf</p>
+                  <p class="text-sm text-muted-foreground truncate">
+                    Agentic coding workflow.
+                  </p>
+                </div>
+              </div>
+              <div class="flex items-start gap-3 rounded-lg p-4">
+                <div
+                  class="shrink-0 h-8 w-8 rounded bg-foreground/4 dark:bg-neutral-600 grid place-items-center">
+                  <img
+                    src="assets/vscode.png"
+                    alt="VS Code"
+                    class="h-6 w-6 object-contain" />
+                </div>
+                <div class="min-w-0">
+                  <p class="font-medium">VS Code</p>
+                  <p class="text-sm text-muted-foreground truncate">
+                    Extensible code editor.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- CLI -->
+          <div class="rounded-xl border border-border bg-card/40">
+            <div
+              class="px-4 py-3 text-sm font-medium text-muted-foreground bg-foreground/5 rounded-t-xl">
+              CLI
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-0 p-2">
+              <div class="flex items-start gap-3 rounded-lg p-4">
+                <div
+                  class="shrink-0 h-8 w-8 rounded bg-foreground/4 dark:bg-neutral-600 grid place-items-center">
+                  <img
+                    src="assets/bash.png"
+                    alt="bash"
+                    class="h-6 w-6 object-contain" />
+                </div>
+                <div class="min-w-0">
+                  <p class="font-medium">bash</p>
+                  <p class="text-sm text-muted-foreground truncate">
+                    Shell I use daily.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Browsers -->
+          <div class="rounded-xl border border-border bg-card/40">
+            <div
+              class="px-4 py-3 text-sm font-medium text-muted-foreground bg-foreground/5 rounded-t-xl">
+              Browsers
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-0 p-2">
+              <div class="flex items-start gap-3 rounded-lg p-4">
+                <div
+                  class="shrink-0 h-8 w-8 rounded bg-foreground/4 dark:bg-neutral-600 grid place-items-center">
+                  <img
+                    src="assets/brave.png"
+                    alt="Brave"
+                    class="h-6 w-6 object-contain" />
+                </div>
+                <div class="min-w-0">
+                  <p class="font-medium">Brave</p>
+                  <p class="text-sm text-muted-foreground truncate">
+                    Privacy-focused browser.
+                  </p>
+                </div>
+              </div>
+              <div class="flex items-start gap-3 rounded-lg p-4">
+                <div
+                  class="shrink-0 h-8 w-8 rounded bg-foreground/4 dark:bg-neutral-600 grid place-items-center">
+                  <img
+                    src="assets/chrome.png"
+                    alt="Chrome"
+                    class="h-6 w-6 object-contain" />
+                </div>
+                <div class="min-w-0">
+                  <p class="font-medium">Chrome</p>
+                  <p class="text-sm text-muted-foreground truncate">
+                    Devtools and testing.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Data & DevTools -->
+          <div class="rounded-xl border border-border bg-card/40">
+            <div
+              class="px-4 py-3 text-sm font-medium text-muted-foreground bg-foreground/5 rounded-t-xl">
+              Data & DevTools
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-0 p-2">
+              <div class="flex items-start gap-3 rounded-lg p-4">
+                <div
+                  class="shrink-0 h-8 w-8 rounded bg-foreground/4 dark:bg-neutral-600 grid place-items-center">
+                  <img
+                    src="assets/github.png"
+                    alt="GitHub Desktop"
+                    class="h-6 w-6 object-contain" />
+                </div>
+                <div class="min-w-0">
+                  <p class="font-medium">GitHub Desktop</p>
+                  <p class="text-sm text-muted-foreground truncate">
+                    Git client for quick flows.
+                  </p>
+                </div>
+              </div>
+              <div class="flex items-start gap-3 rounded-lg p-4">
+                <div
+                  class="shrink-0 h-8 w-8 rounded bg-foreground/4 dark:bg-neutral-600 grid place-items-center">
+                  <img
+                    src="assets/compass.png"
+                    alt="MongoDB Compass"
+                    class="h-6 w-6 object-contain" />
+                </div>
+                <div class="min-w-0">
+                  <p class="font-medium">MongoDB Compass</p>
+                  <p class="text-sm text-muted-foreground truncate">
+                    GUI for MongoDB.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Notes & Productivity -->
+          <div class="rounded-xl border border-border bg-card/40">
+            <div
+              class="px-4 py-3 text-sm font-medium text-muted-foreground bg-foreground/5 rounded-t-xl">
+              Notes & Productivity
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-0 p-2">
+              <div class="flex items-start gap-3 rounded-lg p-4">
+                <div
+                  class="shrink-0 h-8 w-8 rounded bg-foreground/4 dark:bg-neutral-600 grid place-items-center">
+                  <img
+                    src="assets/keep.png"
+                    alt="Google Keep"
+                    class="h-6 w-6 object-contain" />
+                </div>
+                <div class="min-w-0">
+                  <p class="font-medium">Google Keep</p>
+                  <p class="text-sm text-muted-foreground truncate">
+                    Fast notes and lists.
+                  </p>
+                </div>
+              </div>
+              <div class="flex items-start gap-3 rounded-lg p-4">
+                <div
+                  class="shrink-0 h-8 w-8 rounded bg-foreground/4 dark:bg-neutral-600 grid place-items-center">
+                  <img
+                    src="assets/obsidian.png"
+                    alt="Obsidian"
+                    class="h-6 w-6 object-contain" />
+                </div>
+                <div class="min-w-0">
+                  <p class="font-medium">Obsidian</p>
+                  <p class="text-sm text-muted-foreground truncate">
+                    Markdown knowledge base.
+                  </p>
+                </div>
+              </div>
+              <div class="flex items-start gap-3 rounded-lg p-4">
+                <div
+                  class="shrink-0 h-8 w-8 rounded bg-foreground/4 dark:bg-neutral-600 grid place-items-center">
+                  <img
+                    src="assets/notes.png"
+                    alt="Apple Notes"
+                    class="h-6 w-6 object-contain" />
+                </div>
+                <div class="min-w-0">
+                  <p class="font-medium">Notes</p>
+                  <p class="text-sm text-muted-foreground truncate">
+                    Apple Notes for quick drafts.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Collaboration & API -->
+          <div class="rounded-xl border border-border bg-card/40">
+            <div
+              class="px-4 py-3 text-sm font-medium text-muted-foreground bg-foreground/5 rounded-t-xl">
+              Collaboration & API
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-0 p-2">
+              <div class="flex items-start gap-3 rounded-lg p-4">
+                <div
+                  class="shrink-0 h-8 w-8 rounded bg-foreground/4 dark:bg-neutral-600 grid place-items-center">
+                  <img
+                    src="assets/jira.png"
+                    alt="Jira"
+                    class="h-6 w-6 object-contain" />
+                </div>
+                <div class="min-w-0">
+                  <p class="font-medium">Jira</p>
+                  <p class="text-sm text-muted-foreground truncate">
+                    Project tracking.
+                  </p>
+                </div>
+              </div>
+              <div class="flex items-start gap-3 rounded-lg p-4">
+                <div
+                  class="shrink-0 h-8 w-8 rounded bg-foreground/4 dark:bg-neutral-600 grid place-items-center">
+                  <img
+                    src="assets/postman.png"
+                    alt="Postman"
+                    class="h-6 w-6 object-contain" />
+                </div>
+                <div class="min-w-0">
+                  <p class="font-medium">Postman</p>
+                  <p class="text-sm text-muted-foreground truncate">
+                    API testing.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <site-footer></site-footer>
+      </div>
+      <script type="module" src="scripts/main.js"></script>
+      <script src="components/header.component.js"></script>
+      <script src="components/footer.component.js"></script>
+    </main>
+  </body>
+</html>

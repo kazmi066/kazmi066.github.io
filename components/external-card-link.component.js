@@ -1,7 +1,6 @@
 class ExternalCardLink extends HTMLElement {
   constructor() {
     super();
-    this.attachShadow({ mode: "open" });
   }
 
   connectedCallback() {
@@ -9,7 +8,18 @@ class ExternalCardLink extends HTMLElement {
   }
 
   static get observedAttributes() {
-    return ["url", "title"];
+    return [
+      "url",
+      "left",
+      "right",
+      "role",
+      "company",
+      "start",
+      "end",
+      "title",
+      // Optional video preview on hover
+      "preview",
+    ];
   }
 
   get url() {
@@ -24,101 +34,123 @@ class ExternalCardLink extends HTMLElement {
     }
   }
 
-  get title() {
-    return this.getAttribute("title") || "Link";
+  get left() {
+    const explicit = this.getAttribute("left");
+    if (explicit) return explicit;
+    const role = this.getAttribute("role");
+    const company = this.getAttribute("company");
+    if (role && company)
+      return `${role}, <span class="font-medium">${company}</span>`;
+    if (role) return role;
+    const title = this.getAttribute("title");
+    return title || "Link";
   }
 
-  set title(value) {
-    if (value) {
-      this.setAttribute("title", value);
-    } else {
-      this.removeAttribute("title");
-    }
+  set left(v) {
+    v ? this.setAttribute("left", v) : this.removeAttribute("left");
+  }
+
+  get right() {
+    const explicit = this.getAttribute("right");
+    if (explicit) return explicit;
+    const start = this.getAttribute("start");
+    const end = this.getAttribute("end");
+    return [start, end].filter(Boolean).join(" — ") || "";
+  }
+
+  set right(v) {
+    v ? this.setAttribute("right", v) : this.removeAttribute("right");
   }
 
   attributeChangedCallback(name, oldValue, newValue) {
-    if (oldValue !== newValue && this.shadowRoot) {
-      if (name === "url") {
-        const linkElement = this.shadowRoot.querySelector(".card");
-        if (linkElement) {
-          linkElement.setAttribute("href", newValue || "#");
-        }
-      } else if (name === "title") {
-        const titleElement = this.shadowRoot.querySelector(".card__title");
-        if (titleElement) {
-          titleElement.textContent = newValue || "Link";
-        }
-      }
+    if (oldValue !== newValue) {
+      this.render();
+      if (name === "preview") this.#setupPreview();
     }
   }
 
   render() {
-    const url = this.getAttribute("url") || "#";
-    const title = this.getAttribute("title") || "Link";
+    const url = this.url;
+    const left = this.left;
+    const right = this.right;
 
-    this.shadowRoot.innerHTML = `
-      <style>
-        .card-wrapper {
-          padding: var(--spacing-md);
-          position: relative;
-          background-color: var(--color-secondary);
-          border-radius: var(--border-radius-md);
-          border: var(--border-width) solid var(--color-border);
-          overflow: hidden;
-          transition: border-color var(--transition-duration) var(--transition-timing);
-        }
-
-        .card-wrapper:focus-within,
-        .card-wrapper:hover {
-          border-color: var(--color-border-hover);
-        }
-
-        .card {
-          display: block;
-          width: 100%;
-          height: 100%;
-          text-decoration: none;
-          outline: none;
-          box-sizing: border-box;
-        }
-
-        .card:focus {
-          outline: 1px solid var(--color-border-hover);
-        }
-        
-        .card__title {
-          font-weight: var(--font-weight-medium);
-          color: #e4e4e4;
-          display: inline-block;
-          width: 100%;
-        }
-
-        .card__title::after {
-          content: "";
-          position: absolute;
-          top: 0;
-          left: 0;
-          right: 0;
-          bottom: 0;
-          z-index: 1;
-        }
-      </style>
-        
-      <div class="card-wrapper" part="card-wrapper">
-        <a
-          href=${url}
-          target="_blank"
-          rel="noopener noreferrer"
-          class="card"
-        >
-          <span class="card__title"></span>
-          <slot name="card-icon"></slot>
-        </a>
-      </div>
+    this.innerHTML = `
+      <a href="${url}" target="_blank" rel="noopener noreferrer"
+         class="group w-full flex items-center justify-between md:flex-nowrap flex-wrap gap-2 py-3 no-underline">
+        <div class="min-w-0 md:flex-1 flex items-center gap-4">
+          <span class="truncate text-foreground group-hover:text-emerald-500 transition-colors">${left}</span>
+          <span class="hidden sm:block h-px flex-1 bg-border group-hover:bg-emerald-500/80 transition-colors"></span>
+        </div>
+        <span class="shrink-0 text-muted-foreground tabular-nums">${right}</span>
+      </a>
     `;
 
-    const titleElement = this.shadowRoot.querySelector(".card__title");
-    titleElement.textContent = title;
+    this.#setupPreview();
+  }
+
+  // Private: wires up optional hover video preview when `preview` attribute is provided
+  #setupPreview() {
+    // Clean up any previous listeners/preview
+    if (this.__cleanupPreview) this.__cleanupPreview();
+
+    const src = this.getAttribute("preview");
+    if (!src) return; // optional feature
+
+    const anchor = this.querySelector("a");
+    if (!anchor) return;
+
+    const video = document.createElement("video");
+    video.src = src;
+    video.muted = true;
+    video.loop = true;
+    video.playsInline = true;
+    video.autoplay = true;
+    video.style.position = "fixed";
+    video.style.zIndex = "50";
+    video.style.width = "240px";
+    video.style.height = "auto";
+    video.style.borderRadius = "12px";
+    video.style.boxShadow = "0 10px 30px rgba(0,0,0,0.25)";
+    video.style.pointerEvents = "none";
+    video.style.opacity = "0";
+    video.style.transform = "translate(-50%, -50%) scale(0.98)";
+    video.style.transition = "opacity 150ms ease, transform 150ms ease";
+
+    const move = (e) => {
+      const x = e.clientX + 24; // offset from cursor
+      const y = e.clientY + 24;
+      video.style.left = `${x}px`;
+      video.style.top = `${y}px`;
+    };
+
+    const enter = async () => {
+      if (!document.body.contains(video)) document.body.appendChild(video);
+      try {
+        await video.play();
+      } catch (_) {}
+      video.style.opacity = "1";
+      video.style.transform = "translate(-50%, -50%) scale(1)";
+      window.addEventListener("mousemove", move, { passive: true });
+    };
+
+    const leave = () => {
+      video.style.opacity = "0";
+      video.style.transform = "translate(-50%, -50%) scale(0.98)";
+      video.pause();
+      window.removeEventListener("mousemove", move);
+      // keep element in DOM for faster re-entry, just hidden
+    };
+
+    anchor.addEventListener("mouseenter", enter);
+    anchor.addEventListener("mouseleave", leave);
+
+    this.__cleanupPreview = () => {
+      anchor.removeEventListener("mouseenter", enter);
+      anchor.removeEventListener("mouseleave", leave);
+      window.removeEventListener("mousemove", move);
+      if (video && video.parentNode) video.parentNode.removeChild(video);
+      this.__cleanupPreview = null;
+    };
   }
 }
 

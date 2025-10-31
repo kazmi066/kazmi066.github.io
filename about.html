@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="About - Awais Abbas" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap"
+      rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="styles/styles.css" />
+    <style type="text/tailwindcss">
+      @custom-variant dark (&:is(.dark *));
+
+      @theme inline {
+        --color-background: var(--background);
+        --color-foreground: var(--foreground);
+        --color-card: var(--card);
+        --color-primary: var(--primary);
+        --color-secondary: var(--secondary);
+        --color-secondary-foreground: var(--secondary-foreground);
+        --color-muted: var(--muted);
+        --color-muted-foreground: var(--muted-foreground);
+        --color-accent: var(--accent);
+        --color-accent-foreground: var(--accent-foreground);
+        --color-destructive: var(--destructive);
+        --color-destructive-foreground: var(--destructive-foreground);
+        --color-border: var(--border);
+        --color-input: var(--input);
+        --color-ring: var(--ring);
+        --font-sans: var(--font-sans);
+      }
+    </style>
+    <title>About</title>
+  </head>
+  <body class="bg-background text-foreground">
+    <main class="px-4 pt-16 pb-16 sm:pt-32">
+      <div class="max-w-[768px] mx-auto">
+        <site-navbar></site-navbar>
+
+        <section class="work-section">
+          <h2 class="text-2xl sm:text-3xl font-medium">Work</h2>
+          <p class="text-muted-foreground mt-1">Companies I've worked with.</p>
+          <ul class="mt-6">
+            <li>
+              <external-card-link
+                role="Senior Frontend Developer"
+                company="Emumba"
+                start="2024"
+                end="Present"
+                url="https://www.emumba.com"></external-card-link>
+            </li>
+            <li>
+              <external-card-link
+                role="Frontend Developer"
+                company="Stellar Minore"
+                start="2022"
+                end="2024"
+                url="https://www.stellarminore.com"></external-card-link>
+            </li>
+          </ul>
+        </section>
+
+        <section aria-label="Frequently Asked Questions" class="mt-16">
+          <h2 class="text-2xl sm:text-3xl font-medium">FAQ</h2>
+          <dl class="mt-6 space-y-6">
+            <dt class="text-lg font-medium">What's your current tech stack?</dt>
+            <dd class="text-md max-lg:p-0 text-muted-foreground md:ps-6">
+              I mostly work with Vanilla JavaScript, HTML, and CSS, the basics
+              are still my favorite. You can build almost anything with them if
+              you know them well. On top of that, I often use React/Next.js,
+              Angular, TypeScript, and TailwindCSS because they make modern web
+              projects faster and cleaner to build. I’m not tied to any single
+              stack. I also like to self-host my stuff, whether it’s on AWS,
+              Vercel, or my own server.
+            </dd>
+            <dt class="text-lg font-medium">
+              What kind of projects do you like working on?
+            </dt>
+            <dd class="text-md max-lg:p-0 text-muted-foreground md:ps-6">
+              Anything that feels real and has users who care. I like simple,
+              useful tools more than fancy over-engineered stuff. If it involves
+              the web, I’m usually interested.
+            </dd>
+            <dt class="text-lg font-medium">
+              Do you use AI tools or code assistants?
+            </dt>
+            <dd class="text-md max-lg:p-0 text-muted-foreground md:ps-6">
+              Yeah, sometimes. They’re great for speeding things up, but I still
+              prefer to understand what’s happening under the hood. I trust my
+              brain more than any model.
+            </dd>
+            <dt class="text-lg font-medium">
+              What’s your opinion on frameworks vs vanilla?
+            </dt>
+            <dd class="text-md max-lg:p-0 text-muted-foreground md:ps-6">
+              Frameworks are great for moving fast, but vanilla JS, HTML, and
+              CSS are the real roots. If you understand those well, you can pick
+              up any framework easily, or even build your own.
+            </dd>
+          </dl>
+        </section>
+
+        <site-footer></site-footer>
+      </div>
+      <script type="module" src="scripts/main.js"></script>
+      <script src="components/header.component.js"></script>
+      <script src="components/footer.component.js"></script>
+      <script src="components/external-card-link.component.js"></script>
+    </main>
+  </body>
+</html>
