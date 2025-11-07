@@ -2,6 +2,7 @@
 
 import { blogs } from "../data/blogs.js";
 import { socialButtons } from "../data/social-buttons.js";
+import { projects, funLinks } from "../data/projects.js";
 document.documentElement.dataset.theme = "dark";
 
 // App initializer: idempotent per-page setup
@@ -14,6 +15,34 @@ function appInit() {
       card.url = blogItem.url;
       card.title = blogItem.title;
       blogContainer.appendChild(card);
+    });
+  }
+
+  const projectsList = document.getElementById("projects-list");
+  if (projectsList) {
+    projectsList.innerHTML = "";
+    projects.forEach((item) => {
+      const li = document.createElement("li");
+      const card = document.createElement("external-card-link");
+      card.url = item.url;
+      card.title = item.title;
+      if (item.preview) card.setAttribute("preview", item.preview);
+      li.appendChild(card);
+      projectsList.appendChild(li);
+    });
+  }
+
+  const funList = document.getElementById("fun-list");
+  if (funList) {
+    funList.innerHTML = "";
+    funLinks.forEach((item) => {
+      const li = document.createElement("li");
+      const card = document.createElement("external-card-link");
+      card.url = item.url;
+      card.title = item.title;
+      if (item.preview) card.setAttribute("preview", item.preview);
+      li.appendChild(card);
+      funList.appendChild(li);
     });
   }
 

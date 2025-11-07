@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
 
+@view-transition {
+  navigation: auto;
+}
+
 :root {
   --background: #fcfcfc;
   --foreground: #000000;
@@ -107,13 +111,10 @@ body {
   font-family: var(--font-sans);
 }
 
-/* View Transitions: minimal cross-fade for main content */
-/* Progressive enhancement: browsers without support will ignore these rules */
 main {
   view-transition-name: page;
 }
 
-/* Respect reduced motion */
 @media (prefers-reduced-motion: reduce) {
   ::view-transition-old(page),
   ::view-transition-new(page) {

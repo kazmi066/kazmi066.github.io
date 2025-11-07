@@ -24,11 +24,6 @@
     <meta name="theme-color" content="#ffffff" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <style>
-      @view-transition {
-        navigation: auto;
-      }
-    </style>
     <link
       href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap"
       rel="stylesheet" />
@@ -131,28 +126,12 @@
 
         <!-- Projects: simple external links with optional hover previews -->
         <section class="projects-section mt-16">
-          <ul class="mt-2">
-            <li>
-              <external-card-link
-                url="#"
-                title="Cat of Gaza — Interactive Video"
-                right=""
-                preview="/assets/projects/cat-of-gaza.mp4"></external-card-link>
-            </li>
-            <li>
-              <external-card-link
-                url="#"
-                title="LocalSite Generator — UI"
-                right=""></external-card-link>
-            </li>
-            <li>
-              <external-card-link
-                url="#"
-                title="Snake Button — Micro-interaction"
-                right=""
-                preview="/assets/projects/snake-button.mp4"></external-card-link>
-            </li>
-          </ul>
+          <ul id="projects-list" class="mt-2"></ul>
+        </section>
+
+        <!-- Fun / CodePen links -->
+        <section class="fun-section mt-8">
+          <ul id="fun-list" class="mt-2"></ul>
         </section>
 
         <!-- Templates Section -->
