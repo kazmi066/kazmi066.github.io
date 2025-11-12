@@ -1,6 +1,6 @@
 export const projects = [
   {
-    title: "Cat of Gaza — Next.js, Canvas, Interactive Video",
+    title: "Cat of Gaza — Next.js, Canvas",
     url: "https://cat-of-gaza.vercel.app/",
     preview: "/assets/projects/cat-of-gaza.mp4",
   },
@@ -11,7 +11,6 @@ export const projects = [
   {
     title: "LocalSite Generator — SaaS, Next.js, OpenRouter, Netlify",
     url: "https://localsite-gen.vercel.app/",
-    // image preview available but component supports video only; omit for now
   },
 ];
 

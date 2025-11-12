@@ -25,7 +25,9 @@ function appInit() {
       const li = document.createElement("li");
       const card = document.createElement("external-card-link");
       card.url = item.url;
-      card.title = item.title;
+      const [name, stack] = (item.title || "").split(" — ");
+      card.title = name || item.title || "";
+      if (stack) card.cardRightContent = stack;
       if (item.preview) card.setAttribute("preview", item.preview);
       li.appendChild(card);
       projectsList.appendChild(li);

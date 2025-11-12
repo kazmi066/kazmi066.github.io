@@ -14,8 +14,7 @@ class ExternalCardLink extends HTMLElement {
       "right",
       "role",
       "company",
-      "start",
-      "end",
+      "card-right-content",
       "title",
       // Optional video preview on hover
       "preview",
@@ -51,15 +50,25 @@ class ExternalCardLink extends HTMLElement {
   }
 
   get right() {
+    const custom = this.getAttribute("card-right-content");
+    if (custom) return custom;
     const explicit = this.getAttribute("right");
     if (explicit) return explicit;
-    const start = this.getAttribute("start");
-    const end = this.getAttribute("end");
-    return [start, end].filter(Boolean).join(" — ") || "";
+    return "";
   }
 
   set right(v) {
     v ? this.setAttribute("right", v) : this.removeAttribute("right");
+  }
+
+  get cardRightContent() {
+    return this.getAttribute("card-right-content") || "";
+  }
+
+  set cardRightContent(v) {
+    v
+      ? this.setAttribute("card-right-content", v)
+      : this.removeAttribute("card-right-content");
   }
 
   attributeChangedCallback(name, oldValue, newValue) {
@@ -76,12 +85,12 @@ class ExternalCardLink extends HTMLElement {
 
     this.innerHTML = `
       <a href="${url}" target="_blank" rel="noopener noreferrer"
-         class="group w-full flex items-center justify-between md:flex-nowrap flex-wrap gap-2 py-3 no-underline">
-        <div class="min-w-0 md:flex-1 flex items-center gap-4">
-          <span class="md:truncate text-foreground group-hover:text-emerald-500 transition-colors">${left}</span>
+         class="group w-full flex items-center justify-between sm:flex-nowrap flex-wrap gap-2 py-3 no-underline">
+        <div class="min-w-0 flex-1 flex items-center gap-4">
+          <span class="whitespace-normal break-words sm:truncate text-foreground group-hover:text-emerald-500 transition-colors">${left}</span>
           <span class="hidden sm:block h-px flex-1 bg-border group-hover:bg-emerald-500/80 transition-colors"></span>
         </div>
-        <span class="shrink-0 text-muted-foreground tabular-nums">${right}</span>
+        <span class="text-muted-foreground/70 tabular-nums text-sm sm:text-base sm:shrink-0 shrink mt-1 sm:mt-0 w-full sm:w-auto text-left sm:text-right">${right}</span>
       </a>
     `;
 
