@@ -121,12 +121,20 @@
                 >
               </div>
             </h1>
+            <p class="text-sm text-muted-foreground mt-4">
+              Checkout my
+              <a
+                href="resources.html"
+                class="underline underline-offset-2 hover:text-foreground transition-colors"
+                >learning resources</a
+              >
+              — the OG frontend stuff that shaped how I build.
+            </p>
           </article>
         </section>
 
         <!-- Projects: simple external links with optional hover previews -->
         <section class="projects-section mt-16">
-          <h2 class="text-xl sm:text-2xl font-medium">Projects</h2>
           <ul id="projects-list" class="mt-2"></ul>
         </section>
 
@@ -134,6 +142,16 @@
         <section class="fun-section mt-16">
           <h2 class="text-xl sm:text-2xl font-medium">CodePens</h2>
           <ul id="fun-list" class="mt-2"></ul>
+          <a
+            href="https://codepen.io/kazmi066"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-1 mt-3 text-sm text-muted-foreground hover:text-foreground transition-colors">
+            find more here
+            <span class="transition-transform group-hover:translate-x-0.5"
+              >→</span
+            >
+          </a>
         </section>
 
         <!-- Templates Section -->
@@ -168,7 +186,7 @@
       </div>
 
       <script type="module" src="scripts/main.js"></script>
-      <script src="components/header.component.js"></script>
+      <script src="components/navbar.component.js"></script>
       <script src="components/footer.component.js"></script>
       <script src="components/external-card-link.component.js"></script>
     </main>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="view-transition" content="same-origin" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content="Awais Abbas - Resources" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/assets/favicon-32x32.png" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/assets/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap"
+      rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="styles/styles.css" />
+    <style type="text/tailwindcss">
+      @custom-variant dark (&:is(.dark *));
+
+      @theme inline {
+        --color-background: var(--background);
+        --color-foreground: var(--foreground);
+        --color-card: var(--card);
+        --color-primary: var(--primary);
+        --color-secondary: var(--secondary);
+        --color-secondary-foreground: var(--secondary-foreground);
+        --color-muted: var(--muted);
+        --color-muted-foreground: var(--muted-foreground);
+        --color-accent: var(--accent);
+        --color-accent-foreground: var(--accent-foreground);
+        --color-destructive: var(--destructive);
+        --color-destructive-foreground: var(--destructive-foreground);
+        --color-border: var(--border);
+        --color-input: var(--input);
+        --color-ring: var(--ring);
+        --font-sans: var(--font-sans);
+      }
+
+      .resource-link {
+        @apply text-sm text-muted-foreground hover:text-foreground transition-colors;
+      }
+
+      .resource-link:hover .arrow {
+        @apply translate-x-0.5;
+      }
+    </style>
+    <title>Resources - Awais Abbas</title>
+  </head>
+  <body class="bg-background text-foreground">
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <main class="px-4 pt-16 pb-32 sm:pt-32">
+      <div class="max-w-[768px] mx-auto">
+        <site-navbar></site-navbar>
+
+        <!-- Page Header -->
+        <section>
+          <h1 class="text-xl sm:text-2xl font-medium">Resources</h1>
+          <p class="text-sm text-muted-foreground mt-1">
+            A collection of stuff I find useful and inspiring.
+          </p>
+        </section>
+
+        <!-- Frontend Goats Section -->
+        <section class="mt-8">
+          <h2 class="text-base font-medium mb-2">Frontend Goats</h2>
+          <p class="text-xs text-muted-foreground mb-3">
+            Devs that inspired me the most.
+          </p>
+
+          <ul class="space-y-1.5">
+            <li>
+              <a
+                href="https://www.joshwcomeau.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="resource-link inline-flex items-center gap-1">
+                Josh W. Comeau
+                <span class="arrow transition-transform">→</span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://piccalil.li/author/andy-bell/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="resource-link inline-flex items-center gap-1">
+                Andy Bell
+                <span class="arrow transition-transform">→</span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.kevinpowell.co/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="resource-link inline-flex items-center gap-1">
+                Kevin Powell
+                <span class="arrow transition-transform">→</span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.sarasoueidan.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="resource-link inline-flex items-center gap-1">
+                Sara Soueidan
+                <span class="arrow transition-transform">→</span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.developerway.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="resource-link inline-flex items-center gap-1">
+                Nadia Makarevich
+                <span class="arrow transition-transform">→</span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://kentcdodds.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="resource-link inline-flex items-center gap-1">
+                Kent C. Dodds
+                <span class="arrow transition-transform">→</span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://me.getify.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="resource-link inline-flex items-center gap-1">
+                Kyle Simpson
+                <span class="arrow transition-transform">→</span>
+              </a>
+            </li>
+          </ul>
+
+          <p class="text-xs text-muted-foreground mt-4 italic">
+            Adding more when I remember...
+          </p>
+        </section>
+
+        <site-footer></site-footer>
+      </div>
+
+      <script src="components/navbar.component.js"></script>
+      <script src="components/footer.component.js"></script>
+    </main>
+  </body>
+</html>

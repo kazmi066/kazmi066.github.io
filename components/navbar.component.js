@@ -1,4 +1,4 @@
-class HeaderComponent extends HTMLElement {
+class SiteNavbarComponent extends HTMLElement {
   constructor() {
     super();
   }
@@ -226,4 +226,4 @@ class HeaderComponent extends HTMLElement {
   }
 }
 
-customElements.define("site-navbar", HeaderComponent);
+customElements.define("site-navbar", SiteNavbarComponent);

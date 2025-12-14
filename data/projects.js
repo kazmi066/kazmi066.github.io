@@ -1,15 +1,14 @@
 export const projects = [
   {
-    title: "Cat of Gaza — Next.js, Canvas",
+    title: "Cat of Gaza",
     url: "https://cat-of-gaza.vercel.app/",
-    preview: "/assets/projects/cat-of-gaza.mp4",
   },
   {
-    title: "GroupLoop — React Native, Zustand",
+    title: "GroupLoop",
     url: "https://grouploop.godaddysites.com/",
   },
   {
-    title: "LocalSite Generator — SaaS, Next.js, OpenRouter, Netlify",
+    title: "LocalSite Generator",
     url: "https://localsite-gen.vercel.app/",
   },
 ];
@@ -22,7 +21,6 @@ export const funLinks = [
   {
     title: "Snake Game — Button Loading",
     url: "https://codepen.io/kazmi066/pen/WbrKawy",
-    preview: "/assets/projects/snake-button.mp4",
   },
   {
     title: "Add to Cart with Offset Animation",
