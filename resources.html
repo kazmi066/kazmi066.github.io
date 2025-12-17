@@ -58,6 +58,19 @@
       .resource-link:hover .arrow {
         @apply translate-x-0.5;
       }
+
+      .book-link {
+        @apply text-sm transition-colors;
+        color: color-mix(in srgb, var(--muted-foreground), #7c3aed 35%);
+      }
+
+      .book-link:hover {
+        color: color-mix(in srgb, var(--foreground), #7c3aed 35%);
+      }
+
+      .book-link:hover .arrow {
+        @apply translate-x-0.5;
+      }
     </style>
     <title>Resources - Awais Abbas</title>
   </head>
@@ -82,82 +95,21 @@
             Devs that inspired me the most.
           </p>
 
-          <ul class="space-y-1.5">
-            <li>
-              <a
-                href="https://www.joshwcomeau.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="resource-link inline-flex items-center gap-1">
-                Josh W. Comeau
-                <span class="arrow transition-transform">→</span>
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://piccalil.li/author/andy-bell/"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="resource-link inline-flex items-center gap-1">
-                Andy Bell
-                <span class="arrow transition-transform">→</span>
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://www.kevinpowell.co/"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="resource-link inline-flex items-center gap-1">
-                Kevin Powell
-                <span class="arrow transition-transform">→</span>
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://www.sarasoueidan.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="resource-link inline-flex items-center gap-1">
-                Sara Soueidan
-                <span class="arrow transition-transform">→</span>
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://www.developerway.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="resource-link inline-flex items-center gap-1">
-                Nadia Makarevich
-                <span class="arrow transition-transform">→</span>
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://kentcdodds.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="resource-link inline-flex items-center gap-1">
-                Kent C. Dodds
-                <span class="arrow transition-transform">→</span>
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://me.getify.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="resource-link inline-flex items-center gap-1">
-                Kyle Simpson
-                <span class="arrow transition-transform">→</span>
-              </a>
-            </li>
-          </ul>
+          <ul id="frontend-goats-list" class="space-y-1.5"></ul>
 
           <p class="text-xs text-muted-foreground mt-4 italic">
             Adding more when I remember...
           </p>
+        </section>
+
+        <!-- Books Section -->
+        <section class="mt-10">
+          <h2 class="text-base font-medium mb-2">Books</h2>
+          <p class="text-xs text-muted-foreground mb-3">
+            Stuff I keep recommending.
+          </p>
+
+          <ul id="books-list" class="space-y-1.5"></ul>
         </section>
 
         <site-footer></site-footer>
@@ -165,6 +117,72 @@
 
       <script src="components/navbar.component.js"></script>
       <script src="components/footer.component.js"></script>
+      <script>
+        (async () => {
+          try {
+            const response = await fetch("data/resources.json", {
+              cache: "no-cache",
+            });
+
+            if (!response.ok) return;
+
+            const resources = await response.json();
+
+            const frontendGoatsList = document.getElementById(
+              "frontend-goats-list"
+            );
+            if (frontendGoatsList) {
+              const goats = Array.isArray(resources.frontendGoats)
+                ? resources.frontendGoats
+                : [];
+
+              frontendGoatsList.innerHTML = goats
+                .map(
+                  ({ label, href }) => `
+                    <li>
+                      <a
+                        href="${href}"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="resource-link inline-flex items-center gap-1">
+                        ${label}
+                        <span class="arrow transition-transform">→</span>
+                      </a>
+                    </li>
+                  `
+                )
+                .join("");
+            }
+
+            const booksList = document.getElementById("books-list");
+            if (booksList) {
+              const books = Array.isArray(resources.books)
+                ? resources.books
+                : [];
+
+              booksList.innerHTML = books
+                .map(
+                  ({ title, author, href }) => `
+                    <li class="flex items-center justify-between gap-3">
+                      <span class="text-sm text-muted-foreground">${title} - ${author}</span>
+                      <a
+                        href="${href}"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="book-link inline-flex items-center gap-1 shrink-0">
+                        Book
+                        <span class="arrow transition-transform">→</span>
+                      </a>
+                    </li>
+                  `
+                )
+                .join("");
+            }
+          } catch (e) {
+            return;
+          }
+        })();
+      </script>
     </main>
   </body>
 </html>

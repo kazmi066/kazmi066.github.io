@@ -1,0 +1,39 @@
+{
+  "frontendGoats": [
+    { "label": "Josh W. Comeau", "href": "https://www.joshwcomeau.com/" },
+    { "label": "Andy Bell", "href": "https://piccalil.li/author/andy-bell/" },
+    { "label": "Kevin Powell", "href": "https://www.kevinpowell.co/" },
+    { "label": "Sara Soueidan", "href": "https://www.sarasoueidan.com/" },
+    { "label": "Nadia Makarevich", "href": "https://www.developerway.com/" },
+    { "label": "Kent C. Dodds", "href": "https://kentcdodds.com/" },
+    { "label": "Kyle Simpson", "href": "https://me.getify.com/" },
+    { "label": "Basher", "href": "https://github.com/basher" }
+  ],
+  "books": [
+    {
+      "title": "You Don't Know JS (Series)",
+      "author": "Kyle Simpson",
+      "href": "https://archive.org/details/kyle-simpson-all-6"
+    },
+    {
+      "title": "Advanced React",
+      "author": "Nadia Makarevic",
+      "href": "https://www.advanced-react.com/"
+    },
+    {
+      "title": "Atomic Design",
+      "author": "Brad Frost",
+      "href": "https://atomicdesign.bradfrost.com/"
+    },
+    {
+      "title": "Tao of React",
+      "author": "Alex Kondov",
+      "href": "https://alexkondov.com/tao-of-react/"
+    },
+    {
+      "title": "The Pragmatic Programmer (20th Anniversary Edition)",
+      "author": "Andy Hunt and Dave Thomas",
+      "href": "https://pragprog.com/titles/tpp20/the-pragmatic-programmer-20th-anniversary-edition/"
+    }
+  ]
+}
