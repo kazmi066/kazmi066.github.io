@@ -1,15 +1,15 @@
 export const projects = [
   {
-    title: "Cat of Gaza",
-    url: "https://cat-of-gaza.vercel.app/",
-  },
-  {
     title: "GroupLoop",
     url: "https://grouploop.godaddysites.com/",
   },
   {
     title: "LocalSite Generator",
     url: "https://localsite-gen.vercel.app/",
+  },
+  {
+    title: "Cat of Gaza",
+    url: "https://cat-of-gaza.vercel.app/",
   },
 ];
 
