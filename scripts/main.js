@@ -5,7 +5,6 @@ import { socialButtons } from "../data/social-buttons.js";
 import { projects, funLinks } from "../data/projects.js";
 document.documentElement.dataset.theme = "dark";
 
-// App initializer: idempotent per-page setup
 function appInit() {
   const blogContainer = document.getElementById("blogs-list");
   if (blogContainer) {
@@ -49,7 +48,7 @@ function appInit() {
   }
 
   const socialButtonsList = document.querySelector(
-    ".footer-section .social-buttons-list"
+    ".footer-section .social-buttons-list",
   );
   if (socialButtonsList) {
     socialButtonsList.style.display = "flex";
@@ -73,6 +72,39 @@ function appInit() {
   if (currentYearElement) {
     currentYearElement.textContent = currentYear;
   }
+
+  function updateTime() {
+    const now = new Date();
+    const hours = now.getHours();
+    const minutes = now.getMinutes();
+    const ampm = hours >= 12 ? "PM" : "AM";
+    const displayHours = hours % 12 || 12;
+    const displayMinutes = minutes < 10 ? "0" + minutes : minutes;
+    const timeString = `${displayHours}:${displayMinutes} ${ampm}`;
+
+    const timeElement = document.getElementById("current-time");
+    if (timeElement) {
+      timeElement.textContent = timeString;
+    }
+
+    const weatherElement = document.getElementById("weather-emoji");
+    if (weatherElement) {
+      let emoji;
+      if (hours >= 5 && hours < 12) {
+        emoji = "🌅";
+      } else if (hours >= 12 && hours < 17) {
+        emoji = "☀️";
+      } else if (hours >= 17 && hours < 20) {
+        emoji = "🌆";
+      } else {
+        emoji = "🌙";
+      }
+      weatherElement.textContent = emoji;
+    }
+  }
+
+  updateTime();
+  setInterval(updateTime, 1000);
 }
 
 window.appInit = appInit;
