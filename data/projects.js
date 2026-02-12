@@ -4,13 +4,13 @@ export const projects = [
     url: "https://ranklocal.cc/",
   },
   {
+    title: "Better-launch",
+    url: "https://better-launch.cc/",
+  },
+  {
     title: "GroupLoop",
     url: "https://grouploop.godaddysites.com/",
   },
-  // {
-  //   title: "Cat of Gaza",
-  //   url: "https://cat-of-gaza.vercel.app/",
-  // },
 ];
 
 export const funLinks = [
