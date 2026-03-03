@@ -1,5 +1,10 @@
 export const blogs = [
   {
+    id: 9,
+    title: "A Web Dev's Guide to Not Losing Seconds",
+    url: "https://medium.com/@awaisabbas47/a-web-devs-guide-to-not-losing-seconds-004d5b264fd4",
+  },
+  {
     id: 8,
     title: "My component has too many props and I'm not ok",
     url: "https://kazmi066.hashnode.dev/my-component-has-too-many-props-and-im-not-ok",
