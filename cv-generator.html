@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Awais Abbas - CV Generator" />
+    <title>CV Generator - Awais Abbas</title>
+    <link rel="stylesheet" href="styles/cv-generator.css" />
+  </head>
+  <body>
+    <main class="cv-page">
+      <div class="cv-actions" aria-label="CV actions">
+        <a href="index.html" class="action-link">← Back</a>
+        <button id="add-experience-btn" type="button">
+          + Add Work Experience
+        </button>
+        <button id="print-cv-btn" type="button">Print / Save PDF</button>
+        <div class="link-controls">
+          <label class="link-control" for="github-url-input"
+            >GitHub URL
+            <input
+              id="github-url-input"
+              type="text"
+              value="https://github.com/frontend-sandbox"
+          /></label>
+          <label class="link-control" for="linkedin-url-input"
+            >LinkedIn URL
+            <input
+              id="linkedin-url-input"
+              type="text"
+              value="https://www.linkedin.com/in/frontend-sandbox"
+          /></label>
+        </div>
+      </div>
+
+      <article class="resume-sheet" id="resume-sheet">
+        <header>
+          <h1 contenteditable="true">Luca Reinhardt</h1>
+          <p class="title" contenteditable="true">Senior Frontend Engineer</p>
+          <div class="contact-row">
+            <p class="left" contenteditable="true">
+              luca.reinhardt@example.com ❖ Kreuzberg, Berlin, Germany
+            </p>
+            <p class="right">
+              <a
+                id="github-link"
+                href="https://github.com/frontend-sandbox"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Github</a
+              >
+              |
+              <a
+                id="linkedin-link"
+                href="https://www.linkedin.com/in/frontend-sandbox"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Linkedin</a
+              >
+            </p>
+          </div>
+        </header>
+
+        <section>
+          <h2>Summary</h2>
+          <p contenteditable="true">
+            Frontend engineer focused on high-traffic commerce experiences,
+            design systems, and measurable performance improvements. I like
+            clean code, predictable UI architecture, and practical product work.
+          </p>
+        </section>
+
+        <section>
+          <h2>Skills</h2>
+          <p contenteditable="true">
+            <strong>Core:</strong> JavaScript, TypeScript, HTML/CSS, Node.js
+          </p>
+          <p contenteditable="true">
+            <strong>Frameworks:</strong> React, Next.js, Vue, React Native
+          </p>
+          <p contenteditable="true">
+            <strong>UI / Styling:</strong> Sass, Tailwind CSS, Web Components,
+            Material UI, Storybook
+          </p>
+          <p contenteditable="true">
+            <strong>Ecosystem / Tools:</strong> Git, VS Code, Figma, Jira,
+            Playwright
+          </p>
+        </section>
+
+        <section>
+          <h2>Work Experience</h2>
+          <div id="experience-list"></div>
+        </section>
+
+        <section>
+          <h2>Education</h2>
+          <div class="education-row">
+            <p>
+              <strong contenteditable="true"
+                >Delft University of Technology</strong
+              >
+              <em contenteditable="true"> - Delft, Netherlands</em>
+            </p>
+            <p contenteditable="true">Sep. 2015 – Jul. 2019</p>
+          </div>
+          <p class="education-degree" contenteditable="true">
+            BSc in Computer Science and Engineering
+          </p>
+        </section>
+      </article>
+    </main>
+
+    <script src="scripts/cv-generator.js"></script>
+  </body>
+</html>
