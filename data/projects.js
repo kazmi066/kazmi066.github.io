@@ -7,10 +7,6 @@ export const projects = [
     title: "Better-launch",
     url: "https://better-launch.cc/",
   },
-  {
-    title: "GroupLoop",
-    url: "https://grouploop.godaddysites.com/",
-  },
 ];
 
 export const funLinks = [
