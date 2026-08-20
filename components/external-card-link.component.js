@@ -86,6 +86,7 @@ class ExternalCardLink extends HTMLElement {
     this.innerHTML = `
       <a href="${url}" target="_blank" rel="noopener noreferrer"
          class="group w-full flex items-center justify-between sm:flex-nowrap flex-wrap gap-2 py-1 no-underline">
+        <span class="sr-only">Opens in new tab</span>
         <div class="min-w-0 flex-1 flex items-center gap-4">
           <span class="whitespace-normal break-words sm:truncate text-foreground group-hover:text-emerald-500 transition-colors">${left}</span>
           <span class="hidden sm:block h-px flex-1 bg-border group-hover:bg-emerald-500/80 transition-colors"></span>

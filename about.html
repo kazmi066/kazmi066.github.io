@@ -1,9 +1,8 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="view-transition" content="same-origin" />
     <meta name="description" content="About - Awais Abbas" />
     <link
       href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap"
@@ -35,12 +34,19 @@
     <title>About</title>
   </head>
   <body class="bg-background text-foreground">
-    <main class="px-4 pt-16 pb-32 sm:pt-32">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <site-navbar></site-navbar>
+    <main id="main-content" class="px-4 pt-16 pb-16">
       <div class="max-w-[768px] mx-auto">
-        <site-navbar></site-navbar>
+        <section class="mt-2">
+          <h1 class="text-2xl sm:text-3xl font-medium">About</h1>
+          <p class="text-muted-foreground mt-1">
+            A little about me and how I work.
+          </p>
+        </section>
 
-        <section class="work-section">
-          <h2 class="text-2xl sm:text-3xl font-medium">Work</h2>
+        <section class="work-section mt-10">
+          <h2 class="text-xl sm:text-2xl font-medium">Work</h2>
           <p class="text-muted-foreground mt-1">Companies I've worked with.</p>
           <ul class="mt-6">
             <li>
@@ -61,7 +67,7 @@
         </section>
 
         <section aria-label="Frequently Asked Questions" class="mt-16">
-          <h2 class="text-2xl sm:text-3xl font-medium">FAQ</h2>
+          <h2 class="text-xl sm:text-2xl font-medium">FAQ</h2>
           <dl class="mt-6 space-y-6">
             <dt class="text-lg font-medium">What's your current tech stack?</dt>
             <dd class="text-md max-lg:p-0 text-muted-foreground md:ps-6">

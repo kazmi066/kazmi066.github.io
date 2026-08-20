@@ -62,6 +62,10 @@ function appInit() {
       a.rel = "noopener noreferrer";
       a.textContent = socialButton.title;
       a.className = "underline underline-offset-4 hover:text-emerald-500";
+      const srLabel = document.createElement("span");
+      srLabel.className = "sr-only";
+      srLabel.textContent = " (opens in new tab)";
+      a.appendChild(srLabel);
       li.appendChild(a);
       socialButtonsList.appendChild(li);
     });

@@ -1,10 +1,9 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="view-transition" content="same-origin" />
     <meta name="theme-color" content="#000000" />
     <meta name="description" content="Awais Abbas - Resources" />
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
@@ -75,11 +74,11 @@
     <title>Resources - Awais Abbas</title>
   </head>
   <body class="bg-background text-foreground">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <site-navbar></site-navbar>
     <noscript>You need to enable JavaScript to run this app.</noscript>
-    <main class="px-4 pt-16 pb-32 sm:pt-32">
+    <main id="main-content" class="px-4 pt-16 pb-16">
       <div class="max-w-[768px] mx-auto">
-        <site-navbar></site-navbar>
-
         <!-- Page Header -->
         <section>
           <h1 class="text-xl sm:text-2xl font-medium">Resources</h1>
@@ -118,27 +117,58 @@
       <script src="components/navbar.component.js"></script>
       <script src="components/footer.component.js"></script>
       <script>
-        (async () => {
-          try {
-            const response = await fetch("data/resources.json", {
-              cache: "no-cache",
-            });
+        const resources = {
+          frontendGoats: [
+            { label: "Josh W. Comeau", href: "https://www.joshwcomeau.com/" },
+            { label: "Andy Bell", href: "https://piccalil.li/author/andy-bell/" },
+            { label: "Kevin Powell", href: "https://www.kevinpowell.co/" },
+            { label: "Sara Soueidan", href: "https://www.sarasoueidan.com/" },
+            { label: "Nadia Makarevich", href: "https://www.developerway.com/" },
+            { label: "Kent C. Dodds", href: "https://kentcdodds.com/" },
+            { label: "Kyle Simpson", href: "https://me.getify.com/" },
+            { label: "Basher", href: "https://github.com/basher" },
+            { label: "Wes Bos", href: "https://wesbos.com/" },
+          ],
+          books: [
+            {
+              title: "You Don't Know JS (Series)",
+              author: "Kyle Simpson",
+              href: "https://archive.org/details/kyle-simpson-all-6",
+            },
+            {
+              title: "Advanced React",
+              author: "Nadia Makarevic",
+              href: "https://www.advanced-react.com/",
+            },
+            {
+              title: "Atomic Design",
+              author: "Brad Frost",
+              href: "https://atomicdesign.bradfrost.com/",
+            },
+            {
+              title: "Tao of React",
+              author: "Alex Kondov",
+              href: "https://alexkondov.com/tao-of-react/",
+            },
+            {
+              title: "The Pragmatic Programmer (20th Anniversary Edition)",
+              author: "Andy Hunt and Dave Thomas",
+              href: "https://pragprog.com/titles/tpp20/the-pragmatic-programmer-20th-anniversary-edition/",
+            },
+          ],
+        };
 
-            if (!response.ok) return;
+        const frontendGoatsList = document.getElementById(
+          "frontend-goats-list",
+        );
+        if (frontendGoatsList) {
+          const goats = Array.isArray(resources.frontendGoats)
+            ? resources.frontendGoats
+            : [];
 
-            const resources = await response.json();
-
-            const frontendGoatsList = document.getElementById(
-              "frontend-goats-list"
-            );
-            if (frontendGoatsList) {
-              const goats = Array.isArray(resources.frontendGoats)
-                ? resources.frontendGoats
-                : [];
-
-              frontendGoatsList.innerHTML = goats
-                .map(
-                  ({ label, href }) => `
+          frontendGoatsList.innerHTML = goats
+            .map(
+              ({ label, href }) => `
                     <li>
                       <a
                         href="${href}"
@@ -147,22 +177,21 @@
                         class="resource-link inline-flex items-center gap-1">
                         ${label}
                         <span class="arrow transition-transform">→</span>
+                        <span class="sr-only">(opens in new tab)</span>
                       </a>
                     </li>
-                  `
-                )
-                .join("");
-            }
+                  `,
+            )
+            .join("");
+        }
 
-            const booksList = document.getElementById("books-list");
-            if (booksList) {
-              const books = Array.isArray(resources.books)
-                ? resources.books
-                : [];
+        const booksList = document.getElementById("books-list");
+        if (booksList) {
+          const books = Array.isArray(resources.books) ? resources.books : [];
 
-              booksList.innerHTML = books
-                .map(
-                  ({ title, author, href }) => `
+          booksList.innerHTML = books
+            .map(
+              ({ title, author, href }) => `
                     <li class="flex items-center justify-between gap-3">
                       <span class="text-sm text-muted-foreground">${title} - ${author}</span>
                       <a
@@ -172,16 +201,13 @@
                         class="book-link inline-flex items-center gap-1 shrink-0">
                         Book
                         <span class="arrow transition-transform">→</span>
+                        <span class="sr-only">(opens in new tab)</span>
                       </a>
                     </li>
-                  `
-                )
-                .join("");
-            }
-          } catch (e) {
-            return;
-          }
-        })();
+                  `,
+            )
+            .join("");
+        }
       </script>
     </main>
   </body>

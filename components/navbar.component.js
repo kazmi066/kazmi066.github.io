@@ -7,6 +7,7 @@ class SiteNavbarComponent extends HTMLElement {
     this.render();
     this.highlightActive();
     this.setupThemeToggle();
+    this.setupMenuToggle();
   }
 
   render() {
@@ -16,20 +17,20 @@ class SiteNavbarComponent extends HTMLElement {
           position: relative;
           overflow: hidden;
         }
-        
+
         .theme-toggle .emoji {
           display: inline-block;
           transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
         }
-        
+
         .theme-toggle:hover .emoji {
           transform: scale(1.2) rotate(20deg);
         }
-        
+
         .theme-toggle.transitioning .emoji {
           animation: flip-and-bounce 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
         }
-        
+
         @keyframes flip-and-bounce {
           0% {
             transform: scale(1) rotateY(0deg);
@@ -47,7 +48,7 @@ class SiteNavbarComponent extends HTMLElement {
             transform: scale(1) rotateY(360deg);
           }
         }
-        
+
         .theme-toggle::before {
           content: '';
           position: absolute;
@@ -56,15 +57,15 @@ class SiteNavbarComponent extends HTMLElement {
           opacity: 0;
           transition: opacity 0.3s ease;
         }
-        
+
         .theme-toggle:active::before {
           opacity: 1;
         }
-        
+
         .theme-toggle:active {
           transform: scale(0.95);
         }
-        
+
         .ripple {
           position: absolute;
           border-radius: 50%;
@@ -73,38 +74,94 @@ class SiteNavbarComponent extends HTMLElement {
           animation: ripple-animation 0.6s ease-out;
           pointer-events: none;
         }
-        
+
         .dark .ripple {
           background: rgba(255, 255, 255, 0.3);
         }
-        
+
         @keyframes ripple-animation {
           to {
             transform: scale(4);
             opacity: 0;
           }
         }
-        
+
         .theme-toggle {
           transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
+
+        .site-header {
+          position: sticky;
+          top: 0;
+          z-index: 50;
+          background-color: var(--background);
+          background-color: color-mix(in srgb, var(--background) 85%, transparent);
+          border-bottom: 1px solid var(--border);
+          backdrop-filter: blur(8px);
+          -webkit-backdrop-filter: blur(8px);
+        }
+
+        .site-menu {
+          border-top: 1px solid var(--border);
+          background-color: var(--background);
+          animation: site-menu-in 0.18s ease;
+        }
+
+        @keyframes site-menu-in {
+          from {
+            opacity: 0;
+            transform: translateY(-4px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
+        .menu-icon-close {
+          display: none;
+        }
+
+        .menu-toggle[aria-expanded="true"] .menu-icon-open {
+          display: none;
+        }
+
+        .menu-toggle[aria-expanded="true"] .menu-icon-close {
+          display: block;
+        }
       </style>
-      
-      <nav
-        class="isolate z-50 rounded-full px-6 flex items-center gap-6 fixed bottom-6 left-1/2 -translate-x-1/2 backdrop-blur-sm backdrop-filter bg-opacity-50 shadow-lg border text-sm bg-white/80 border-neutral-950/10 dark:bg-neutral-950/80 dark:border-neutral-100/10">
 
-        <a aria-label="Home" class="nav-link relative py-3 text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors" data-path="/" href="/">Home</a>
-        
-        <a aria-label="About" class="nav-link relative py-3 text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors" data-path="/about.html" href="about.html">About</a>
-        
-        <a aria-label="Blog" class="nav-link relative py-3 text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors" data-path="/blog.html" href="blog.html">Blog</a>
-        
-        <a aria-label="Stack" class="nav-link relative py-3 text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors" data-path="/stack.html" href="stack.html">Stack</a>
+      <header class="site-header">
+        <nav class="max-w-[768px] mx-auto px-4 h-14 flex items-center justify-between" aria-label="Main navigation">
+          <div></div>
+          <div class="flex items-center gap-1 sm:gap-2">
+            <ul class="hidden md:flex items-center gap-6 mr-2">
+              <li><a aria-label="Home" class="nav-link relative py-3 text-sm text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors" data-path="/" href="/">Home</a></li>
+              <li><a aria-label="About" class="nav-link relative py-3 text-sm text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors" data-path="/about.html" href="about.html">About</a></li>
+              <li><a aria-label="Blog" class="nav-link relative py-3 text-sm text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors" data-path="/blog.html" href="blog.html">Blog</a></li>
+              <li><a aria-label="Stack" class="nav-link relative py-3 text-sm text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors" data-path="/stack.html" href="stack.html">Stack</a></li>
+            </ul>
 
-        <button type="button" aria-label="Toggle theme" class="theme-toggle ml-2 inline-flex items-center justify-center rounded-full px-2 py-2 text-base leading-none bg-neutral-100 text-neutral-700 border border-neutral-200 hover:bg-neutral-200 dark:bg-neutral-800 dark:text-white dark:border-neutral-700 dark:hover:bg-neutral-700 transition-colors">
-          <span class="emoji">🌤️</span>
-        </button>
-      </nav>
+            <button type="button" aria-label="Toggle theme" aria-pressed="false" class="theme-toggle inline-flex items-center justify-center rounded-full px-2 py-2 text-base leading-none bg-neutral-100 text-neutral-700 border border-neutral-200 hover:bg-neutral-200 dark:bg-neutral-800 dark:text-white dark:border-neutral-700 dark:hover:bg-neutral-700 transition-colors">
+              <span class="emoji">🌤️</span>
+            </button>
+
+            <button type="button" class="menu-toggle md:hidden inline-flex items-center justify-center rounded-full p-2 text-neutral-700 dark:text-white bg-neutral-100 dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700 hover:bg-neutral-200 dark:hover:bg-neutral-700 transition-colors" aria-expanded="false" aria-controls="site-menu" aria-label="Open menu">
+              <svg class="menu-icon-open" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 6h16"/><path d="M4 12h16"/><path d="M4 18h16"/></svg>
+              <svg class="menu-icon-close" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M18 6l-12 12"/><path d="M6 6l12 12"/></svg>
+            </button>
+          </div>
+        </nav>
+
+        <nav id="site-menu" class="site-menu md:hidden" aria-label="Mobile navigation" hidden>
+          <ul class="px-4 py-2">
+            <li><a aria-label="Home" class="nav-link block py-2.5 text-sm text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors" data-path="/" href="/">Home</a></li>
+            <li><a aria-label="About" class="nav-link block py-2.5 text-sm text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors" data-path="/about.html" href="about.html">About</a></li>
+            <li><a aria-label="Blog" class="nav-link block py-2.5 text-sm text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors" data-path="/blog.html" href="blog.html">Blog</a></li>
+            <li><a aria-label="Stack" class="nav-link block py-2.5 text-sm text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors" data-path="/stack.html" href="stack.html">Stack</a></li>
+          </ul>
+        </nav>
+      </header>
     `;
   }
 
@@ -127,29 +184,34 @@ class SiteNavbarComponent extends HTMLElement {
         (normalizedTarget === "/" &&
           (normalizedPath === "/" || normalizedPath === ""));
 
+      const isMobile = Boolean(a.closest("#site-menu"));
+
+      a.classList.remove(
+        "font-medium",
+        "text-neutral-900",
+        "dark:text-white",
+        "border-b-2",
+        "border-neutral-900",
+        "dark:border-white",
+      );
+      a.classList.add("text-neutral-500", "dark:text-neutral-400");
+      a.removeAttribute("aria-current");
+
       if (isActive) {
         a.classList.remove("text-neutral-500", "dark:text-neutral-400");
-        a.classList.add(
-          "font-medium",
-          "text-neutral-900",
-          "dark:text-white",
-          "border-b-2",
-          "border-neutral-900",
-          "dark:border-white"
-        );
-      } else {
-        a.classList.remove(
-          "font-medium",
-          "text-neutral-900",
-          "dark:text-white",
-          "border-b-2",
-          "border-neutral-900",
-          "dark:border-white"
-        );
-        a.classList.add("text-neutral-500", "dark:text-neutral-400");
+        a.classList.add("font-medium", "text-neutral-900", "dark:text-white");
+        if (!isMobile) {
+          a.classList.add(
+            "border-b-2",
+            "border-neutral-900",
+            "dark:border-white",
+          );
+        }
+        a.setAttribute("aria-current", "page");
       }
     });
   }
+
   createRipple(event, button) {
     const ripple = document.createElement("span");
     ripple.classList.add("ripple");
@@ -174,19 +236,18 @@ class SiteNavbarComponent extends HTMLElement {
     const emoji = btn.querySelector(".emoji");
     const html = document.documentElement;
     const key = "theme";
+    const reduceMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)",
+    ).matches;
 
     const applyTheme = (mode, animate = false) => {
-      if (animate) {
+      const isDark = mode === "dark";
+      html.classList.toggle("dark", isDark);
+      if (emoji) emoji.textContent = isDark ? "🌑" : "🌤️";
+      btn.setAttribute("aria-pressed", String(isDark));
+      if (animate && !reduceMotion) {
         btn.classList.add("transitioning");
         setTimeout(() => btn.classList.remove("transitioning"), 600);
-      }
-
-      if (mode === "dark") {
-        html.classList.add("dark");
-        if (emoji) emoji.textContent = "🌑";
-      } else {
-        html.classList.remove("dark");
-        if (emoji) emoji.textContent = "🌤️";
       }
     };
 
@@ -196,7 +257,7 @@ class SiteNavbarComponent extends HTMLElement {
         applyTheme(stored, false);
       } else {
         const prefersDark = window.matchMedia(
-          "(prefers-color-scheme: dark)"
+          "(prefers-color-scheme: dark)",
         ).matches;
         const systemTheme = prefersDark ? "dark" : "light";
         applyTheme(systemTheme, false);
@@ -207,7 +268,7 @@ class SiteNavbarComponent extends HTMLElement {
     initTheme();
 
     btn.addEventListener("click", (e) => {
-      this.createRipple(e, btn);
+      if (!reduceMotion) this.createRipple(e, btn);
 
       const isDark = html.classList.contains("dark");
       const newTheme = isDark ? "light" : "dark";
@@ -223,6 +284,37 @@ class SiteNavbarComponent extends HTMLElement {
           applyTheme(e.matches ? "dark" : "light", false);
         }
       });
+  }
+
+  setupMenuToggle() {
+    const btn = this.querySelector(".menu-toggle");
+    const menu = this.querySelector("#site-menu");
+    if (!btn || !menu) return;
+
+    const setOpen = (open) => {
+      const isOpen = !menu.hidden;
+      if (open === isOpen) return;
+      menu.hidden = !open;
+      btn.setAttribute("aria-expanded", String(open));
+      btn.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+    };
+
+    btn.addEventListener("click", () => setOpen(menu.hidden));
+
+    menu.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => setOpen(false));
+    });
+
+    document.addEventListener("click", (e) => {
+      if (!menu.hidden && !this.contains(e.target)) setOpen(false);
+    });
+
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && !menu.hidden) {
+        setOpen(false);
+        btn.focus();
+      }
+    });
   }
 }
 
