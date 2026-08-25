@@ -1,5 +1,9 @@
 export const projects = [
   {
+    title: "Heaven Design System — Storybook",
+    url: "https://kazmi066.github.io/heaven-design-system/",
+  },
+  {
     title: "RankLocal",
     url: "https://ranklocal.cc/",
   },
