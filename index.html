@@ -139,9 +139,74 @@
           </article>
         </section>
 
-        <!-- Projects: simple external links with optional hover previews -->
-        <section class="projects-section mt-16">
-          <ul id="projects-list" class="mt-2"></ul>
+        <section class="projects-section mt-16" aria-labelledby="projects-heading">
+          <div class="projects-head">
+            <h2 id="projects-heading" class="text-xl sm:text-2xl font-medium">
+              Projects
+            </h2>
+            <div class="projects-corner">
+              <p
+                id="projects-counter"
+                class="projects-counter"
+                aria-hidden="true">
+                01 / 04
+              </p>
+              <div class="projects-nav" role="group" aria-label="Project slides">
+                <button
+                  type="button"
+                  id="projects-prev"
+                  aria-label="Previous project"
+                  aria-controls="projects-track">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.75"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true">
+                    <path d="M15 6l-6 6l6 6" />
+                  </svg>
+                </button>
+                <button
+                  type="button"
+                  id="projects-next"
+                  aria-label="Next project"
+                  aria-controls="projects-track">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.75"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true">
+                    <path d="M9 6l6 6l-6 6" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div
+            id="projects-track"
+            class="projects-track"
+            tabindex="0"
+            role="region"
+            aria-roledescription="carousel"
+            aria-label="Featured projects">
+            <ul id="projects-list"></ul>
+          </div>
+          <p
+            id="projects-status"
+            class="sr-only"
+            aria-live="polite"
+            aria-atomic="true"></p>
         </section>
 
         <!-- Fun / CodePen links -->
