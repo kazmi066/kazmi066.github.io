@@ -1,13 +1,5 @@
 export const projects = [
   {
-    title: "Heaven Design System",
-    blurb: "Components documented in Storybook.",
-    url: "https://kazmi066.github.io/heaven-design-system/",
-    host: "Storybook",
-    accent: "#0070f3",
-    logo: "./assets/projects/heaven-logo.svg",
-  },
-  {
     title: "RankLocal",
     blurb: "Local business sites, generated to rank.",
     url: "https://ranklocal.cc/",
@@ -30,6 +22,22 @@ export const projects = [
     host: "bhej.cc",
     accent: "#a3b441",
     logo: "./assets/projects/bhej-logo.png",
+  },
+  {
+    title: "QuickSaas",
+    blurb: "SaaS homepages, assembled from section variants.",
+    url: "https://quicksaas.cc/",
+    host: "quicksaas.cc",
+    accent: "#e5e5e5",
+    logo: "./assets/projects/quicksaas-logo.png",
+  },
+  {
+    title: "Heaven Design System",
+    blurb: "Components documented in Storybook.",
+    url: "https://kazmi066.github.io/heaven-design-system/",
+    host: "Storybook",
+    accent: "#0070f3",
+    logo: "./assets/projects/heaven-logo.svg",
   },
 ];
 
