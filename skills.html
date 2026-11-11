@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content="Agent skills I use daily, grouped by when I reach for them." />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/assets/favicon-32x32.png" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/assets/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap"
+      rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="styles/styles.css" />
+    <style type="text/tailwindcss">
+      @custom-variant dark (&:is(.dark *));
+
+      @theme inline {
+        --color-background: var(--background);
+        --color-foreground: var(--foreground);
+        --color-card: var(--card);
+        --color-primary: var(--primary);
+        --color-secondary: var(--secondary);
+        --color-secondary-foreground: var(--secondary-foreground);
+        --color-muted: var(--muted);
+        --color-muted-foreground: var(--muted-foreground);
+        --color-accent: var(--accent);
+        --color-accent-foreground: var(--accent-foreground);
+        --color-destructive: var(--destructive);
+        --color-destructive-foreground: var(--destructive-foreground);
+        --color-border: var(--border);
+        --color-input: var(--input);
+        --color-ring: var(--ring);
+        --font-sans: var(--font-sans);
+      }
+    </style>
+    <title>Skills - Awais Abbas</title>
+  </head>
+  <body class="bg-background text-foreground">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <site-navbar></site-navbar>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <main id="main-content" class="px-4 pt-16 pb-16">
+      <div class="max-w-[768px] mx-auto">
+        <section class="mt-2">
+          <h1 class="text-2xl sm:text-3xl font-medium">Skills</h1>
+          <p class="text-muted-foreground mt-1">
+            Agent skills I use daily, in the order I reach for them during a
+            task.
+          </p>
+        </section>
+
+        <ol id="skill-flow" class="skill-flow mt-10"></ol>
+
+        <site-footer></site-footer>
+      </div>
+      <script type="module" src="scripts/main.js"></script>
+      <script type="module" src="scripts/skills.js"></script>
+      <script src="components/navbar.component.js"></script>
+      <script src="components/footer.component.js"></script>
+    </main>
+  </body>
+</html>

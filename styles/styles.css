@@ -401,3 +401,205 @@ main {
     transform: none;
   }
 }
+
+/* Skills page */
+.skill-flow {
+  display: grid;
+  gap: 2.75rem;
+  padding: 0;
+  list-style: none;
+}
+
+.skill-category-head {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+}
+
+.skill-step {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.75rem;
+  font-variant-numeric: tabular-nums;
+  color: var(--muted-foreground);
+}
+
+.skill-category-title {
+  margin: 0;
+  font-size: 1.125rem;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+}
+
+.skill-blurb {
+  margin: 0.25rem 0 0;
+  padding-inline-start: 2.05rem;
+  font-size: 0.875rem;
+  color: var(--muted-foreground);
+}
+
+.skill-list {
+  display: grid;
+  gap: 1.75rem;
+  margin: 1.25rem 0 0 0.6rem;
+  padding: 0 0 0 1.45rem;
+  list-style: none;
+  border-inline-start: 1px solid var(--border);
+}
+
+.skill-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.25rem 1rem;
+}
+
+.skill-name {
+  margin: 0;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.skill-name a {
+  text-decoration: underline;
+  text-decoration-color: var(--border);
+  text-underline-offset: 4px;
+  transition: text-decoration-color 0.15s ease;
+}
+
+.skill-name a:hover {
+  text-decoration-color: currentColor;
+}
+
+.skill-source {
+  font-size: 0.75rem;
+  color: var(--muted-foreground);
+}
+
+.skill-desc {
+  margin: 0.4rem 0 0;
+  font-size: 0.875rem;
+  line-height: 1.55;
+  color: var(--muted-foreground);
+  text-wrap: pretty;
+}
+
+.skill-when {
+  margin: 0.5rem 0 0;
+  font-size: 0.875rem;
+  line-height: 1.55;
+  text-wrap: pretty;
+}
+
+.skill-label {
+  margin-inline-end: 0.35rem;
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted-foreground);
+}
+
+.skill-install {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+  padding: 0.35rem 0.35rem 0.35rem 0.75rem;
+  background: var(--muted);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.skill-install pre {
+  flex: 1;
+  min-width: 0;
+  margin: 0;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.8rem;
+  line-height: 1.5;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.skill-docs {
+  display: inline-block;
+  margin-top: 0.6rem;
+  font-size: 0.8rem;
+  color: var(--muted-foreground);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color 0.15s ease;
+}
+
+.skill-docs:hover {
+  color: var(--foreground);
+}
+
+.copy {
+  position: relative;
+  flex: none;
+}
+
+.copy-button {
+  display: grid;
+  place-items: center;
+  min-inline-size: 2rem;
+  min-block-size: 2rem;
+  padding: 0;
+  color: var(--muted-foreground);
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: calc(var(--radius) - 2px);
+  cursor: pointer;
+  transition: color 0.15s ease;
+}
+
+.copy-button:hover {
+  color: var(--foreground);
+}
+
+.copy-button > svg {
+  grid-area: 1 / 1;
+}
+
+.copy-button .icon-check,
+.copy-button[data-copied] .icon-copy {
+  opacity: 0;
+}
+
+.copy-button[data-copied] .icon-check {
+  opacity: 1;
+}
+
+.copy-button[data-failed] {
+  color: var(--destructive);
+}
+
+.copy .tip {
+  position: absolute;
+  inset-block-end: calc(100% + 0.4rem);
+  inset-inline-end: 0;
+  padding: 0.2rem 0.45rem;
+  font-size: 0.7rem;
+  white-space: nowrap;
+  color: var(--primary-foreground);
+  background: var(--primary);
+  border-radius: 4px;
+  pointer-events: none;
+  opacity: 0;
+  translate: 0 2px;
+  transition: opacity 0.15s ease, translate 0.15s ease;
+}
+
+.copy .tip:not(:empty) {
+  opacity: 1;
+  translate: 0 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .copy .tip {
+    translate: none;
+  }
+}

@@ -139,6 +139,7 @@ class SiteNavbarComponent extends HTMLElement {
               <li><a aria-label="Home" class="nav-link relative py-3 text-sm text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors" data-path="/" href="/">Home</a></li>
               <li><a aria-label="About" class="nav-link relative py-3 text-sm text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors" data-path="/about.html" href="about.html">About</a></li>
               <li><a aria-label="Blog" class="nav-link relative py-3 text-sm text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors" data-path="/blog.html" href="blog.html">Blog</a></li>
+            <li><a aria-label="Skills" class="nav-link relative py-3 text-sm text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors" data-path="/skills.html" href="skills.html">Skills</a></li>
               <li><a aria-label="Stack" class="nav-link relative py-3 text-sm text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors" data-path="/stack.html" href="stack.html">Stack</a></li>
             </ul>
 
@@ -158,6 +159,7 @@ class SiteNavbarComponent extends HTMLElement {
             <li><a aria-label="Home" class="nav-link block py-2.5 text-sm text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors" data-path="/" href="/">Home</a></li>
             <li><a aria-label="About" class="nav-link block py-2.5 text-sm text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors" data-path="/about.html" href="about.html">About</a></li>
             <li><a aria-label="Blog" class="nav-link block py-2.5 text-sm text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors" data-path="/blog.html" href="blog.html">Blog</a></li>
+            <li><a aria-label="Skills" class="nav-link block py-2.5 text-sm text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors" data-path="/skills.html" href="skills.html">Skills</a></li>
             <li><a aria-label="Stack" class="nav-link block py-2.5 text-sm text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors" data-path="/stack.html" href="stack.html">Stack</a></li>
           </ul>
         </nav>
