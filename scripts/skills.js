@@ -20,15 +20,12 @@ const externalLink = (href, text, className) => {
 };
 
 function renderSkill(skill) {
-  const li = el("li", "skill");
+  const li = el("li", "skill-card");
 
   const head = el("div", "skill-head");
   const title = el("h3", "skill-name");
   title.append(externalLink(skill.href, skill.name));
   head.append(title, el("span", "skill-source", skill.source));
-
-  const when = el("p", "skill-when");
-  when.append(el("span", "skill-label", "Use when"), ` ${skill.useWhen}`);
 
   const codeId = `install-${skill.name}`;
   const install = el("div", "skill-install");
@@ -49,38 +46,30 @@ function renderSkill(skill) {
   copy.append(button, tip);
   install.append(pre, copy);
 
-  li.append(head, el("p", "skill-desc", skill.description), when, install);
-
-  if (skill.docs) {
-    const docs = externalLink(skill.docs, "Read the announcement", "skill-docs");
-    li.append(docs);
-  }
-
+  li.append(head, el("p", "skill-desc", skill.description), install);
   return li;
 }
 
-function renderCategory(category, index) {
-  const li = el("li", "skill-category");
-  li.id = category.id;
+function renderCategory(category) {
+  const section = el("section", "skill-category");
+  section.id = category.id;
 
-  const head = el("div", "skill-category-head");
-  const step = el("span", "skill-step", String(index + 1).padStart(2, "0"));
-  step.setAttribute("aria-hidden", "true");
-  head.append(step, el("h2", "skill-category-title", category.title));
-
-  const list = el("ul", "skill-list");
+  const grid = el("ul", "skill-grid");
   // Safari drops list semantics when list-style is removed outside <nav>.
-  list.setAttribute("role", "list");
-  category.skills.forEach((skill) => list.append(renderSkill(skill)));
+  grid.setAttribute("role", "list");
+  category.skills.forEach((skill) => grid.append(renderSkill(skill)));
 
-  li.append(head, el("p", "skill-blurb", category.blurb), list);
-  return li;
+  section.append(
+    el("h2", "skill-category-title", category.title),
+    el("p", "skill-blurb", category.blurb),
+    grid,
+  );
+  return section;
 }
 
-const flow = document.getElementById("skill-flow");
-if (flow) {
-  flow.setAttribute("role", "list");
-  flow.replaceChildren(...skillCategories.map(renderCategory));
+const container = document.getElementById("skill-categories");
+if (container) {
+  container.replaceChildren(...skillCategories.map(renderCategory));
 }
 
 // Copy button: Invoker Commands with a click fallback.

@@ -404,24 +404,9 @@ main {
 }
 
 /* Skills page */
-.skill-flow {
+.skill-categories {
   display: grid;
-  gap: 2.75rem;
-  padding: 0;
-  list-style: none;
-}
-
-.skill-category-head {
-  display: flex;
-  align-items: baseline;
-  gap: 0.75rem;
-}
-
-.skill-step {
-  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
-  font-size: 0.75rem;
-  font-variant-numeric: tabular-nums;
-  color: var(--muted-foreground);
+  gap: 2.5rem;
 }
 
 .skill-category-title {
@@ -432,19 +417,28 @@ main {
 }
 
 .skill-blurb {
-  margin: 0.25rem 0 0;
-  padding-inline-start: 2.05rem;
+  margin: 0.2rem 0 0;
   font-size: 0.875rem;
   color: var(--muted-foreground);
 }
 
-.skill-list {
+.skill-grid {
   display: grid;
-  gap: 1.75rem;
-  margin: 1.25rem 0 0 0.6rem;
-  padding: 0 0 0 1.45rem;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 20rem), 1fr));
+  gap: 0.75rem;
+  margin: 1rem 0 0;
+  padding: 0;
   list-style: none;
-  border-inline-start: 1px solid var(--border);
+}
+
+.skill-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  padding: 1rem;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: calc(var(--radius) + 2px);
 }
 
 .skill-head {
@@ -458,7 +452,7 @@ main {
 .skill-name {
   margin: 0;
   font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   font-weight: 500;
 }
 
@@ -479,35 +473,20 @@ main {
 }
 
 .skill-desc {
-  margin: 0.4rem 0 0;
-  font-size: 0.875rem;
-  line-height: 1.55;
-  color: var(--muted-foreground);
-  text-wrap: pretty;
-}
-
-.skill-when {
+  flex: 1;
   margin: 0.5rem 0 0;
-  font-size: 0.875rem;
+  font-size: 0.85rem;
   line-height: 1.55;
-  text-wrap: pretty;
-}
-
-.skill-label {
-  margin-inline-end: 0.35rem;
-  font-size: 0.7rem;
-  font-weight: 500;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
   color: var(--muted-foreground);
+  text-wrap: pretty;
 }
 
 .skill-install {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  margin-top: 0.75rem;
-  padding: 0.35rem 0.35rem 0.35rem 0.75rem;
+  margin-top: 0.9rem;
+  padding: 0.3rem 0.3rem 0.3rem 0.65rem;
   background: var(--muted);
   border: 1px solid var(--border);
   border-radius: var(--radius);
@@ -518,24 +497,10 @@ main {
   min-width: 0;
   margin: 0;
   font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   line-height: 1.5;
   white-space: pre-wrap;
   overflow-wrap: anywhere;
-}
-
-.skill-docs {
-  display: inline-block;
-  margin-top: 0.6rem;
-  font-size: 0.8rem;
-  color: var(--muted-foreground);
-  text-decoration: underline;
-  text-underline-offset: 3px;
-  transition: color 0.15s ease;
-}
-
-.skill-docs:hover {
-  color: var(--foreground);
 }
 
 .copy {
