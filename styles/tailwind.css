@@ -44,6 +44,36 @@
   --font-sans: var(--font-sans);
 }
 
+/*
+  The hand waves once when the page loads and again on hover. Two
+  identical keyframes so hover restarts the animation instead of reusing
+  the finished one.
+*/
+@theme {
+  --animate-wave: wave 1.6s ease-in-out 0.3s;
+  --animate-wave-again: wave-again 1.6s ease-in-out;
+
+  @keyframes wave {
+    0%, 60%, 100% { rotate: 0deg; }
+    10%, 30% { rotate: 14deg; }
+    20% { rotate: -8deg; }
+    40% { rotate: -4deg; }
+    50% { rotate: 10deg; }
+  }
+
+  @keyframes wave-again {
+    0%, 60%, 100% { rotate: 0deg; }
+    10%, 30% { rotate: 14deg; }
+    20% { rotate: -8deg; }
+    40% { rotate: -4deg; }
+    50% { rotate: 10deg; }
+  }
+}
+
+.wave {
+  transform-origin: 70% 70%;
+}
+
 /* Resources page */
 .resource-link {
   @apply text-sm text-muted-foreground transition-colors hover:text-foreground;
