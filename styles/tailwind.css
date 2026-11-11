@@ -1,0 +1,67 @@
+/*
+  Tailwind source. Edit this file, then rebuild styles/app.css:
+    bun run build:css   (or: bun run watch:css while working)
+  app.css is committed because GitHub Pages serves the repo as-is.
+*/
+@import "tailwindcss" source(none);
+
+@source "../*.html";
+@source "../components";
+@source "../scripts";
+@source "../data";
+
+/*
+  `dark:` utilities apply when the inline head script set .dark, or, if
+  that script never ran, when the OS prefers dark and nothing set .light.
+*/
+@custom-variant dark {
+  &:where(.dark, .dark *) {
+    @slot;
+  }
+  @media (prefers-color-scheme: dark) {
+    &:where(:root:not(.light), :root:not(.light) *) {
+      @slot;
+    }
+  }
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --font-sans: var(--font-sans);
+}
+
+/* Resources page */
+.resource-link {
+  @apply text-sm text-muted-foreground transition-colors hover:text-foreground;
+}
+
+.resource-link:hover .arrow {
+  @apply translate-x-0.5;
+}
+
+.book-link {
+  @apply text-sm transition-colors;
+  color: color-mix(in srgb, var(--muted-foreground), #7c3aed 35%);
+}
+
+.book-link:hover {
+  color: color-mix(in srgb, var(--foreground), #7c3aed 35%);
+}
+
+.book-link:hover .arrow {
+  @apply translate-x-0.5;
+}

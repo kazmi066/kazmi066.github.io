@@ -15,7 +15,7 @@ class ExternalCardLink extends HTMLElement {
       "position",
       "company",
       "card-right-content",
-      "title",
+      "label",
       // Optional video preview on hover
       "preview",
     ];
@@ -41,8 +41,8 @@ class ExternalCardLink extends HTMLElement {
     if (position && company)
       return `${position}, <span class="font-medium">${company}</span>`;
     if (position) return position;
-    const title = this.getAttribute("title");
-    return title || "Link";
+    const label = this.getAttribute("label");
+    return label || "Link";
   }
 
   set left(v) {

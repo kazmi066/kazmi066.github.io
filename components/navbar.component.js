@@ -69,14 +69,10 @@ class SiteNavbarComponent extends HTMLElement {
         .ripple {
           position: absolute;
           border-radius: 50%;
-          background: rgba(255, 255, 255, 0.6);
+          background: light-dark(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.3));
           transform: scale(0);
           animation: ripple-animation 0.6s ease-out;
           pointer-events: none;
-        }
-
-        .dark .ripple {
-          background: rgba(255, 255, 255, 0.3);
         }
 
         @keyframes ripple-animation {
@@ -264,10 +260,14 @@ class SiteNavbarComponent extends HTMLElement {
 
     const systemTheme = () => (system.matches ? "dark" : "light");
 
+    const renderedTheme = () => readStored() || systemTheme();
+
     const applyTheme = (animate = false) => {
       const stored = readStored();
-      const isDark = (stored || systemTheme()) === "dark";
-      html.classList.toggle("dark", isDark);
+      const isDark = renderedTheme() === "dark";
+      // Classes only pin an override; without one, CSS follows the OS.
+      html.classList.toggle("dark", stored === "dark");
+      html.classList.toggle("light", stored === "light");
       if (meta) meta.content = stored || "light dark";
       if (emoji) emoji.textContent = isDark ? "🌑" : "🌤️";
       btn.setAttribute("aria-pressed", String(isDark));
@@ -283,7 +283,7 @@ class SiteNavbarComponent extends HTMLElement {
       if (!reduceMotion) this.createRipple(e, btn);
       // Flip what the user sees. Picking the system's own theme clears the
       // override, so the site follows the OS again.
-      const target = html.classList.contains("dark") ? "light" : "dark";
+      const target = renderedTheme() === "dark" ? "light" : "dark";
       writeStored(target === systemTheme() ? null : target);
       applyTheme(true);
     });

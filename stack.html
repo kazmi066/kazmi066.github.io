@@ -7,20 +7,15 @@
     <meta name="description" content="Apps and tools Awais Abbas uses daily." />
     <meta name="color-scheme" content="light dark" />
     <script>
-      // Apply the saved theme before first paint so the page never flashes.
-      (() => {
-        let saved = null;
-        try {
-          saved = localStorage.getItem("theme");
-        } catch {}
-        const dark = saved
-          ? saved === "dark"
-          : matchMedia("(prefers-color-scheme: dark)").matches;
-        document.documentElement.classList.toggle("dark", dark);
-        if (saved) {
+      // Pin a saved theme before first paint. With nothing saved, CSS
+      // follows the OS on its own.
+      try {
+        const saved = localStorage.getItem("theme");
+        if (saved === "light" || saved === "dark") {
+          document.documentElement.classList.add(saved);
           document.querySelector('meta[name="color-scheme"]').content = saved;
         }
-      })();
+      } catch {}
     </script>
     <meta
       name="theme-color"
@@ -43,34 +38,8 @@
     <link
       href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap"
       rel="stylesheet" />
-    <script
-      src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4.3.3/dist/index.global.js"
-      integrity="sha384-2ql948lIdLcGEE0/qxNiudyTjgauA3RDJERu5xW75kFCvSl5a9odyQYCb6tEjnmB"
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="styles/app.css" />
     <link rel="stylesheet" href="styles/styles.css" />
-    <style type="text/tailwindcss">
-      @custom-variant dark (&:is(.dark *));
-
-      @theme inline {
-        --color-background: var(--background);
-        --color-foreground: var(--foreground);
-        --color-card: var(--card);
-        --color-primary: var(--primary);
-        --color-secondary: var(--secondary);
-        --color-secondary-foreground: var(--secondary-foreground);
-        --color-muted: var(--muted);
-        --color-muted-foreground: var(--muted-foreground);
-        --color-accent: var(--accent);
-        --color-accent-foreground: var(--accent-foreground);
-        --color-destructive: var(--destructive);
-        --color-destructive-foreground: var(--destructive-foreground);
-        --color-border: var(--border);
-        --color-input: var(--input);
-        --color-ring: var(--ring);
-        --font-sans: var(--font-sans);
-      }
-    </style>
   </head>
   <body class="bg-background text-foreground">
     <a class="skip-link" href="#main-content">Skip to main content</a>

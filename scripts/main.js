@@ -11,7 +11,7 @@ function appInit() {
     blogs.forEach((blogItem) => {
       const card = document.createElement("external-card-link");
       card.url = blogItem.url;
-      card.title = blogItem.title;
+      card.setAttribute("label", blogItem.title);
       blogContainer.appendChild(card);
     });
   }
@@ -78,7 +78,7 @@ function appInit() {
       const li = document.createElement("li");
       const card = document.createElement("external-card-link");
       card.url = item.url;
-      card.title = item.title;
+      card.setAttribute("label", item.title);
       if (item.preview) card.setAttribute("preview", item.preview);
       li.appendChild(card);
       funList.appendChild(li);
