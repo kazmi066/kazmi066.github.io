@@ -12,7 +12,7 @@ class ExternalCardLink extends HTMLElement {
       "url",
       "left",
       "right",
-      "role",
+      "position",
       "company",
       "card-right-content",
       "title",
@@ -36,11 +36,11 @@ class ExternalCardLink extends HTMLElement {
   get left() {
     const explicit = this.getAttribute("left");
     if (explicit) return explicit;
-    const role = this.getAttribute("role");
+    const position = this.getAttribute("position");
     const company = this.getAttribute("company");
-    if (role && company)
-      return `${role}, <span class="font-medium">${company}</span>`;
-    if (role) return role;
+    if (position && company)
+      return `${position}, <span class="font-medium">${company}</span>`;
+    if (position) return position;
     const title = this.getAttribute("title");
     return title || "Link";
   }
@@ -86,12 +86,11 @@ class ExternalCardLink extends HTMLElement {
     this.innerHTML = `
       <a href="${url}" target="_blank" rel="noopener noreferrer"
          class="group w-full flex items-center justify-between sm:flex-nowrap flex-wrap gap-2 py-1 no-underline">
-        <span class="sr-only">Opens in new tab</span>
         <div class="min-w-0 flex-1 flex items-center gap-4">
-          <span class="whitespace-normal break-words sm:truncate text-foreground group-hover:text-emerald-500 transition-colors">${left}</span>
+          <span class="whitespace-normal break-words sm:truncate text-foreground group-hover:text-emerald-500 transition-colors">${left}<span class="sr-only"> (opens in new tab)</span></span>
           <span class="hidden sm:block h-px flex-1 bg-border group-hover:bg-emerald-500/80 transition-colors"></span>
         </div>
-        <span class="text-muted-foreground/70 tabular-nums text-sm sm:text-base sm:shrink-0 shrink mt-1 sm:mt-0 w-full sm:w-auto text-left sm:text-right">${right}</span>
+        <span class="text-muted-foreground tabular-nums text-sm sm:text-base sm:shrink-0 shrink mt-1 sm:mt-0 w-full sm:w-auto text-left sm:text-right">${right}</span>
       </a>
     `;
 
@@ -105,6 +104,11 @@ class ExternalCardLink extends HTMLElement {
 
     const src = this.getAttribute("preview");
     if (!src) return; // optional feature
+    // Decorative motion: skip it for reduced motion and on touch screens.
+    const canPreview =
+      window.matchMedia("(hover: hover)").matches &&
+      !window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (!canPreview) return;
 
     const anchor = this.querySelector("a");
     if (!anchor) return;

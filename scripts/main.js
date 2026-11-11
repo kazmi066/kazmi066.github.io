@@ -3,7 +3,6 @@
 import { blogs } from "../data/blogs.js";
 import { socialButtons } from "../data/social-buttons.js";
 import { projects, funLinks } from "../data/projects.js";
-document.documentElement.dataset.theme = "dark";
 
 function appInit() {
   const blogContainer = document.getElementById("blogs-list");
@@ -146,8 +145,12 @@ function appInit() {
     }
   }
 
+  // The clock shows minutes, so update on each minute boundary.
   updateTime();
-  setInterval(updateTime, 1000);
+  setTimeout(() => {
+    updateTime();
+    setInterval(updateTime, 60_000);
+  }, 60_000 - (Date.now() % 60_000));
 }
 
 function initProjectsCarousel(total) {

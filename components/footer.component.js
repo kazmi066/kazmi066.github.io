@@ -11,7 +11,7 @@ class SiteFooter extends HTMLElement {
           <a href="mailto:awaisabbas47@gmail.com" class="underline underline-offset-4">Email</a>.
           You can also check out my social media following the links below.
         </p>
-        <ul class="social-buttons-list flex flex-wrap gap-3 mt-4"></ul>
+        <ul class="social-buttons-list flex flex-wrap gap-3 mt-4" role="list"></ul>
       </footer>
     `;
   }

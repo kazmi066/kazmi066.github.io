@@ -132,35 +132,35 @@ class SiteNavbarComponent extends HTMLElement {
       </style>
 
       <header class="site-header">
-        <nav class="max-w-[768px] mx-auto px-4 h-14 flex items-center justify-between" aria-label="Main navigation">
+        <nav class="max-w-[768px] mx-auto px-4 h-14 flex items-center justify-between" aria-label="Primary">
           <div></div>
           <div class="flex items-center gap-1 sm:gap-2">
             <ul class="hidden md:flex items-center gap-6 mr-2">
-              <li><a aria-label="Home" class="nav-link relative py-3 text-sm text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors" data-path="/" href="/">Home</a></li>
-              <li><a aria-label="About" class="nav-link relative py-3 text-sm text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors" data-path="/about.html" href="about.html">About</a></li>
-              <li><a aria-label="Blog" class="nav-link relative py-3 text-sm text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors" data-path="/blog.html" href="blog.html">Blog</a></li>
-            <li><a aria-label="Skills" class="nav-link relative py-3 text-sm text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors" data-path="/skills.html" href="skills.html">Skills</a></li>
-              <li><a aria-label="Stack" class="nav-link relative py-3 text-sm text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors" data-path="/stack.html" href="stack.html">Stack</a></li>
+                <li><a class="nav-link relative py-3 text-sm text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors" data-path="/" href="/">Home</a></li>
+                <li><a class="nav-link relative py-3 text-sm text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors" data-path="/about.html" href="about.html">About</a></li>
+                <li><a class="nav-link relative py-3 text-sm text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors" data-path="/blog.html" href="blog.html">Blog</a></li>
+              <li><a class="nav-link relative py-3 text-sm text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors" data-path="/skills.html" href="skills.html">Skills</a></li>
+                <li><a class="nav-link relative py-3 text-sm text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors" data-path="/stack.html" href="stack.html">Stack</a></li>
             </ul>
 
-            <button type="button" aria-label="Toggle theme" aria-pressed="false" class="theme-toggle inline-flex items-center justify-center rounded-full px-2 py-2 text-base leading-none bg-neutral-100 text-neutral-700 border border-neutral-200 hover:bg-neutral-200 dark:bg-neutral-800 dark:text-white dark:border-neutral-700 dark:hover:bg-neutral-700 transition-colors">
-              <span class="emoji">🌤️</span>
+            <button type="button" aria-label="Dark theme" aria-pressed="false" class="theme-toggle inline-flex items-center justify-center rounded-full px-2 py-2 text-base leading-none bg-neutral-100 text-neutral-700 border border-neutral-200 hover:bg-neutral-200 dark:bg-neutral-800 dark:text-white dark:border-neutral-700 dark:hover:bg-neutral-700 transition-colors">
+              <span class="emoji" aria-hidden="true">🌤️</span>
             </button>
 
-            <button type="button" class="menu-toggle md:hidden inline-flex items-center justify-center rounded-full p-2 text-neutral-700 dark:text-white bg-neutral-100 dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700 hover:bg-neutral-200 dark:hover:bg-neutral-700 transition-colors" aria-expanded="false" aria-controls="site-menu" aria-label="Open menu">
+            <button type="button" class="menu-toggle md:hidden inline-flex items-center justify-center rounded-full p-2 text-neutral-700 dark:text-white bg-neutral-100 dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700 hover:bg-neutral-200 dark:hover:bg-neutral-700 transition-colors" aria-expanded="false" aria-controls="site-menu" aria-label="Menu">
               <svg class="menu-icon-open" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 6h16"/><path d="M4 12h16"/><path d="M4 18h16"/></svg>
               <svg class="menu-icon-close" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M18 6l-12 12"/><path d="M6 6l12 12"/></svg>
             </button>
           </div>
         </nav>
 
-        <nav id="site-menu" class="site-menu md:hidden" aria-label="Mobile navigation" hidden>
+        <nav id="site-menu" class="site-menu md:hidden" aria-label="Menu" hidden>
           <ul class="px-4 py-2">
-            <li><a aria-label="Home" class="nav-link block py-2.5 text-sm text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors" data-path="/" href="/">Home</a></li>
-            <li><a aria-label="About" class="nav-link block py-2.5 text-sm text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors" data-path="/about.html" href="about.html">About</a></li>
-            <li><a aria-label="Blog" class="nav-link block py-2.5 text-sm text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors" data-path="/blog.html" href="blog.html">Blog</a></li>
-            <li><a aria-label="Skills" class="nav-link block py-2.5 text-sm text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors" data-path="/skills.html" href="skills.html">Skills</a></li>
-            <li><a aria-label="Stack" class="nav-link block py-2.5 text-sm text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors" data-path="/stack.html" href="stack.html">Stack</a></li>
+            <li><a class="nav-link block py-2.5 text-sm text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors" data-path="/" href="/">Home</a></li>
+            <li><a class="nav-link block py-2.5 text-sm text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors" data-path="/about.html" href="about.html">About</a></li>
+            <li><a class="nav-link block py-2.5 text-sm text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors" data-path="/blog.html" href="blog.html">Blog</a></li>
+            <li><a class="nav-link block py-2.5 text-sm text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors" data-path="/skills.html" href="skills.html">Skills</a></li>
+            <li><a class="nav-link block py-2.5 text-sm text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors" data-path="/stack.html" href="stack.html">Stack</a></li>
           </ul>
         </nav>
       </header>
@@ -237,14 +237,38 @@ class SiteNavbarComponent extends HTMLElement {
     if (!btn) return;
     const emoji = btn.querySelector(".emoji");
     const html = document.documentElement;
+    const meta = document.querySelector('meta[name="color-scheme"]');
     const key = "theme";
+    const system = window.matchMedia("(prefers-color-scheme: dark)");
     const reduceMotion = window.matchMedia(
       "(prefers-reduced-motion: reduce)",
     ).matches;
 
-    const applyTheme = (mode, animate = false) => {
-      const isDark = mode === "dark";
+    // Two states: follow the system (nothing stored), or an override stored
+    // as "light" or "dark". localStorage can throw when site data is blocked.
+    const readStored = () => {
+      try {
+        const value = localStorage.getItem(key);
+        return value === "light" || value === "dark" ? value : null;
+      } catch {
+        return null;
+      }
+    };
+
+    const writeStored = (value) => {
+      try {
+        if (value) localStorage.setItem(key, value);
+        else localStorage.removeItem(key);
+      } catch {}
+    };
+
+    const systemTheme = () => (system.matches ? "dark" : "light");
+
+    const applyTheme = (animate = false) => {
+      const stored = readStored();
+      const isDark = (stored || systemTheme()) === "dark";
       html.classList.toggle("dark", isDark);
+      if (meta) meta.content = stored || "light dark";
       if (emoji) emoji.textContent = isDark ? "🌑" : "🌤️";
       btn.setAttribute("aria-pressed", String(isDark));
       if (animate && !reduceMotion) {
@@ -253,39 +277,23 @@ class SiteNavbarComponent extends HTMLElement {
       }
     };
 
-    const initTheme = () => {
-      const stored = localStorage.getItem(key);
-      if (stored === "light" || stored === "dark") {
-        applyTheme(stored, false);
-      } else {
-        const prefersDark = window.matchMedia(
-          "(prefers-color-scheme: dark)",
-        ).matches;
-        const systemTheme = prefersDark ? "dark" : "light";
-        applyTheme(systemTheme, false);
-        localStorage.setItem(key, systemTheme);
-      }
-    };
-
-    initTheme();
+    applyTheme();
 
     btn.addEventListener("click", (e) => {
       if (!reduceMotion) this.createRipple(e, btn);
-
-      const isDark = html.classList.contains("dark");
-      const newTheme = isDark ? "light" : "dark";
-      localStorage.setItem(key, newTheme);
-      applyTheme(newTheme, true);
+      // Flip what the user sees. Picking the system's own theme clears the
+      // override, so the site follows the OS again.
+      const target = html.classList.contains("dark") ? "light" : "dark";
+      writeStored(target === systemTheme() ? null : target);
+      applyTheme(true);
     });
 
-    window
-      .matchMedia("(prefers-color-scheme: dark)")
-      .addEventListener("change", (e) => {
-        const stored = localStorage.getItem(key);
-        if (!stored) {
-          applyTheme(e.matches ? "dark" : "light", false);
-        }
-      });
+    system.addEventListener("change", () => applyTheme());
+
+    // Keep other open tabs in sync.
+    window.addEventListener("storage", (e) => {
+      if (e.key === key || e.key === null) applyTheme();
+    });
   }
 
   setupMenuToggle() {
@@ -298,7 +306,6 @@ class SiteNavbarComponent extends HTMLElement {
       if (open === isOpen) return;
       menu.hidden = !open;
       btn.setAttribute("aria-expanded", String(open));
-      btn.setAttribute("aria-label", open ? "Close menu" : "Open menu");
     };
 
     btn.addEventListener("click", () => setOpen(menu.hidden));

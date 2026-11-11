@@ -3,11 +3,51 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Stack - Awais Abbas" />
+    <title>Stack | Awais Abbas</title>
+    <meta name="description" content="Apps and tools Awais Abbas uses daily." />
+    <meta name="color-scheme" content="light dark" />
+    <script>
+      // Apply the saved theme before first paint so the page never flashes.
+      (() => {
+        let saved = null;
+        try {
+          saved = localStorage.getItem("theme");
+        } catch {}
+        const dark = saved
+          ? saved === "dark"
+          : matchMedia("(prefers-color-scheme: dark)").matches;
+        document.documentElement.classList.toggle("dark", dark);
+        if (saved) {
+          document.querySelector('meta[name="color-scheme"]').content = saved;
+        }
+      })();
+    </script>
+    <meta
+      name="theme-color"
+      content="#fcfcfc"
+      media="(prefers-color-scheme: light)" />
+    <meta
+      name="theme-color"
+      content="#000000"
+      media="(prefers-color-scheme: dark)" />
+    <link rel="icon" href="/assets/favicon.ico" sizes="any" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/assets/favicon-32x32.png" />
+    <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
+    <link rel="manifest" href="/assets/manifest.json" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap"
       rel="stylesheet" />
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4.3.3/dist/index.global.js"
+      integrity="sha384-2ql948lIdLcGEE0/qxNiudyTjgauA3RDJERu5xW75kFCvSl5a9odyQYCb6tEjnmB"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"></script>
     <link rel="stylesheet" href="styles/styles.css" />
     <style type="text/tailwindcss">
       @custom-variant dark (&:is(.dark *));
@@ -31,7 +71,6 @@
         --font-sans: var(--font-sans);
       }
     </style>
-    <title>Stack</title>
   </head>
   <body class="bg-background text-foreground">
     <a class="skip-link" href="#main-content">Skip to main content</a>
@@ -58,7 +97,9 @@
                   class="shrink-0 h-8 w-8 rounded bg-foreground/4 dark:bg-neutral-600 grid place-items-center">
                   <img
                     src="assets/gpt.png"
-                    alt="ChatGPT"
+                    alt=""
+                    width="24"
+                    height="24"
                     class="h-6 w-6 object-contain" />
                 </div>
                 <div class="min-w-0">
@@ -73,7 +114,9 @@
                   class="shrink-0 h-8 w-8 rounded bg-foreground/4 dark:bg-neutral-600 grid place-items-center">
                   <img
                     src="assets/copilot.png"
-                    alt="Copilot"
+                    alt=""
+                    width="24"
+                    height="24"
                     class="h-6 w-6 object-contain" />
                 </div>
                 <div class="min-w-0">
@@ -88,7 +131,9 @@
                   class="shrink-0 h-8 w-8 rounded bg-foreground/4 dark:bg-neutral-600 grid place-items-center">
                   <img
                     src="assets/claude.png"
-                    alt="Claude"
+                    alt=""
+                    width="24"
+                    height="24"
                     class="h-6 w-6 object-contain" />
                 </div>
                 <div class="min-w-0">
@@ -113,7 +158,9 @@
                   class="shrink-0 h-8 w-8 rounded bg-foreground/4 dark:bg-neutral-600 grid place-items-center">
                   <img
                     src="assets/cursor.png"
-                    alt="Cursor"
+                    alt=""
+                    width="24"
+                    height="24"
                     class="h-6 w-6 object-contain" />
                 </div>
                 <div class="min-w-0">
@@ -128,7 +175,9 @@
                   class="shrink-0 h-8 w-8 rounded bg-foreground/4 dark:bg-neutral-600 grid place-items-center">
                   <img
                     src="assets/windsurf.png"
-                    alt="Windsurf"
+                    alt=""
+                    width="24"
+                    height="24"
                     class="h-6 w-6 object-contain" />
                 </div>
                 <div class="min-w-0">
@@ -143,7 +192,9 @@
                   class="shrink-0 h-8 w-8 rounded bg-foreground/4 dark:bg-neutral-600 grid place-items-center">
                   <img
                     src="assets/vscode.png"
-                    alt="VS Code"
+                    alt=""
+                    width="24"
+                    height="24"
                     class="h-6 w-6 object-contain" />
                 </div>
                 <div class="min-w-0">
@@ -168,7 +219,9 @@
                   class="shrink-0 h-8 w-8 rounded bg-foreground/4 dark:bg-neutral-600 grid place-items-center">
                   <img
                     src="assets/bash.png"
-                    alt="bash"
+                    alt=""
+                    width="24"
+                    height="24"
                     class="h-6 w-6 object-contain" />
                 </div>
                 <div class="min-w-0">
@@ -193,7 +246,9 @@
                   class="shrink-0 h-8 w-8 rounded bg-foreground/4 dark:bg-neutral-600 grid place-items-center">
                   <img
                     src="assets/brave.png"
-                    alt="Brave"
+                    alt=""
+                    width="24"
+                    height="24"
                     class="h-6 w-6 object-contain" />
                 </div>
                 <div class="min-w-0">
@@ -208,7 +263,9 @@
                   class="shrink-0 h-8 w-8 rounded bg-foreground/4 dark:bg-neutral-600 grid place-items-center">
                   <img
                     src="assets/chrome.png"
-                    alt="Chrome"
+                    alt=""
+                    width="24"
+                    height="24"
                     class="h-6 w-6 object-contain" />
                 </div>
                 <div class="min-w-0">
@@ -233,7 +290,9 @@
                   class="shrink-0 h-8 w-8 rounded bg-foreground/4 dark:bg-neutral-600 grid place-items-center">
                   <img
                     src="assets/github.png"
-                    alt="GitHub Desktop"
+                    alt=""
+                    width="24"
+                    height="24"
                     class="h-6 w-6 object-contain" />
                 </div>
                 <div class="min-w-0">
@@ -248,7 +307,9 @@
                   class="shrink-0 h-8 w-8 rounded bg-foreground/4 dark:bg-neutral-600 grid place-items-center">
                   <img
                     src="assets/compass.png"
-                    alt="MongoDB Compass"
+                    alt=""
+                    width="24"
+                    height="24"
                     class="h-6 w-6 object-contain" />
                 </div>
                 <div class="min-w-0">
@@ -273,7 +334,9 @@
                   class="shrink-0 h-8 w-8 rounded bg-foreground/4 dark:bg-neutral-600 grid place-items-center">
                   <img
                     src="assets/keep.png"
-                    alt="Google Keep"
+                    alt=""
+                    width="24"
+                    height="24"
                     class="h-6 w-6 object-contain" />
                 </div>
                 <div class="min-w-0">
@@ -288,7 +351,9 @@
                   class="shrink-0 h-8 w-8 rounded bg-foreground/4 dark:bg-neutral-600 grid place-items-center">
                   <img
                     src="assets/obsidian.png"
-                    alt="Obsidian"
+                    alt=""
+                    width="24"
+                    height="24"
                     class="h-6 w-6 object-contain" />
                 </div>
                 <div class="min-w-0">
@@ -303,7 +368,9 @@
                   class="shrink-0 h-8 w-8 rounded bg-foreground/4 dark:bg-neutral-600 grid place-items-center">
                   <img
                     src="assets/notes.png"
-                    alt="Apple Notes"
+                    alt=""
+                    width="24"
+                    height="24"
                     class="h-6 w-6 object-contain" />
                 </div>
                 <div class="min-w-0">
@@ -328,7 +395,9 @@
                   class="shrink-0 h-8 w-8 rounded bg-foreground/4 dark:bg-neutral-600 grid place-items-center">
                   <img
                     src="assets/jira.png"
-                    alt="Jira"
+                    alt=""
+                    width="24"
+                    height="24"
                     class="h-6 w-6 object-contain" />
                 </div>
                 <div class="min-w-0">
@@ -343,7 +412,9 @@
                   class="shrink-0 h-8 w-8 rounded bg-foreground/4 dark:bg-neutral-600 grid place-items-center">
                   <img
                     src="assets/postman.png"
-                    alt="Postman"
+                    alt=""
+                    width="24"
+                    height="24"
                     class="h-6 w-6 object-contain" />
                 </div>
                 <div class="min-w-0">

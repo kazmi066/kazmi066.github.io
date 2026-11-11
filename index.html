@@ -2,31 +2,52 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta name="description" content="Awais Abbas" />
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <title>Awais Abbas | Software Engineer</title>
+    <meta name="description" content="Awais Abbas, software engineer in Islamabad. Projects, CodePens and starter templates." />
+    <meta name="color-scheme" content="light dark" />
+    <script>
+      // Apply the saved theme before first paint so the page never flashes.
+      (() => {
+        let saved = null;
+        try {
+          saved = localStorage.getItem("theme");
+        } catch {}
+        const dark = saved
+          ? saved === "dark"
+          : matchMedia("(prefers-color-scheme: dark)").matches;
+        document.documentElement.classList.toggle("dark", dark);
+        if (saved) {
+          document.querySelector('meta[name="color-scheme"]').content = saved;
+        }
+      })();
+    </script>
+    <meta
+      name="theme-color"
+      content="#fcfcfc"
+      media="(prefers-color-scheme: light)" />
+    <meta
+      name="theme-color"
+      content="#000000"
+      media="(prefers-color-scheme: dark)" />
+    <link rel="icon" href="/assets/favicon.ico" sizes="any" />
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
       href="/assets/favicon-32x32.png" />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="/assets/favicon-16x16.png" />
-    <link rel="manifest" href="/site.webmanifest" />
-    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
-    <meta name="msapplication-TileColor" content="#da532c" />
-    <meta name="theme-color" content="#ffffff" />
+    <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
+    <link rel="manifest" href="/assets/manifest.json" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap"
       rel="stylesheet" />
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4.3.3/dist/index.global.js"
+      integrity="sha384-2ql948lIdLcGEE0/qxNiudyTjgauA3RDJERu5xW75kFCvSl5a9odyQYCb6tEjnmB"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"></script>
     <link rel="stylesheet" href="styles/styles.css" />
     <style type="text/tailwindcss">
       @custom-variant dark (&:is(.dark *));
@@ -50,7 +71,6 @@
         --font-sans: var(--font-sans);
       }
     </style>
-    <title>Awais Abbas.</title>
   </head>
   <body class="bg-background text-foreground">
     <a class="skip-link" href="#main-content">Skip to main content</a>
@@ -72,14 +92,13 @@
               I'm Awais Abbas
               <img
                 alt=""
-                loading="lazy"
-                width="460"
-                height="460"
+                width="96"
+                height="96"
                 decoding="async"
                 class="m-0 inline w-8 aspect-square overflow-hidden object-cover rounded-md border rotate-6 -translate-y-0.5 border-neutral-200 dark:border-neutral-700"
                 style="color: transparent"
-                src="./assets/myself.jpg" />. I'm a Software Engineer 🥷
-              <div
+                src="./assets/myself-96.jpg" />. I'm a Software Engineer 🥷
+              <span
                 class="not-prose inline-flex overflow-hidden border rounded-md shadow-[0_1px_8px_0_rgba(0,0,0,0.04)] scale-[0.8] md:scale-100 border-neutral-200 dark:border-neutral-700 dark:text-foreground -translate-y-0.5">
                 <a
                   href="https://github.com/kazmi066"
@@ -106,9 +125,9 @@
                   class="px-2 py-1.5 text-sm font-medium shadow-[inset_0_-2px_5px_0_rgba(0,0,0,0.07)] bg-white dark:bg-neutral-800"
                   >70</span
                 >
-              </div>
+              </span>
               currently based in Islamabad, Pakistan.
-              <div
+              <span
                 class="not-prose align-text-bottom inline-flex overflow-hidden border rounded-md shadow-[0_1px_8px_0_rgba(0,0,0,0.04)] scale-[0.8] md:scale-100 border-neutral-200 dark:border-neutral-700 dark:text-white -translate-y-1">
                 <span
                   id="weather-emoji"
@@ -120,7 +139,7 @@
                   class="px-2 py-1.5 text-sm font-medium shadow-[inset_0_-2px_5px_0_rgba(0,0,0,0.07)] bg-neutral dark:bg-neutral-800"
                   >2:42 PM</span
                 >
-              </div>
+              </span>
             </h1>
             <p class="text-sm text-muted-foreground mt-4">
               Checkout my
@@ -139,7 +158,7 @@
           </article>
         </section>
 
-        <section class="projects-section mt-16" aria-labelledby="projects-heading">
+        <section class="projects-section mt-16">
           <div class="projects-head">
             <h2 id="projects-heading" class="text-xl sm:text-2xl font-medium">
               Projects
@@ -219,9 +238,8 @@
             rel="noopener noreferrer"
             class="inline-flex items-center gap-1 mt-3 text-sm text-muted-foreground hover:text-foreground transition-colors">
             find more here
-            <span class="transition-transform group-hover:translate-x-0.5"
-              >→</span
-            >
+            <span aria-hidden="true">→</span>
+            <span class="sr-only">(opens in new tab)</span>
           </a>
         </section>
 
