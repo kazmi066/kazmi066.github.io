@@ -1,3 +1,7 @@
+// og:   the project's Open Graph image, 800x420 JPEG in assets/projects/og/.
+//       Leave it out and the card shows a placeholder built from the logo
+//       and accent colour.
+// logo: only used by that placeholder.
 export const projects = [
   {
     title: "RankLocal",
@@ -6,6 +10,7 @@ export const projects = [
     host: "ranklocal.cc",
     accent: "#f57214",
     logo: "./assets/projects/ranklocal-logo.svg",
+    og: "./assets/projects/og/ranklocal.jpg",
   },
   {
     title: "Better-launch",
@@ -22,6 +27,7 @@ export const projects = [
     host: "bhej.cc",
     accent: "#a3b441",
     logo: "./assets/projects/bhej-logo.png",
+    og: "./assets/projects/og/bhej.jpg",
   },
   {
     title: "QuickSaas",
@@ -30,6 +36,7 @@ export const projects = [
     host: "quicksaas.cc",
     accent: "#e5e5e5",
     logo: "./assets/projects/quicksaas-logo.png",
+    og: "./assets/projects/og/quicksaas.jpg",
   },
   {
     title: "Heaven Design System",

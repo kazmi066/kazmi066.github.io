@@ -226,76 +226,86 @@ main {
 .project-card {
   --project-accent: var(--foreground);
   display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
-  grid-template-areas:
-    "title logo"
-    "blurb blurb"
-    "meta meta";
-  column-gap: 0.75rem;
-  row-gap: 0.3rem;
-  align-items: start;
+  gap: 0.3rem;
   min-width: 0;
-  padding: 0.95rem 1rem 0.9rem;
   color: inherit;
   text-decoration: none;
-  background: var(--card);
-  border: 1px solid color-mix(in srgb, var(--project-accent) 28%, var(--border));
-  border-radius: calc(var(--radius) + 2px);
-  transition: border-color 0.15s ease;
+  border-radius: calc(var(--radius) + 4px);
 }
 
-.project-card:hover,
-.project-card:focus-visible {
-  border-color: var(--project-accent);
+.project-media {
+  display: block;
+  overflow: hidden;
+  margin-bottom: 0.45rem;
+  border-radius: calc(var(--radius) + 2px);
+  background: var(--muted);
+}
+
+.project-og {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 800 / 420;
+  object-fit: cover;
+  transition: scale 0.3s ease;
+}
+
+.project-card:hover .project-og,
+.project-card:focus-visible .project-og {
+  scale: 1.03;
+}
+
+/* Stand-in for projects without an OG image: logo on an accent wash. */
+.project-og-placeholder {
+  display: grid;
+  place-items: center;
+  background:
+    radial-gradient(
+      circle at 30% 20%,
+      color-mix(in srgb, var(--project-accent) 30%, transparent),
+      transparent 60%
+    ),
+    color-mix(in srgb, var(--project-accent) 10%, var(--card));
+}
+
+.project-og-placeholder img {
+  width: auto;
+  height: 3rem;
+  max-width: 40%;
+  object-fit: contain;
 }
 
 .project-title {
-  grid-area: title;
   min-width: 0;
-  font-size: clamp(1.05rem, 3.2vw, 1.25rem);
+  font-size: clamp(1.05rem, 3.2vw, 1.2rem);
   font-weight: 500;
   letter-spacing: -0.03em;
   line-height: 1.25;
-  transition: color 0.15s ease;
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+  transition: text-decoration-color 0.15s ease;
 }
 
 .project-card:hover .project-title,
 .project-card:focus-visible .project-title {
-  color: var(--project-accent);
-}
-
-.project-logo-wrap {
-  grid-area: logo;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  max-width: 4.25rem;
-  pointer-events: none;
-}
-
-.project-logo {
-  display: block;
-  width: auto;
-  height: 1.75rem;
-  max-width: 4.25rem;
-  object-fit: contain;
+  text-decoration-color: var(--project-accent);
 }
 
 .project-blurb {
-  grid-area: blurb;
-  font-size: 0.8rem;
-  line-height: 1.4;
+  font-size: 0.85rem;
+  line-height: 1.45;
   color: var(--muted-foreground);
 }
 
 .project-meta {
-  grid-area: meta;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 0.75rem;
-  margin-top: 0.35rem;
-  font-size: 0.7rem;
+  margin-top: 0.2rem;
+  font-size: 0.75rem;
   letter-spacing: 0.01em;
   color: var(--muted-foreground);
 }
@@ -306,15 +316,14 @@ main {
   width: 1.4rem;
   height: 1.4rem;
   color: var(--foreground);
-  border: 1px solid color-mix(in srgb, var(--project-accent) 35%, var(--border));
+  border: 1px solid var(--border);
   border-radius: 999px;
-  transition: transform 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+  transition: translate 0.15s ease, border-color 0.15s ease;
 }
 
 .project-card:hover .project-go,
 .project-card:focus-visible .project-go {
-  color: var(--project-accent);
-  transform: translate(1px, -1px);
+  translate: 1px -1px;
   border-color: var(--project-accent);
 }
 
@@ -323,19 +332,6 @@ main {
   .project-slide:last-child {
     width: calc((100cqi - 0.75rem) / 2);
   }
-
-  .project-card {
-    padding: 1rem 1.05rem 0.95rem;
-  }
-
-  .project-logo-wrap {
-    max-width: 4.75rem;
-  }
-
-  .project-logo {
-    height: 1.9rem;
-    max-width: 4.75rem;
-  }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -343,9 +339,12 @@ main {
     scroll-behavior: auto;
   }
 
+  .project-card:hover .project-og,
+  .project-card:focus-visible .project-og,
   .project-card:hover .project-go,
   .project-card:focus-visible .project-go {
-    transform: none;
+    scale: none;
+    translate: none;
   }
 }
 

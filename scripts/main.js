@@ -21,7 +21,7 @@ function appInit() {
     projectsList.innerHTML = "";
     const total = projects.length;
 
-    projects.forEach((item) => {
+    projects.forEach((item, index) => {
       const li = document.createElement("li");
       li.className = "project-slide";
 
@@ -45,13 +45,20 @@ function appInit() {
         `${item.title}. ${item.blurb || ""} (opens in new tab)`.trim(),
       );
 
-      const logo = item.logo
-        ? `<img class="project-logo" src="${item.logo}" alt="" width="32" height="32" decoding="async">`
-        : "";
+      // Slides past the first two start off screen: load them late and low.
+      const offscreen =
+        index > 1 ? ' loading="lazy" fetchpriority="low"' : "";
+      const media = item.og
+        ? `<img class="project-og" src="${item.og}" alt="" width="800" height="420" decoding="async"${offscreen}>`
+        : `<span class="project-og project-og-placeholder">${
+            item.logo
+              ? `<img src="${item.logo}" alt="" width="48" height="48" decoding="async"${offscreen}>`
+              : ""
+          }</span>`;
 
       a.innerHTML = `
+        <span class="project-media" aria-hidden="true">${media}</span>
         <span class="project-title">${item.title}</span>
-        <span class="project-logo-wrap" aria-hidden="true">${logo}</span>
         <span class="project-blurb">${item.blurb || ""}</span>
         <span class="project-meta">
           <span class="project-host">${host}</span>
