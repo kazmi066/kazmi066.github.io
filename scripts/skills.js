@@ -54,10 +54,15 @@ function renderCategory(category) {
   const section = el("section", "skill-category");
   section.id = category.id;
 
-  const grid = el("ul", "skill-grid");
-  // Safari drops list semantics when list-style is removed outside <nav>.
-  grid.setAttribute("role", "list");
-  category.skills.forEach((skill) => grid.append(renderSkill(skill)));
+  let grid;
+  if (category.skills.length) {
+    grid = el("ul", "skill-grid");
+    // Safari drops list semantics when list-style is removed outside <nav>.
+    grid.setAttribute("role", "list");
+    category.skills.forEach((skill) => grid.append(renderSkill(skill)));
+  } else {
+    grid = el("p", "skill-empty", "Nothing here yet.");
+  }
 
   section.append(
     el("h2", "skill-category-title", category.title),

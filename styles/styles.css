@@ -377,6 +377,15 @@ main {
   list-style: none;
 }
 
+.skill-empty {
+  margin: 1rem 0 0;
+  padding: 1rem;
+  font-size: 0.85rem;
+  color: var(--muted-foreground);
+  border: 1px dashed var(--border);
+  border-radius: calc(var(--radius) + 2px);
+}
+
 .skill-card {
   display: flex;
   flex-direction: column;

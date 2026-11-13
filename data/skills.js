@@ -1,5 +1,5 @@
-// Agent skills, grouped by the kind of work they help with.
-// Categories render in this order.
+// Agent skills, grouped by the stage of work they help with.
+// Categories render in this order: plan, write, review.
 //
 // A category's blurb says when to reach for its skills, so keep it general
 // enough to cover anything added later.
@@ -9,13 +9,28 @@
 //   href        source (repo folder or docs page)
 //   source      who publishes it, shown next to the name
 //   description one line on what it does
-//   install     shell command that installs it
+//   install     command that installs it (shell or Claude Code slash command)
 
 export const skillCategories = [
   {
-    id: "build",
-    title: "Build",
-    blurb: "When writing or changing frontend code.",
+    id: "plan",
+    title: "Plan",
+    blurb: "Before building. Turning an idea into a spec and a plan.",
+    skills: [
+      {
+        name: "superpowers",
+        href: "https://github.com/obra/superpowers",
+        source: "Jesse Vincent",
+        description:
+          "A set of skills that hand off to each other: brainstorm the idea, write a plan, build it test-first with subagents, then request a code review.",
+        install: "/plugin install superpowers@claude-plugins-official",
+      },
+    ],
+  },
+  {
+    id: "write",
+    title: "Write",
+    blurb: "While writing code or docs.",
     skills: [
       {
         name: "modern-web-guidance",
@@ -25,13 +40,15 @@ export const skillCategories = [
           "Around 200 guides with Baseline browser data. The agent searches them before writing UI code, so it skips patterns the platform has replaced.",
         install: "npx modern-web-guidance@latest install",
       },
-    ],
-  },
-  {
-    id: "write",
-    title: "Write",
-    blurb: "When drafting or editing text that people will read.",
-    skills: [
+      {
+        name: "senior-frontend",
+        href: "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/development/senior-frontend",
+        source: "claude-code-templates",
+        description:
+          "Reads the project before writing, builds every state (loading, empty, error, long content), then checks the page in a real browser at phone and desktop width.",
+        install:
+          "npx claude-code-templates@latest --skill development/senior-frontend",
+      },
       {
         name: "unslop",
         href: "https://github.com/cursor/plugins/tree/main/pstack/skills/unslop",
@@ -41,5 +58,11 @@ export const skillCategories = [
         install: "npx skills add cursor/plugins --skill unslop",
       },
     ],
+  },
+  {
+    id: "review",
+    title: "Review",
+    blurb: "Before anything ships. Checking work for problems.",
+    skills: [],
   },
 ];
